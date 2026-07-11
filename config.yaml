@@ -1,0 +1,101 @@
+# Fill in the bracketed placeholders with your actual brand details.
+
+brand_name: "Recrea8"
+
+brand_voice: >
+  Informational, professional, and warm — never preachy or fear-based.
+  Speaks like a knowledgeable friend who genuinely cares about what people put
+  in their bodies. Confident about the science without being clinical.
+  Leads with "healthy indulgence": food should feel good AND be good for you,
+  never a tradeoff.
+
+brand_context: >
+  [Replace with your actual positioning]: Recrea8 makes [product category]
+  using whole-food ingredients, free from artificial sweeteners, dyes, and
+  ultra-processed fillers. The brand stands for transparency about
+  ingredients and making the healthier choice the more delicious one.
+
+topics:
+  - "how ultra-processed ingredients affect the body"
+  - "reading a nutrition label like a pro"
+  - "what 'natural flavors' actually means"
+  - "whole food swaps for common pantry staples"
+  - "why we chose [key ingredient] instead of [common alternative]"
+
+content_calendar:
+  # Gives the feed intentional structure instead of random rotation — a
+  # proven engagement/retention tactic (followers learn what to expect).
+  # Day names are full lowercase weekday names. Any day left out uses the
+  # regular content_mix weighting from "posting" above instead.
+  monday:
+    pillar: "Mythbusting Monday"
+    content_type: educational
+  wednesday:
+    pillar: "Ingredient Spotlight"
+    content_type: lifestyle
+  friday:
+    pillar: "Weekend Ready — recipe or use-case"
+    content_type: library
+
+aesthetic:
+  # Feeds into image generation and, once you add reference screenshots to
+  # content/style_references/, gets combined with the auto-extracted style
+  # guide (data/style_guide.json).
+  description: >
+    Clean, minimal, beautiful. Soft natural color palette (warm neutrals,
+    sage, cream) rather than saturated candy-brand colors. Generous white
+    space. Bold confident typography. Feels premium and trustworthy, not
+    clinical or sterile — approachable "healthy indulgence," not deprivation.
+
+platforms:
+  instagram: true
+  tiktok: true
+
+posting:
+  mode: auto
+  caption_max_words: 60
+  hashtag_count: 5
+  # If true, nothing posts automatically — every piece of content becomes a
+  # GitHub issue for you to review and comment "approve" on first. Strongly
+  # recommended for at least the first few weeks. See README section on
+  # the approval workflow.
+  require_approval: true
+  # How often each content type gets picked, as relative weights (don't need
+  # to sum to 1 — they're normalized automatically). If a source has nothing
+  # available that run (e.g. research queue is empty), it's skipped
+  # gracefully and the others pick up the slack.
+  content_mix:
+    library: 0.25       # your own uploaded photos/videos
+    educational: 0.45   # research-backed nutrition science posts
+    lifestyle: 0.30      # generated on-brand quote/graphic cards
+
+content_generation:
+  image_style: "clean minimal quote card, bold sans-serif text, soft natural color palette"
+  # If true, educational posts become short narrated videos (Piper voiceover)
+  # instead of static graphic cards. Slower to generate, more scroll-stopping.
+  educational_as_video: false
+
+research:
+  # Topics the research agent searches on PubMed (real published studies).
+  # Add/remove freely — more specific queries return more relevant studies.
+  topics:
+    - "ultra-processed food inflammation"
+    - "artificial sweeteners health effects"
+    - "whole foods gut microbiome"
+    - "added sugar chronic disease risk"
+    - "artificial food dye health effects"
+    - "anti-inflammatory diet clinical trial"
+  # How many new studies to pull per topic each time the research workflow runs
+  per_topic: 2
+
+engagement:
+  # Auto-replies to comments on YOUR OWN posts (sanctioned use of the API).
+  auto_reply_to_own_comments: true
+  # For the weekly human-in-the-loop digest: public Instagram Business/Creator
+  # accounts (usernames, no @) you'd like suggested comments drafted for.
+  # You review data/engagement_digest.md and post them yourself — nothing
+  # here is automated on other accounts, by design (see README section 9).
+  accounts_to_monitor:
+    - "example_account_1"
+    - "example_account_2"
+  posts_per_account: 3
