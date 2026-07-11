@@ -1,0 +1,48 @@
+name: Post Instagram Story
+
+on:
+  schedule:
+    - cron: "0 15 * * *"   # once a day by default — bump to 2-3x/day once comfortable
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write   # only used if stories.require_approval is true
+
+jobs:
+  post-story:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Cache Piper voice model
+        uses: actions/cache@v4
+        with:
+          path: data/voices
+          key: piper-voices-v1
+
+      - name: Post story
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+          GITHUB_BRANCH: ${{ github.ref_name }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python -m src.post_story
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "social-agent-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/posted/ content/generated/ data/pending_posts.json data/post_history.json || true
+          git diff --cached --quiet || git commit -m "Story run [skip ci]"
+          git push
