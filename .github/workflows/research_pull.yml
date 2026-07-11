@@ -1,0 +1,46 @@
+name: Refresh research queue
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # weekly, Monday 6am UTC — studies don't change hourly
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Pull new research and simplify with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python -c "
+          import yaml
+          from src import research_agent
+          config = yaml.safe_load(open('config.yaml'))
+          research_agent.refresh_research_queue(
+              topics=config.get('research', {}).get('topics'),
+              brand_voice=config.get('brand_voice', ''),
+              brand_context=config.get('brand_context', ''),
+              per_topic=config.get('research', {}).get('per_topic', 2),
+          )
+          "
+
+      - name: Commit updated research queue
+        run: |
+          git config user.name "social-agent-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/research_queue.json
+          git diff --cached --quiet || git commit -m "Refresh research queue [skip ci]"
+          git push
