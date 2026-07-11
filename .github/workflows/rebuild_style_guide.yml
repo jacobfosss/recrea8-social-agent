@@ -1,0 +1,36 @@
+name: Rebuild style guide
+
+# Manual trigger only — run this after you add/change screenshots in
+# content/style_references/. Not scheduled since it only needs to run when
+# you've actually updated your references.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Rebuild style guide from reference images
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m src.style_analyzer
+
+      - name: Commit updated style guide
+        run: |
+          git config user.name "social-agent-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/style_guide.json
+          git diff --cached --quiet || git commit -m "Rebuild style guide [skip ci]"
+          git push
