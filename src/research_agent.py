@@ -1,11 +1,14 @@
 """
-Searches PubMed (NIH's official, free, keyless E-utilities API — no scraping,
-no ToS issue, public-domain metadata) for recent studies on your topics, then
-has Claude translate the science into plain-language, brand-voiced content
-ideas. Results queue into data/research_queue.json for content_selector to
-draw from as an "educational" content type.
+Searches PubMed (NIH's official, free API — no scraping, no ToS issue,
+public-domain metadata) for recent studies on your topics, then has Claude
+translate the science into plain-language, brand-voiced content ideas.
+Results queue into data/research_queue.json for content_selector to draw
+from as an "educational" content type.
 
 PubMed docs: https://www.ncbi.nlm.nih.gov/books/NBK25501/
+
+Set NCBI_API_KEY in your .env (free, from ncbi.nlm.nih.gov/account) to raise
+the rate limit from 3 requests/second to 10/second.
 """
 import json
 import time
@@ -36,28 +39,38 @@ def _client():
     return Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
 
+def _ncbi_api_key():
+    import os
+    return os.environ.get("NCBI_API_KEY")
+
+
 def _search_pubmed(topic: str, max_results: int = 5) -> list[str]:
-    resp = requests.get(
-        f"{EUTILS_BASE}/esearch.fcgi",
-        params={
-            "db": "pubmed", "term": topic, "retmax": max_results,
-            "sort": "pub+date", "retmode": "json",
-        },
-        timeout=30,
-    )
+    params = {
+        "db": "pubmed", "term": topic, "retmax": max_results,
+        "sort": "pub+date", "retmode": "json",
+    }
+    api_key = _ncbi_api_key()
+    if api_key:
+        params["api_key"] = api_key
+
+    resp = requests.get(f"{EUTILS_BASE}/esearch.fcgi", params=params, timeout=30)
     resp.raise_for_status()
+    time.sleep(0.4)
     return resp.json().get("esearchresult", {}).get("idlist", [])
 
 
 def _fetch_abstracts(pmids: list[str]) -> list[dict]:
     if not pmids:
         return []
-    resp = requests.get(
-        f"{EUTILS_BASE}/efetch.fcgi",
-        params={"db": "pubmed", "id": ",".join(pmids), "retmode": "xml"},
-        timeout=30,
-    )
+
+    params = {"db": "pubmed", "id": ",".join(pmids), "retmode": "xml"}
+    api_key = _ncbi_api_key()
+    if api_key:
+        params["api_key"] = api_key
+
+    resp = requests.get(f"{EUTILS_BASE}/efetch.fcgi", params=params, timeout=30)
     resp.raise_for_status()
+    time.sleep(0.4)
     root = ET.fromstring(resp.content)
 
     articles = []
@@ -79,6 +92,27 @@ def _fetch_abstracts(pmids: list[str]) -> list[dict]:
             "journal": journal_el.text if journal_el is not None else "",
         })
     return articles
+
+
+def _is_relevant_to_nutrition(article: dict) -> bool:
+    """Quick relevance filter — PubMed's search sometimes matches studies
+    that share keywords but aren't actually about food/nutrition (e.g. a
+    sweetener study about vaping products). Skip those before spending
+    effort simplifying them into a post."""
+    client = _client()
+    prompt = f"""Is this study genuinely about food, nutrition, diet, or eating
+habits (as opposed to an unrelated topic that just happens to share some
+keywords, like tobacco/vaping products, cosmetics, or pharmaceuticals)?
+
+Title: {article['title']}
+Abstract: {article['abstract'][:300]}
+
+Answer with exactly one word: YES or NO.
+"""
+    resp = client.messages.create(model=MODEL, max_tokens=10,
+                                   messages=[{"role": "user", "content": prompt}])
+    answer = "".join(b.text for b in resp.content if b.type == "text").strip().upper()
+    return answer.startswith("Y")
 
 
 def _simplify_for_social(article: dict, brand_voice: str, brand_context: str) -> dict:
@@ -105,7 +139,7 @@ Write:
 
 Separate the two parts with "---". No preamble.
 """
-    resp = client.messages.create(model=MODEL, max_tokens=400,
+    resp = client.messages.create(model=MODEL, max_tokens=800,
                                    messages=[{"role": "user", "content": prompt}])
     text = "".join(b.text for b in resp.content if b.type == "text")
     parts = text.split("---")
@@ -132,6 +166,10 @@ def refresh_research_queue(topics=None, brand_voice="", brand_context="", per_to
             for article in articles:
                 if article["pmid"] in seen_pmids or not article["abstract"]:
                     continue
+                if not article["title"]:
+                    continue
+                if not _is_relevant_to_nutrition(article):
+                    continue
                 idea = _simplify_for_social(article, brand_voice, brand_context)
                 idea["topic"] = topic
                 idea["used"] = False
@@ -140,7 +178,7 @@ def refresh_research_queue(topics=None, brand_voice="", brand_context="", per_to
                 added += 1
                 if added % per_topic == 0:
                     break
-            time.sleep(0.5)  # be polite to the free API, no key = lower rate limit
+            time.sleep(1.0)
         except Exception as e:
             print(f"[research] failed on topic '{topic}': {e}")
 
@@ -170,4 +208,18 @@ def mark_used(pmid: str):
 
 
 if __name__ == "__main__":
-    refresh_research_queue()
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    import yaml
+    config_path = ROOT / "config.yaml"
+    if config_path.exists():
+        config = yaml.safe_load(config_path.read_text())
+        refresh_research_queue(
+            topics=config.get("research", {}).get("topics"),
+            brand_voice=config.get("brand_voice", ""),
+            brand_context=config.get("brand_context", ""),
+            per_topic=config.get("research", {}).get("per_topic", 2),
+        )
+    else:
+        refresh_research_queue()

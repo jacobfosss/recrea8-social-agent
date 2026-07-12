@@ -2,14 +2,18 @@
 Replies to comments on YOUR OWN Instagram posts automatically. This is a
 sanctioned use of the Graph API (the instagram_manage_comments permission
 exists specifically for this) — distinct from commenting on other accounts'
-posts, which this project does not and will not automate (see
-engagement_assist.py for the human-in-the-loop alternative to that).
+posts, which this project does not and will not automate.
+
+Controlled by config.yaml's engagement.auto_reply_to_own_comments — defaults
+to OFF. You must explicitly set it to true when you're ready for this to run
+live, since once enabled it acts on real comments with no approval step.
 """
 import json
 import os
 from pathlib import Path
 
 import requests
+import yaml
 from anthropic import Anthropic
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,8 +23,6 @@ GRAPH_VERSION = "v21.0"
 GRAPH_BASE = f"https://graph.facebook.com/{GRAPH_VERSION}"
 MODEL = "claude-sonnet-5"
 
-# Very short/low-effort comments usually aren't worth an individual reply and
-# are more likely to be spam — skip them rather than reply to everything.
 MIN_COMMENT_LENGTH = 3
 
 
@@ -95,7 +97,7 @@ def reply_to_new_comments(brand_voice="", brand_context="", media_limit=10):
             if comment["id"] in replied:
                 continue
             if len(comment.get("text", "").strip()) < MIN_COMMENT_LENGTH:
-                replied.add(comment["id"])  # mark seen so we don't re-check forever
+                replied.add(comment["id"])
                 continue
             try:
                 reply_text = _draft_reply(comment["text"], brand_voice, brand_context)
@@ -112,9 +114,19 @@ def reply_to_new_comments(brand_voice="", brand_context="", media_limit=10):
 
 
 if __name__ == "__main__":
-    import yaml
-    config = yaml.safe_load(open(ROOT / "config.yaml"))
-    reply_to_new_comments(
-        brand_voice=config.get("brand_voice", ""),
-        brand_context=config.get("brand_context", ""),
-    )
+    from dotenv import load_dotenv
+    load_dotenv()
+
+    config_path = ROOT / "config.yaml"
+    config = yaml.safe_load(config_path.read_text()) if config_path.exists() else {}
+    enabled = config.get("engagement", {}).get("auto_reply_to_own_comments", False)
+
+    if not enabled:
+        print("[comment-reply] disabled — set engagement.auto_reply_to_own_comments: "
+              "true in config.yaml when you're ready to turn this on. Exiting "
+              "without doing anything.")
+    else:
+        reply_to_new_comments(
+            brand_voice=config.get("brand_voice", ""),
+            brand_context=config.get("brand_context", ""),
+        )

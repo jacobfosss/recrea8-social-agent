@@ -1,3 +1,4 @@
+from __future__ import annotations
 """
 Pulls royalty-free, commercially-licensed background music from Jamendo's
 official free API (free API key, real Creative Commons licensing metadata

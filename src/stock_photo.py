@@ -1,3 +1,4 @@
+from __future__ import annotations
 """
 Pulls real, licensed stock photography from Pexels' official free API
 (free API key, explicit commercial-use license, not scraping) to use as a

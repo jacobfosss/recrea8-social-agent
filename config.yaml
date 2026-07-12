@@ -1,4 +1,5 @@
-# Fill in the bracketed placeholders with your actual brand details.
+# Recrea8 Social Agent — full configuration
+# Fill in any remaining bracketed placeholders as needed.
 
 brand_name: "Recrea8"
 
@@ -10,37 +11,50 @@ brand_voice: >
   never a tradeoff.
 
 brand_context: >
-  [Replace with your actual positioning]: Recrea8 makes [product category]
-  using whole-food ingredients, free from artificial sweeteners, dyes, and
-  ultra-processed fillers. The brand stands for transparency about
-  ingredients and making the healthier choice the more delicious one.
+  Recrea8 was founded by Zach and Jacob, who bonded over a shared passion for
+  whole foods and recreating a better food system. Both are obsessed with
+  sports, nutrition, training, recovery, and how they all connect through what
+  we eat. That passion led them to interview nutritionists across the NBA,
+  NFL, and MLB — and they kept hearing the same thing: professional athletes
+  were already eating tons of ice cream for recovery and enjoyment, but there
+  was no genuinely clean option built for how hard their bodies work. So they
+  built one — engineering every ingredient around what those nutritionists
+  said their athletes actually needed: magnesium glycinate for recovery,
+  grass-fed whey for protein, real ingredients throughout. No artificial
+  sweeteners, dyes, or ultra-processed fillers — just whole food your body
+  actually recognizes, built by people who understand what performance and
+  recovery really demand.
 
 topics:
+  # Core brand education
   - "how ultra-processed ingredients affect the body"
   - "reading a nutrition label like a pro"
   - "what 'natural flavors' actually means"
   - "whole food swaps for common pantry staples"
-  - "why we chose [key ingredient] instead of [common alternative]"
 
-content_calendar:
-  # Gives the feed intentional structure instead of random rotation — a
-  # proven engagement/retention tactic (followers learn what to expect).
-  # Day names are full lowercase weekday names. Any day left out uses the
-  # regular content_mix weighting from "posting" above instead.
-  monday:
-    pillar: "Mythbusting Monday"
-    content_type: educational
-  wednesday:
-    pillar: "Ingredient Spotlight"
-    content_type: lifestyle
-  friday:
-    pillar: "Weekend Ready — recipe or use-case"
-    content_type: library
+  # Ingredient spotlight series — what IS in our label
+  - "why we use honey instead of refined sugar"
+  - "grass-fed whey protein and why it matters"
+  - "spirulina in our mint cacao flavor"
+  - "why magnesium glycinate specifically"
+  - "cacao vs regular cocoa"
+  - "why real egg yolk instead of stabilizers"
+
+  # "What's NOT in our label" series — research-backed
+  - "why we don't use allulose"
+  - "artificial sweeteners hidden in 'healthy' ice cream"
+  - "corn syrup in conventional ice cream"
+  - "gums and stabilizers — what they do to your gut"
+  - "seed oils in frozen desserts"
+  - "artificial food coloring in ice cream"
+
+  # Lifestyle / occasion-based
+  - "post-workout recovery ice cream"
+  - "picnic dessert ideas"
+  - "affogato and coffee dessert pairings"
+  - "ice cream as a healthy indulgence, not a cheat day"
 
 aesthetic:
-  # Feeds into image generation and, once you add reference screenshots to
-  # content/style_references/, gets combined with the auto-extracted style
-  # guide (data/style_guide.json).
   description: >
     Clean, minimal, beautiful. Soft natural color palette (warm neutrals,
     sage, cream) rather than saturated candy-brand colors. Generous white
@@ -57,13 +71,8 @@ posting:
   hashtag_count: 5
   # If true, nothing posts automatically — every piece of content becomes a
   # GitHub issue for you to review and comment "approve" on first. Strongly
-  # recommended for at least the first few weeks. See README section on
-  # the approval workflow.
+  # recommended for at least the first few weeks.
   require_approval: true
-  # How often each content type gets picked, as relative weights (don't need
-  # to sum to 1 — they're normalized automatically). If a source has nothing
-  # available that run (e.g. research queue is empty), it's skipped
-  # gracefully and the others pick up the slack.
   content_mix:
     library: 0.25       # your own uploaded photos/videos
     educational: 0.45   # research-backed nutrition science posts
@@ -72,30 +81,75 @@ posting:
 content_generation:
   image_style: "clean minimal quote card, bold sans-serif text, soft natural color palette"
   # If true, educational posts become short narrated videos (Piper voiceover)
-  # instead of static graphic cards. Slower to generate, more scroll-stopping.
+  # instead of static graphic cards.
   educational_as_video: false
 
+content_calendar:
+  monday:
+    pillar: "Mythbusting Monday"
+    content_type: educational
+  wednesday:
+    pillar: "Ingredient Spotlight"
+    content_type: lifestyle
+  friday:
+    pillar: "Weekend Ready — recipe or use-case"
+    content_type: library
+
 research:
-  # Topics the research agent searches on PubMed (real published studies).
-  # Add/remove freely — more specific queries return more relevant studies.
   topics:
+    # Ultra-processed food & inflammation
     - "ultra-processed food inflammation"
-    - "artificial sweeteners health effects"
-    - "whole foods gut microbiome"
+    - "ultra-processed food cardiovascular disease risk"
+    - "diet quality systemic inflammation biomarkers"
+
+    # Artificial sweeteners & sugar substitutes
+    - "artificial sweeteners food health effects"
+    - "allulose metabolic effects"
+    - "aspartame health effects research"
+    - "sucralose gut microbiome"
+    - "artificial sweeteners insulin response"
+
+    # Sugar & metabolic health
     - "added sugar chronic disease risk"
+    - "added sugar insulin resistance"
+    - "high fructose corn syrup metabolic effects"
+
+    # Additives, stabilizers, emulsifiers
+    - "carrageenan gum gut health"
+    - "food emulsifiers gut microbiome"
+    - "gums stabilizers digestive health"
     - "artificial food dye health effects"
+    - "food dye hyperactivity children research"
+
+    # Fats & oils
+    - "seed oil inflammation research"
+    - "omega-6 omega-3 ratio inflammation"
+
+    # Whole foods & positive nutrition
+    - "whole foods gut microbiome"
     - "anti-inflammatory diet clinical trial"
-  # How many new studies to pull per topic each time the research workflow runs
+    - "whey protein muscle recovery research"
+    - "magnesium glycinate athletic recovery"
+    - "spirulina antioxidant health benefits"
+    - "cacao flavanols cardiovascular health"
   per_topic: 2
 
 engagement:
   # Auto-replies to comments on YOUR OWN posts (sanctioned use of the API).
-  auto_reply_to_own_comments: true
+  auto_reply_to_own_comments: false
   # For the weekly human-in-the-loop digest: public Instagram Business/Creator
   # accounts (usernames, no @) you'd like suggested comments drafted for.
-  # You review data/engagement_digest.md and post them yourself — nothing
-  # here is automated on other accounts, by design (see README section 9).
+  # You review data/engagement_digest.md and post them yourself.
   accounts_to_monitor:
     - "example_account_1"
     - "example_account_2"
   posts_per_account: 3
+
+stories:
+  enabled: true
+  # "auto" alternates between a fresh quick-tip card and reposting your most
+  # recent feed post. "quick_tip" or "repost" to force one.
+  mode: auto
+  # Stories are ephemeral/24hr and lower-stakes than feed posts, so these
+  # default to posting directly rather than through the approval queue.
+  require_approval: false
