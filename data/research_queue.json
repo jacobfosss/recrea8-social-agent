@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "card_text": "Your liver processes food differently than you'd think.",
+    "caption": "New research explores how diet \u2014 not just what's in your food, but how it's processed \u2014 may influence liver enzyme pathways linked to fatty liver disease risk. The science is still emerging (mostly early-stage and animal/lab research), but it points to a clear theme: whole-food patterns support liver function better than heavily processed ones. Another reason we keep ingredients simple and real. (Journal of Nutritional Biochemistry, 2026)",
+    "source_title": "CYP450 Network Shifts in MASLD/MASH: From Pathogenesis to Nutrition-Informed Modulation.",
+    "source_journal": "The Journal of nutritional biochemistry",
+    "source_year": "2026",
+    "pmid": "42435783",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Tradition on your plate: corn, beans, and real food wisdom.",
+    "caption": "A new review looks at the Traditional Mexican Diet \u2014 corn, legumes, vegetables, and traditional techniques like nixtamalization \u2014 and its link to better metabolic markers and lower rates of certain cancers in studied populations. It's observational, not proof of cause and effect, but it's a compelling reminder: whole, minimally processed staples have always been quietly powerful (Plant Foods for Human Nutrition, 2026).",
+    "source_title": "Preserving Tradition, Preventing Cancer: A Narrative Review of the Traditional Mexican Diet as a Framework for Cancer Risk Reduction.",
+    "source_journal": "Plant foods for human nutrition (Dordrecht, Netherlands)",
+    "source_year": "2026",
+    "pmid": "42429890",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Maternal health today shapes tomorrow's met",
+    "caption": "Maternal health today shapes tomorrow's met",
+    "source_title": "The effect of ",
+    "source_journal": "Journal of developmental origins of health and disease",
+    "source_year": "2026",
+    "pmid": "42438413",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your cells are always listening to what fuels them.",
+    "caption": "This review looks at how tumor cells reprogram glucose and lipid metabolism, especially under low-oxygen conditions, by altering RNA \"tags\" (m6A methylation) \u2014 not something diet changes directly. It's basic cancer biology, not a nutrition study. But it's a good reminder: metabolism is intricate and every cell responds to its environment. We just think that's one more reason to feed yours well. (Adv Exp Med Biol, 2026)",
+    "source_title": "Influence of RNA Modifications on Cancer Metabolism: Interplay with Hypoxia and Therapeutic Implications.",
+    "source_journal": "Advances in experimental medicine and biology",
+    "source_year": "2026",
+    "pmid": "42435175",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "More plants, more variety, happier gut.",
+    "caption": "A 6-week randomized trial with nearly 400 adults found that a diverse, whole-food plant-based diet was linked to improved gut microbiome composition, fewer digestive symptoms, and better reported energy and hunger levels compared to typical eating patterns. It's a solid reminder: variety in whole plant foods \u2014 not restriction \u2014 seems to be what our gut actually thrives on. (British Journal of Nutrition, 2026)",
+    "source_title": "Does a diverse whole-food plant-based dietary intervention improve gut microbiome composition, gut symptoms, energy and hunger in healthy adults? A randomised controlled trial.",
+    "source_journal": "The British journal of nutrition",
+    "source_year": "2026",
+    "pmid": "42423005",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "How you prep grains can change what your gut gets out of them",
+    "caption": "New research on foxtail millet compared seven prep methods \u2014 raw, ground, steamed, extruded, and sprouted \u2014 to see how each affects nutrients and gut fermentation. Long sprouting (84 hours) stood out, boosting polyphenols and GABA while producing more beneficial short-chain fatty acids during digestion. One caveat: it also raised certain bacteria linked to potential risk, so more research is needed. A good reminder that how whole grains are processed matters as much as what's in them. (Food Research International, 2026)",
+    "source_title": "Effects of different processing methods on the nutritional components and in vitro digestion and fermentation characteristics of foxtail millet (Setaria italica).",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "42409563",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Cereal for breakfast? The science says: it depends on the box.",
+    "caption": "New global research confirms what we've suspected: ready-to-eat cereal can boost fiber and micronutrient intake and support overall diet quality \u2014 but not all boxes are created equal. Researchers flagged ongoing concerns about sodium and added sugar in many popular options. Our take? Read the label, choose whole-food ingredients, and let breakfast do more for you. (Frontiers in Nutrition, 2026)",
+    "source_title": "The nutritional and health benefits of ready-to-eat-cereal consumption: an updated technical review of global evidence.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42389703",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "This study is about inhaled corticosteroids and blood sugar in COPD patients \u2014 it has no connection to food, nutrition, or eating habits. Writing a nutrition-brand caption \"explaining why it matters for everyday eating\" would require fabricating a link that doesn't exist in the research, which conflicts with the accuracy and honesty standards you've set.\n\nI don't want to force a connection just to hit the format (e.g., vague parallels like \"comb",
+    "caption": "This study is about inhaled corticosteroids and blood sugar in COPD patients \u2014 it has no connection to food, nutrition, or eating habits. Writing a nutrition-brand caption \"explaining why it matters for everyday eating\" would require fabricating a link that doesn't exist in the research, which conflicts with the accuracy and honesty standards you've set.\n\nI don't want to force a connection just to hit the format (e.g., vague parallels like \"comb",
+    "source_title": "Effect of Inhaled Corticosteroids on Clinical Efficacy and Blood Glucose In COPD: A Retrospective Cohort Study.",
+    "source_journal": "Journal of visualized experiments : JoVE",
+    "source_year": "2026",
+    "pmid": "42371832",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Better detection tech means safer meat, sooner.",
+    "caption": "Researchers refined a lab technique (PMAxx real-time PCR) that can spot live \u2014 and even hard-to-detect, dormant \u2014 Salmonella in retail meat more accurately than older methods. It's a food-safety science advancement, not a warning about your dinner. It just means testing labs get better tools to catch what matters. We're all for that kind of transparency (Journal of Microbiological Methods, 2026).",
+    "source_title": "Detection of viable and VBNC Salmonella in retail meat using optimized PMAxx real-time PCR.",
+    "source_journal": "Journal of microbiological methods",
+    "source_year": "2026",
+    "pmid": "42229763",
+    "topic": "artificial food dye health effects",
+    "used": false
+  },
+  {
+    "card_text": "There's now a more precise way to catch dye in food.",
+    "caption": "Scientists developed a new sensor using copper nanoclusters that can detect Sunset Yellow, a common artificial food dye, with impressive precision\u2014even in complex food samples. It's a lab tool, not a warning label, but it points to a future where food safety testing gets faster and more reliable. We love seeing science make transparency easier to verify (Analytical Methods, 2026).",
+    "source_title": "Rational design of L-histidine-stabilized fluorescent copper nanoclusters for highly selective and sensitive detection of sunset yellow.",
+    "source_journal": "Analytical methods : advancing methods and applications",
+    "source_year": "2026",
+    "pmid": "42200410",
+    "topic": "artificial food dye health effects",
+    "used": false
+  },
+  {
+    "card_text": "**Hook:** New brain research spotlights inflammation's role in memory health.",
+    "caption": "Scientists studying",
+    "source_title": "Repurposing apremilast for alzheimer's disease: multitarget modulation of cAMP\u2011PI3K/Akt-GSK\u20113\u03b2 and NF\u2011\u03baB signaling.",
+    "source_journal": "Metabolic brain disease",
+    "source_year": "2026",
+    "pmid": "42432263",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  },
+  {
+    "card_text": "Your brain's ketones might have a calming trick up their sleeve.",
+    "caption": "New research suggests beta-hydroxybutyrate (BHB) \u2014 a ketone body your body makes naturally \u2014 may help calm brain inflammation by activating a specific receptor pathway (CB2R). The findings, from mouse and cell studies, are early but promising for understanding how metabolic states influence brain health. Not a treatment claim \u2014 just a fascinating glimpse into why nourishing your metabolism matters. (Journal of Physiology and Biochemistry, 2026)",
+    "source_title": "Unveiling the role of CB2 receptor in beta-hydroxybutyrate mediated modulation of.",
+    "source_journal": "Journal of physiology and biochemistry",
+    "source_year": "2026",
+    "pmid": "42423995",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  }
+]
