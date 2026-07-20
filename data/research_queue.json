@@ -118,5 +118,125 @@
     "pmid": "42423995",
     "topic": "anti-inflammatory diet clinical trial",
     "used": false
+  },
+  {
+    "card_text": "Your mood might start in your kitchen.",
+    "caption": "A large study of adults 70+ found that diets higher in ultra-processed foods were linked to more depressive symptoms over time, while anti-inflammatory, whole-food eating patterns were linked to fewer. This held true regardless of genetics or inflammation levels \u2014 though it shows association, not proof of cause. Another reminder that what's on your plate is worth caring about, at every age (Molecular Psychiatry, 2026).",
+    "source_title": "Diet quality and depressive symptoms in older adults, assessing the effect modification by genetic predisposition and low-grade inflammation: a target trial emulation.",
+    "source_journal": "Molecular psychiatry",
+    "source_year": "2026",
+    "pmid": "42469454",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your cooking method might matter more than you think.",
+    "caption": "New research found a link between diets high in advanced glycation end products (AGEs) \u2014 compounds formed in processed and high-heat-cooked foods \u2014 and higher rates of gallstone disease in adults studied. It's an association, not proof of cause, but it's a nice reminder that how food is made and cooked matters, not just what's on the label. (Indian Journal of Gastroenterology, 2026)",
+    "source_title": "Association between dietary advanced glycation end products and gallstone disease: A case-control study.",
+    "source_journal": "Indian journal of gastroenterology : official journal of the Indian Society of Gastroenterology",
+    "source_year": "2026",
+    "pmid": "42463553",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "This study (neonatal venepuncture vs. heel lance) is a pediatric pain-management review \u2014 it has no genuine connection to nutrition, food, or everyday eating. Writing a caption that ties it to diet would mean fabricating a link that doesn't exist, which conflicts with the transparency and honesty this brand voice requires.\n\nI'd need a nutrition-relevant study to write an accurate hook and caption. If you can share one, I'll draft both pieces right away.",
+    "caption": "This study (neonatal venepuncture vs. heel lance) is a pediatric pain-management review \u2014 it has no genuine connection to nutrition, food, or everyday eating. Writing a caption that ties it to diet would mean fabricating a link that doesn't exist, which conflicts with the transparency and honesty this brand voice requires.\n\nI'd need a nutrition-relevant study to write an accurate hook and caption. If you can share one, I'll draft both pieces right away.",
+    "source_title": "Venepuncture versus heel lance for blood sampling in term neonates.",
+    "source_journal": "The Cochrane database of systematic reviews",
+    "source_year": "2026",
+    "pmid": "42466545",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your gut knows the difference between real and \"diet.\"",
+    "caption": "New research is exploring how aspartame, a common artificial sweetener, may interact with airway inflammation and asthma risk through immune and metabolic pathways. The findings are early \u2014 based on combined human and animal data \u2014 and don't prove cause and effect. Still, it's a good reminder that \"sugar-free\" isn't automatically the simpler or more natural choice. We just prefer real ingredients you can picture in a kitchen (Respiratory Research, 2026).",
+    "source_title": "Aspartame and asthma: immunomodulatory effects on airway inflammation.",
+    "source_journal": "Respiratory research",
+    "source_year": "2026",
+    "pmid": "42464261",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "Cacao's hidden secret: good bacteria, big potential.",
+    "caption": "Scientists studying fermented cacao recently identified strains of beneficial bacteria (LAB) with promising probiotic traits and early antimicrobial activity against tough, hard-to-treat pathogens. It's a reminder that fermentation \u2014 a process behind chocolate itself \u2014 can be a source of interesting microbial activity. Early-stage lab research, not a health claim, but a fascinating peek into how traditional food processes may hold untapped potential (International Journal of Molecular Sciences, 2026).",
+    "source_title": "Comparative Genomic and Functional Characterization of ",
+    "source_journal": "International journal of molecular sciences",
+    "source_year": "2026",
+    "pmid": "42450263",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your gut bacteria might be quietly protecting your nervous system.",
+    "caption": "New mouse research found a specific gut microbe, Veillonella ratti, helped calm neuroinflammation in a multiple sclerosis model \u2014 partly by reshaping the surrounding microbiome and producing beneficial metabolites. It's early-stage animal research, not a human treatment or dietary recommendation, but it adds to growing evidence that gut microbial balance matters far beyond digestion. Another reason we're fascinated by what's happening in there. (Experimental & Molecular Medicine, 2026)",
+    "source_title": "Gut microbiome modulation by Veillonella ratti induces resistance to EAE pathogenesis via microbe-derived metabolites.",
+    "source_journal": "Experimental & molecular medicine",
+    "source_year": "2026",
+    "pmid": "42448967",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "\"Ultra-processed\" isn't one thing \u2014 nuance matters.",
+    "caption": "New research pushes back on treating all ultra-processed foods as equally harmful, noting that specific ingredients \u2014 added sugars, saturated fat, salt, certain additives \u2014 likely matter more than the \"UPF\" label itself. It's a reminder that ingredient quality, not just processing category, deserves the spotlight. We couldn't agree more \u2014 it's why we obsess over what's actually in the box (Nutrients, 2026).",
+    "source_title": "Ultra-Processed Foods Controversy: Myths, Realities, and Policy Implications.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42451121",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "**Hook:**\nToddler taste buds are being shaped right now.",
+    "caption": "**Ca",
+    "source_title": "Changes in Toddler Diet Quality Between 12 and 24 Months Using the HEI-Toddlers-2020: A Secondary Analysis of a Prospective Cohort.",
+    "source_journal": "Journal of the Academy of Nutrition and Dietetics",
+    "source_year": "2026",
+    "pmid": "42342117",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "",
+    "caption": "",
+    "source_title": "Cell Painting PLUS: An Iterative Staining-Elution Protocol for High-Content Phenotypic Screenings.",
+    "source_journal": "Current protocols",
+    "source_year": "2026",
+    "pmid": "42037520",
+    "topic": "artificial food dye health effects",
+    "used": false
+  },
+  {
+    "card_text": "Ultra-processed food is everywhere. Regulation isn't catching up.",
+    "caption": "New research highlights a growing gap: ultra-processed foods now make up nearly half of daily calories in many diets, yet regulation hasn't kept pace with mounting evidence of their health risks. The science isn't about blame \u2014 it's about awareness. Reading labels and knowing what's actually in your food is one of the simplest ways to stay ahead of the curve. (Future Healthcare Journal, 2026)",
+    "source_title": "Why is there no regulation despite evidence that ultra-processed foods are hazardous to long-term health?",
+    "source_journal": "Future healthcare journal",
+    "source_year": "2026",
+    "pmid": "41799554",
+    "topic": "artificial food dye health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your gut and brain are talking. Science is listening.",
+    "caption": "New research found links between gut bacteria, blood metabolites, and markers of amyloid buildup and memory performance in people with mild cognitive impairment. It's early, observational work \u2014 it can't say gut health causes or prevents cognitive decline. But it adds to a growing picture of how what happens in your gut may connect to brain health over time. (Nutrients, 2026)",
+    "source_title": "Gut Microbiota Composition and Plasma Metabolomic Profile Are Associated with Amyloid Pathology and Cognitive Performance in Patients with Mild Cognitive Impairment.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42451200",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  },
+  {
+    "card_text": "Herbs aren't just for flavor \u2014 even fish benefit.",
+    "caption": "New research looked at basil and thyme essential oils added to tilapia feed, and found improved growth, immune markers, and disease resistance compared to a standard diet. It's a fish farming study, not a human nutrition one \u2014 but it's a neat reminder that humble kitchen herbs carry real, measurable bioactive power, not just flavor. (Fish Physiology and Biochemistry, 2026)",
+    "source_title": "Protective effects of dietary Ocimum basilicum and Thymus vulgaris essential oils on growth performance, immune response, and disease resistance following challenge with Aeromonas hydrophila in Nile Tilapia (Oreochromis niloticus).",
+    "source_journal": "Fish physiology and biochemistry",
+    "source_year": "2026",
+    "pmid": "42400869",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
   }
 ]
