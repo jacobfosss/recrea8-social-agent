@@ -238,5 +238,95 @@
     "pmid": "42400869",
     "topic": "anti-inflammatory diet clinical trial",
     "used": false
+  },
+  {
+    "card_text": "What you eat may connect to how you feel.",
+    "caption": "A large South Korean health survey found that people eating more heavily processed foods reported more depressive symptoms than those eating mostly whole or minimally processed foods. It's an association, not proof of cause \u2014 but it's a good reminder that real, whole-food meals support more than just your body. (Psychiatry Research, 2026)",
+    "source_title": "Associations between food processing levels and depressive symptoms: A cross-sectional study using the Korea National Health and Nutrition Examination Survey (KNHANES) 2014-2020.",
+    "source_journal": "Psychiatry research",
+    "source_year": "2026",
+    "pmid": "42501472",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might be keeping score on processed meats, alcohol, and diet soda.",
+    "caption": "New research followed 633 adults with overweight/obesity and found that diets high in processed meats, alcohol, and artificially sweetened drinks (the \"sulfur microbial diet\") were linked to higher cholesterol and shifts in gut-related markers like LPS and NGF. It's an association, not proof of cause \u2014 but it's a nudge toward whole-food choices your gut may thank you for. (Scientific Reports, 2026)",
+    "source_title": "Association of the sulfur microbial diet with metabolic profile, gut-related biomarkers, and adiposity indicators in adults with overweight and obesity.",
+    "source_journal": "Scientific reports",
+    "source_year": "2026",
+    "pmid": "42493530",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "",
+    "caption": "",
+    "source_title": "MiR-138-5p Suppresses Glucose Metabolism to Inhibit the Progression of Nasopharyngeal Carcinoma by Targeting the CENPN/PI3K/Akt/mTOR Signaling.",
+    "source_journal": "Journal of biochemical and molecular toxicology",
+    "source_year": "2026",
+    "pmid": "42502210",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your liver is working overtime\u2014even before your next meal.",
+    "caption": "New research found that airborne particulate matter can trigger inflammation in liver immune cells, disrupting how the body stores and manages glucose. It's a reminder that metabolic health is shaped by more than diet alone\u2014environment matters too. This",
+    "source_title": "Role of macrophage NLRP3 inflammasome activation in real-ambient particulate matter-induced abnormal hepatic glucose metabolism.",
+    "source_journal": "Journal of environmental sciences (China)",
+    "source_year": "2026",
+    "pmid": "42498412",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your brain eats too \u2014 feed it the whole-food way.",
+    "caption": "A new review looked at how whole dietary patterns \u2014 like Mediterranean, Nordic, Okinawan, and plant-based eating \u2014 relate to cognitive health in older adults. Turns out, no single \"brain nutrient\" did the heavy lifting; it was the combination of whole foods working together that showed the most promise. A good reminder that real, whole ingredients tend to beat isolated fixes. (Frontiers in Nutrition, 2026)",
+    "source_title": "Dietary approaches to support cognition in older adults: a systematic review.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42494770",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Sprouted grains: same seed, more nutritional power.",
+    "caption": "New research shows that germinating grains and pseudocereals \u2014 think sprouted quinoa, oats, or rice \u2014 naturally boosts beneficial plant compounds while lowering phytic acid, which can block mineral absorption. Early studies suggest this may support blood sugar balance, gut health, and more. It's early-stage science, but a compelling reason we love working with sprouted ingredients. (Comprehensive Reviews in Food Science and Food Safety, 2026)",
+    "source_title": "Germination as a Strategy to Enhance the Bioactivity of Whole Grains: Phytochemical Remodeling and Health Implications.",
+    "source_journal": "Comprehensive reviews in food science and food safety",
+    "source_year": "2026",
+    "pmid": "42494203",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Labels matter more than you might think.",
+    "caption": "A recent study compared how sugary drink habits shifted in Mexico and the US after each country introduced new nutrition labeling \u2014 Mexico's bold front-of-package warnings and the US's updated Nutrition Facts panel. The takeaway? How information is presented can shape choices just as much as the information itself. It's a reminder that clear, honest labeling helps all of us make informed choices. (Preventing Chronic Disease, 2026)",
+    "source_title": "Changes in Sugar-Sweetened Beverage Intake From Before to After Nutrition Labeling Policy Implementation: A Comparison of Mexico and the United States.",
+    "source_journal": "Preventing chronic disease",
+    "source_year": "2026",
+    "pmid": "42274329",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Turns out even pond plants are quietly brilliant.",
+    "caption": "Not every study lands on your plate \u2014 and that's okay. This one looked at how Ceratophyllum demersum (a common aquarium/pond plant) can be turned into activated carbon that filters toxic dye out of water, using smart modeling to fine-tune the process. It's a win for water treatment",
+    "source_title": "Application of Advanced Ceratophyllum demersum Activated Carbon in Toxic Dye Adsorption: Optimization via Box-Behnken Design and Artificial Neural Network.",
+    "source_journal": "Water environment research : a research publication of the Water Environment Federation",
+    "source_year": "2026",
+    "pmid": "42490328",
+    "topic": "artificial food dye health effects",
+    "used": false
+  },
+  {
+    "card_text": "Stress-eating link? Science is catching up on that.",
+    "caption": "Heads up: this is a study protocol, not results yet \u2014 researchers are launching a long-term project to track how academic stress connects to eating habits, nutrition, sleep, and mood in college students over time. No findings to report yet, but it's a good reminder that stress and eating patterns are worth paying attention to together. (PLoS One, 2026)",
+    "source_title": "Longitudinal associations of academic stress with eating related patterns, nutrition, somatic indicators, and depressive symptoms in university students: A study protocol.",
+    "source_journal": "PloS one",
+    "source_year": "2026",
+    "pmid": "42412896",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
   }
 ]
