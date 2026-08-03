@@ -328,5 +328,85 @@
     "pmid": "42412896",
     "topic": "anti-inflammatory diet clinical trial",
     "used": false
+  },
+  {
+    "card_text": "",
+    "caption": "",
+    "source_title": "The Gut-brain-adipose Axis in Ultra-processed Food and Obesity: A Mechanistic Synthesis and Its Implications for Food Classification.",
+    "source_journal": "Current obesity reports",
+    "source_year": "2026",
+    "pmid": "42525211",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "What you eat after diagnosis may matter more than we thought.",
+    "caption": "A 2026 scoping review looked at whether eating more ultra-processed food after a GI cancer diagnosis could affect outcomes. The honest takeaway? Research here is still early and fragmented \u2014 no firm conclusions yet, just a strong signal that diet quality deserves more attention post-diagnosis. It's a reminder that whole-food choices are worth prioritizing, always. (Frontiers in Nutrition, 2026)",
+    "source_title": "Post-diagnostic ultra-processed food exposure in gastrointestinal cancers: scoping review with narrative synthesis and clinical implications.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42524374",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Another reason we skip sugar alcohols like sorbitol.",
+    "caption": "A new animal study looked at how oral sorbitol \u2014 a common low-calorie sweetener \u2014 affected reproductive hormones and testicular function in male rats, finding effects that varied by dose and duration. It's early-stage research in rodents, not humans, so no firm conclusions yet. Still, it's a good reminder why we build recipes on whole-food ingredients instead of sugar alcohols. (Nigerian Journal of Physiological Sciences, 2026)",
+    "source_title": "Experimental Evaluation of Sorbitol's Impact on the Testicular Axis in Male Wistar Rats.",
+    "source_journal": "Nigerian journal of physiological sciences : official publication of the Physiological Society of Nigeria",
+    "source_year": "2026",
+    "pmid": "42537038",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "A plant from traditional medicine, studied for blood sugar support.",
+    "caption": "New research looked at a compound from Euphorbia antiquorum, a plant used traditionally in Asian medicine, and its effects on blood sugar in diabetic rats. Scientists found it helped glucose enter cells more efficiently by boosting a transporter called GLUT4 \u2014 one of the body's key tools for managing blood sugar. It's early-stage animal research, not a human treatment, but it's a great reminder of how much plant science still has to teach us about metabolism. (Chemistry & Biodiversity, 2026)",
+    "source_title": "A Bioactive Fraction of Euphorbia antiquorum Stem Powder Ameliorates High-Fat High-Fructose Diet/Streptozotocin-Induced Diabetes via GLUT-4 Modulation.",
+    "source_journal": "Chemistry & biodiversity",
+    "source_year": "2026",
+    "pmid": "42533618",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "Fermented onions, happier chickens, less waste \u2014 nature knows best.",
+    "caption": "Here's a fun one from the research world: scientists fermented red onion extract with a beneficial bacteria strain and added it to chickens' drinking water during hot weather. The result? Better growth efficiency, a more balanced gut microbiome, and lower ammonia emissions \u2014 all from a whole-food ingredient, no synthetic additives needed. It's a small but compelling reminder that fermentation and real ingredients can support wellbeing, even beyond our own plates. (Tropical Animal Health and Production, 2026)",
+    "source_title": "Lactic-fermented red onion (Allium cepa L.) extract in drinking water improves feed efficiency, selectively modulates cecal microbiota, and reduces ammonia emission in heat-stressed yellow-feather chickens.",
+    "source_journal": "Tropical animal health and production",
+    "source_year": "2026",
+    "pmid": "42530815",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your olive oil choice might be talking to your gut.",
+    "caption": "New research suggests extra-virgin olive oil's polyphenols may support gut bacteria linked to short-chain fatty acid production, a healthier mucus barrier, and calmer inflammation \u2014 benefits less consistently seen with refined oils. Most of this comes from lab and animal studies, with human evidence still emerging. Still, it's one more reason we reach for real, unrefined EVOO. Quality matters more than you'd think. (Nutrients, 2026)",
+    "source_title": "Olive Oil as a Modulator of Gut Microbiota and Intestinal Health: A Narrative Review from Microbial Metabolism to Host Responses.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42514304",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "This study doesn't fit \u2014 here's why:\n\nThe paper is about **materials chemistry/environmental engineering**, not food or nutrition. It describes lab-synthesized nickel-chromium-selenide microspheres (bound with chitosan, a substance derived from shellfish shells) designed to chemically break down Congo red \u2014 an industrial textile dye \u2014 in wastewater, using light-activated catalysis.\n\nThere's no nutritional, dietary, or health-related finding here to connect to eating habits, ingredients, or \"healthy indulgence\" messaging. Even a loose interpretive bridge (e.g., \"chitosan is natural!\") would misrepresent the study's actual purpose and risk implying a food-safety or health claim that isn't supported by the research.\n\n**My recommendation:** Skip this one for social content,",
+    "caption": "This study doesn't fit \u2014 here's why:\n\nThe paper is about **materials chemistry/environmental engineering**, not food or nutrition. It describes lab-synthesized nickel-chromium-selenide microspheres (bound with chitosan, a substance derived from shellfish shells) designed to chemically break down Congo red \u2014 an industrial textile dye \u2014 in wastewater, using light-activated catalysis.\n\nThere's no nutritional, dietary, or health-related finding here to connect to eating habits, ingredients, or \"healthy indulgence\" messaging. Even a loose interpretive bridge (e.g., \"chitosan is natural!\") would misrepresent the study's actual purpose and risk implying a food-safety or health claim that isn't supported by the research.\n\n**My recommendation:** Skip this one for social content,",
+    "source_title": "Synthesis, characterization and photocatalytic evaluation of ternary metal-selenide-chitosan microspheres for the degradation of Congo red dye.",
+    "source_journal": "RSC advances",
+    "source_year": "2026",
+    "pmid": "42540663",
+    "topic": "artificial food dye health effects",
+    "used": false
+  },
+  {
+    "card_text": "**Even during cancer treatment, food choices can matter**",
+    "caption": "In a clinical trial, cervical cancer patients undergoing chemoradiation who followed an anti-infl",
+    "source_title": "Benefits of an anti-inflammatory diet compared to a low-residue diet during concurrent chemoradiation therapy for patients with locally advanced cervical cancer: a randomized clinical trial.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42516234",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
   }
 ]
