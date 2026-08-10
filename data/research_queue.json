@@ -408,5 +408,85 @@
     "pmid": "42516234",
     "topic": "anti-inflammatory diet clinical trial",
     "used": false
+  },
+  {
+    "card_text": "**Hook:**\nWhat you eat may shape more than your waistline.",
+    "caption": "**Caption:**\nEmerging research suggests obesity, asthma, and allergies often show up together \u2014 especially in kids \u2014 and may share common roots: inflammation and gut health. Diet appears to be one connecting thread, with researchers pointing to nutrition (even during pregnancy) as a promising area for support. It's early, associative research, not a cure or treatment \u2014 but it's a compelling reminder that what fuels your gut may ripple further than we think. (Annals of Allergy, Asthma & Immunology, 2026)",
+    "source_title": "Obesity, Asthma and Allergy Triangle: The Solution could be the Diet.",
+    "source_journal": "Annals of allergy, asthma & immunology : official publication of the American College of Allergy, Asthma, & Immunology",
+    "source_year": "2026",
+    "pmid": "42562282",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "**Hook:**\nThat gel-like texture? It might come from seaweed extract.",
+    "caption": "**Caption:**\nCarrageenan is a seaweed-derived thickener used in everything from yogurt to plant milk. A recent scientific review looked at its widespread use and the ongoing research into its effects on digestion and gut health. The findings were mixed \u2014 some studies raise questions, others show no issue at typical food-use levels. The science isn't settled, but it's part of why we choose to keep our ingredient list short and recognizable. (Annals of Nutrition & Metabolism, 2026)",
+    "source_title": "Carrageenan: Food Additive or Health Concern? A Comprehensive Review.",
+    "source_journal": "Annals of nutrition & metabolism",
+    "source_year": "2026",
+    "pmid": "42560937",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your heart's cells may prefer fat as fuel, not sugar.",
+    "caption": "Lab-grown heart cells are notoriously \"immature\" \u2014 great for research, but not very heart-like. Scientists found that feeding these cells fatty acids (instead of glucose) helped them organize better, produce energy more efficiently, and beat more strongly, mimicking real adult heart tissue. It's early-stage cell research, not dietary guidance, but a fascinating reminder that fat is a legitimate, valuable fuel source for the body. (Cellular and Molecular Life Sciences, 2026)",
+    "source_title": "Metabolic fatty acid substrates enhance the structural and mechanical performance of human-induced pluripotent stem cell-derived cardiomyocytes.",
+    "source_journal": "Cellular and molecular life sciences : CMLS",
+    "source_year": "2026",
+    "pmid": "42565878",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "What your bottled water and toast have",
+    "caption": "What your bottled water and toast have",
+    "source_title": "Gut barrier breach and glucose dysregulation: the dual threat of food-transformed microplastics.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "42562517",
+    "topic": "artificial sweeteners health effects",
+    "used": false
+  },
+  {
+    "card_text": "Type 1 diabetes may quietly affect digestion, too.",
+    "caption": "New research found that many people with type 1 diabetes have lower levels of a digestive enzyme (elastase), often without obvious digestive symptoms \u2014 and this seemed more linked to how long they'd had diabetes than to what they ate. It's a reminder that digestion and blood sugar are more connected than we often realize. Not a diagnosis tool \u2014 just food for thought (Diabetologia, 2026).",
+    "source_title": "High prevalence of low faecal elastase levels in individuals with type 1 diabetes is associated with diabetes duration but not with marked alterations in food intake or clinical symptoms.",
+    "source_journal": "Diabetologia",
+    "source_year": "2026",
+    "pmid": "42570940",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your childhood taste buds might be shaping your health decades later.",
+    "caption": "A UK study followed people born just before and after 1953 sugar rationing ended. Those with less sugar in their first 1,000 days grew up preferring less sugar \u2014 and decades later showed lower cancer rates and signs of slower biological aging. It's one study, not proof for any individual, but it's a compelling reminder: the tastes we build early may stick with us for life. (PNAS, 2026)",
+    "source_title": "Early-life sugar restriction causally reduces adult cancer incidence and slows biological aging.",
+    "source_journal": "Proceedings of the National Academy of Sciences of the United States of America",
+    "source_year": "2026",
+    "pmid": "42550905",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Global gut health experts agree: diet matters, deeply.",
+    "caption": "A recent review of the International Organization for the Study of IBD highlights four decades of global research shaping gut health care \u2014 including consensus guidance recognizing nutrition as a modifiable factor in digestive disease. This isn't a diet study or medical advice, but it reinforces something we believe: what's on your plate is worth taking seriously. (Therapeutic Advances in Gastroenterology, 2026)",
+    "source_title": "IOIBD: the International Organization for the Study of Inflammatory Bowel Disease.",
+    "source_journal": "Therapeutic advances in gastroenterology",
+    "source_year": "2026",
+    "pmid": "42553409",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  },
+  {
+    "card_text": "Your heart has rhythm \u2014 feed it accordingly.",
+    "caption": "New research in Heart Rhythm (2026) dives into how atrial fibrillation develops, from early triggers to more complex, scarred heart tissue over time. It's a dense look at cardiac electrophysiology \u2014 not a diet study. But researchers do note that lifestyle factors like diet and exercise play a supporting role in managing inflammation tied to heart rhythm health. Another reminder: what's on your plate is part of the bigger picture. (Heart Rhythm, 2026)",
+    "source_title": "Contemporary concepts in the onset and maintenance of atrial fibrillation: Mechanisms, substrates, and clinical implications.",
+    "source_journal": "Heart rhythm",
+    "source_year": "2026",
+    "pmid": "42462800",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
   }
 ]
