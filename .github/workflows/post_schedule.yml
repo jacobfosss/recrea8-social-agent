@@ -2,20 +2,31 @@ name: Autonomous social posting
 
 on:
   schedule:
-    # 3x/day, normal weighted-random content selection (educational/
-    # lifestyle/library mix per config.yaml's content_mix) — inside
-    # TikTok's real sweet spot for a growing account, per 2026 guidance.
+    # Educational: checks in 8x/day, but only actually posts ONCE — timing
+    # starts random and automatically shifts toward the historically
+    # best-performing hour once enough real engagement data exists (see
+    # src/time_optimizer.py). This is intentionally MORE checks than
+    # posts — most checks will just print "not posting" and exit quickly.
     - cron: "0 8 * * *"
+    - cron: "0 10 * * *"
+    - cron: "0 12 * * *"
     - cron: "0 14 * * *"
+    - cron: "0 16 * * *"
+    - cron: "0 18 * * *"
     - cron: "0 20 * * *"
-    # Creative/witty pillar — deliberately curated, not left to random
-    # chance. Always requires approval (enforced in code, not just config).
-    - cron: "0 18 * * 2"    # Tuesday
-    - cron: "0 18 * * 5"    # Friday
+    - cron: "0 22 * * *"
+    # Lifestyle/library: normal weighted-random rotation, 3x/day
+    - cron: "0 9 * * *"
+    - cron: "0 15 * * *"
+    - cron: "0 21 * * *"
+    # Creative: deliberately curated, not random — Tue/Fri only, always
+    # requires approval (enforced in code, not just this schedule)
+    - cron: "0 18 * * 2"
+    - cron: "0 18 * * 5"
   workflow_dispatch:
     inputs:
       content_type:
-        description: "Force a content type (leave blank for normal weighted pick)"
+        description: "Force a content type (leave blank for scheduled default)"
         required: false
         type: choice
         options: ["", "educational", "lifestyle", "library", "creative"]
@@ -43,18 +54,25 @@ jobs:
           path: data/voices
           key: piper-voices-v1
 
-      - name: Determine content type for this run
-        id: content_type
+      - name: Determine what this run should do
+        id: run_config
         run: |
           if [ -n "${{ github.event.inputs.content_type }}" ]; then
             echo "type=${{ github.event.inputs.content_type }}" >> "$GITHUB_OUTPUT"
+            echo "scheduled_check=false" >> "$GITHUB_OUTPUT"
           else
             HOUR=$(date -u +%H)
             DOW=$(date -u +%u)
+            EDUCATIONAL_HOURS="8 10 12 14 16 18 20 22"
             if { [ "$DOW" = "2" ] || [ "$DOW" = "5" ]; } && [ "$HOUR" = "18" ]; then
               echo "type=creative" >> "$GITHUB_OUTPUT"
+              echo "scheduled_check=false" >> "$GITHUB_OUTPUT"
+            elif echo "$EDUCATIONAL_HOURS" | grep -qw "$HOUR"; then
+              echo "type=educational" >> "$GITHUB_OUTPUT"
+              echo "scheduled_check=true" >> "$GITHUB_OUTPUT"
             else
               echo "type=" >> "$GITHUB_OUTPUT"
+              echo "scheduled_check=false" >> "$GITHUB_OUTPUT"
             fi
           fi
 
@@ -71,17 +89,24 @@ jobs:
           GITHUB_BRANCH: ${{ github.ref_name }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           JAMENDO_CLIENT_ID: ${{ secrets.JAMENDO_CLIENT_ID }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          SHOTSTACK_SANDBOX_API_KEY: ${{ secrets.SHOTSTACK_SANDBOX_API_KEY }}
+          SHOTSTACK_PRODUCTION_API_KEY: ${{ secrets.SHOTSTACK_PRODUCTION_API_KEY }}
         run: |
-          if [ -n "${{ steps.content_type.outputs.type }}" ]; then
-            python -m src.main --content-type "${{ steps.content_type.outputs.type }}"
-          else
-            python -m src.main
+          CMD="python -m src.main"
+          if [ -n "${{ steps.run_config.outputs.type }}" ]; then
+            CMD="$CMD --content-type ${{ steps.run_config.outputs.type }}"
           fi
+          if [ "${{ steps.run_config.outputs.scheduled_check }}" = "true" ]; then
+            CMD="$CMD --scheduled-check --check-hours 8,10,12,14,16,18,20,22"
+          fi
+          echo "Running: $CMD"
+          $CMD
 
-      - name: Commit updated log
+      - name: Commit updated state
         run: |
           git config user.name "social-agent-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/posted_log.json content/posted/ content/generated/ || true
-          git diff --cached --quiet || git commit -m "Update posted log / add media [skip ci]"
+          git add data/posted_log.json data/post_timing.json content/posted/ content/generated/ || true
+          git diff --cached --quiet || git commit -m "Update posted log / timing data [skip ci]"
           git push

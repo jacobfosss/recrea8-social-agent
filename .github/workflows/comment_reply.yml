@@ -1,8 +1,6 @@
 name: Reply to comments on our own posts
 
 on:
-  schedule:
-    - cron: "0 */3 * * *"   # every 3 hours — sanctioned use, replying to our own comments
   workflow_dispatch: {}
 
 permissions:
