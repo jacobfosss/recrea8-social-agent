@@ -15,14 +15,10 @@ on:
     - cron: "0 18 * * *"
     - cron: "0 20 * * *"
     - cron: "0 22 * * *"
-    # Lifestyle/library: normal weighted-random rotation, 3x/day
-    - cron: "0 9 * * *"
-    - cron: "0 15 * * *"
-    - cron: "0 21 * * *"
-    # Creative: deliberately curated, not random — Tue/Fri only, always
-    # requires approval (enforced in code, not just this schedule)
-    - cron: "0 18 * * 2"
-    - cron: "0 18 * * 5"
+    # Lifestyle/library and creative are PAUSED from the automatic
+    # schedule until they're brought up to the same standard as
+    # educational — both still work fine via manual workflow_dispatch
+    # runs below for testing.
   workflow_dispatch:
     inputs:
       content_type:
@@ -62,18 +58,8 @@ jobs:
             echo "scheduled_check=false" >> "$GITHUB_OUTPUT"
           else
             HOUR=$(date -u +%H)
-            DOW=$(date -u +%u)
-            EDUCATIONAL_HOURS="8 10 12 14 16 18 20 22"
-            if { [ "$DOW" = "2" ] || [ "$DOW" = "5" ]; } && [ "$HOUR" = "18" ]; then
-              echo "type=creative" >> "$GITHUB_OUTPUT"
-              echo "scheduled_check=false" >> "$GITHUB_OUTPUT"
-            elif echo "$EDUCATIONAL_HOURS" | grep -qw "$HOUR"; then
-              echo "type=educational" >> "$GITHUB_OUTPUT"
-              echo "scheduled_check=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "type=" >> "$GITHUB_OUTPUT"
-              echo "scheduled_check=false" >> "$GITHUB_OUTPUT"
-            fi
+            echo "type=educational" >> "$GITHUB_OUTPUT"
+            echo "scheduled_check=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run agent

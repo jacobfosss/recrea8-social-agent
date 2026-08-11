@@ -1,0 +1,40 @@
+name: Refresh research queue
+
+on:
+  schedule:
+    # Weekly refill — keeps the queue topped up indefinitely. With ~25
+    # topics and per_topic=2, one run can add dozens of new items (minus
+    # whatever gets filtered for relevance), comfortably outpacing
+    # consumption even at 2x/day (14/week).
+    - cron: "0 6 * * 1"  # every Monday, 6am UTC
+  workflow_dispatch: {}  # manual trigger available too, for whenever you want to top up on demand
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh research queue
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: python -m src.research_agent
+
+      - name: Commit updated queue
+        run: |
+          git config user.name "social-agent-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/research_queue.json
+          git diff --cached --quiet || git commit -m "Weekly research queue refresh [skip ci]"
+          git push
