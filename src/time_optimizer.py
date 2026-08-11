@@ -1,22 +1,9 @@
 """
 Decides WHEN, within a day, educational content actually posts — not a
 fixed hour. Starts fully random (since there's no data yet), and
-automatically shifts toward whichever hour has historically performed best
-once enough real engagement data has accumulated. Guarantees exactly one
-post per day either way (never zero, never more than one).
-
-How it works: the workflow checks in periodically throughout the day (see
-post_schedule.yml) rather than firing once at one fixed hour. Each check
-calls should_post_now() — early on, this is a random dice-roll weighted so
-that by end of day it's virtually certain to have posted exactly once,
-with the SPECIFIC hour randomized. Once MIN_SAMPLES real posts have scored
-engagement data, it switches to preferring whichever hour scored best.
-
-This is a genuinely self-contained module, since it doesn't yet know your
-existing metrics_fetcher.py's exact structure — wire that file to call
-update_engagement_score() once it has real numbers for a post_id, and
-this starts learning automatically. It works correctly even before that
-wiring, since the random phase doesn't depend on it.
+automatically shifts toward whichever hour(s) have historically performed
+best once enough real engagement data has accumulated. Guarantees exactly
+POSTS_PER_DAY posts per day — never fewer, never more.
 """
 import json
 import random
@@ -24,8 +11,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "post_timing.json"
-MIN_SAMPLES = 10  # how many scored posts before trusting a "best hour" over randomness
-BEST_HOUR_TOLERANCE = 1  # post if within this many hours of the best-performing hour
+MIN_SAMPLES = 10
+BEST_HOUR_TOLERANCE = 1
+POSTS_PER_DAY = 2
 
 
 def _load():
@@ -43,28 +31,24 @@ def _today_str():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
-def has_posted_today(pillar: str) -> bool:
+def count_posted_today(pillar: str) -> int:
     today = _today_str()
-    return any(r["pillar"] == pillar and r["date"] == today for r in _load())
+    return sum(1 for r in _load() if r["pillar"] == pillar and r["date"] == today)
 
 
 def record_scheduled_post(pillar: str, hour_utc: int, post_id: str = None):
-    """Call this right after a successful post, so we know what hour it
-    went out at — this is the raw data get_best_hour() later learns from."""
     records = _load()
     records.append({
         "pillar": pillar,
         "date": _today_str(),
         "hour_utc": hour_utc,
         "post_id": post_id,
-        "engagement_score": None,  # filled in later once real metrics exist
+        "engagement_score": None,
     })
     _save(records)
 
 
 def update_engagement_score(post_id: str, score: float):
-    """Call this once real engagement data is available for a post (e.g.
-    from metrics_fetcher.py ~24h after posting)."""
     records = _load()
     updated = False
     for r in records:
@@ -76,10 +60,7 @@ def update_engagement_score(post_id: str, score: float):
     return updated
 
 
-def get_best_hour(pillar: str, min_samples: int = MIN_SAMPLES):
-    """Returns the hour (0-23 UTC) with the highest average engagement
-    score for this pillar, or None if there isn't enough scored data yet
-    to trust a pattern over randomness."""
+def get_best_hours(pillar: str, top_n: int = POSTS_PER_DAY, min_samples: int = MIN_SAMPLES):
     records = [r for r in _load() if r["pillar"] == pillar and r.get("engagement_score") is not None]
     if len(records) < min_samples:
         return None
@@ -88,35 +69,48 @@ def get_best_hour(pillar: str, min_samples: int = MIN_SAMPLES):
     for r in records:
         hour_scores.setdefault(r["hour_utc"], []).append(r["engagement_score"])
 
-    best_hour = max(hour_scores, key=lambda h: sum(hour_scores[h]) / len(hour_scores[h]))
-    return best_hour
+    ranked = sorted(hour_scores, key=lambda h: sum(hour_scores[h]) / len(hour_scores[h]), reverse=True)
+    return ranked[:top_n]
 
 
-def should_post_now(pillar: str, current_hour_utc: int, check_hours: list) -> bool:
-    """check_hours: the full sorted list of hours the workflow checks in at
-    today (e.g. [8,10,12,14,16,18,20,22]) — used both to compute
-    random-phase probability and to know when it's the LAST chance today
-    (safety fallback, so a day never passes with zero posts)."""
-    if has_posted_today(pillar):
+MIN_GAP_HOURS = 4  # don't let multiple daily posts land right next to each other
+
+
+def should_post_now(pillar: str, current_hour_utc: int, check_hours: list,
+                      posts_per_day: int = POSTS_PER_DAY) -> bool:
+    today_posts = [r for r in _load() if r["pillar"] == pillar and r["date"] == _today_str()]
+    already_posted = len(today_posts)
+    if already_posted >= posts_per_day:
         return False
 
-    best_hour = get_best_hour(pillar)
+    still_needed = posts_per_day - already_posted
 
-    if best_hour is not None:
-        if abs(current_hour_utc - best_hour) <= BEST_HOUR_TOLERANCE:
-            return True
-        # safety fallback: if this is the last check of the day and we
-        # still haven't posted (e.g. the best hour was already missed for
-        # some reason), post anyway rather than skip the whole day
-        if current_hour_utc == max(check_hours):
-            return True
-        return False
+    # The guaranteed-count promise takes priority over spacing — if this is
+    # the LAST check of the day and we're still short, post anyway even if
+    # it violates the minimum gap. Missing the daily quota is worse than
+    # imperfect spacing.
+    if current_hour_utc == max(check_hours) and still_needed > 0:
+        return True
 
-    # Random phase — no trustworthy data yet. Weight the probability so
-    # that across the day's remaining checks, exactly one post happens on
-    # average, with the specific hour genuinely randomized.
+    # Enforce minimum spacing from today's most recent post, so multiple
+    # daily posts don't cluster back-to-back — but only once the above
+    # guarantee-priority check has already had first say.
+    if today_posts:
+        last_hour = max(r["hour_utc"] for r in today_posts)
+        if current_hour_utc - last_hour < MIN_GAP_HOURS:
+            return False
+
+    best_hours = get_best_hours(pillar, top_n=posts_per_day)
+
+    if best_hours is not None:
+        return any(abs(current_hour_utc - h) <= BEST_HOUR_TOLERANCE for h in best_hours)
+
     remaining_checks = [h for h in check_hours if h >= current_hour_utc]
+    if today_posts:
+        last_hour = max(r["hour_utc"] for r in today_posts)
+        remaining_checks = [h for h in remaining_checks if h - last_hour >= MIN_GAP_HOURS]
     if not remaining_checks:
         return False
-    probability = 1.0 / len(remaining_checks)
+
+    probability = still_needed / len(remaining_checks)
     return random.random() < probability
