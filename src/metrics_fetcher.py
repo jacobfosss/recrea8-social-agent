@@ -2,6 +2,13 @@
 Pulls engagement metrics for previously-posted content and fills them into
 data/post_history.json. Meant to run on a delay after posting (metrics need
 time to accumulate) — see .github/workflows/metrics_pull.yml.
+
+Also feeds TikTok engagement scores into time_optimizer.py, so it can learn
+which hour of day performs best for educational content. This is safe to
+call for every TikTok record regardless of pillar — time_optimizer only
+tracks posts it created itself (educational), so it silently ignores
+anything else (creative, lifestyle) without needing this file to know or
+care which pillar a given post belongs to.
 """
 import json
 import os
@@ -9,6 +16,8 @@ import time
 from pathlib import Path
 
 import requests
+
+from . import time_optimizer
 
 ROOT = Path(__file__).resolve().parent.parent
 HISTORY_PATH = ROOT / "data" / "post_history.json"
@@ -102,6 +111,23 @@ def _fetch_tiktok_metrics(publish_id: str) -> dict:
         return {}
 
 
+def _compute_engagement_score(metrics: dict) -> float:
+    """A weighted engagement RATE (not raw counts), so a post that happened
+    to get more reach isn't unfairly judged 'better' than one with a
+    smaller but more engaged audience. Comments and shares are weighted
+    higher than likes since they signal more active engagement than a
+    passive tap. This is a reasonable default — feel free to adjust the
+    weights once you have a real sense of what you actually care about."""
+    views = metrics.get("views", 0)
+    if views == 0:
+        return 0.0
+    likes = metrics.get("likes", 0)
+    comments = metrics.get("comments", 0)
+    shares = metrics.get("shares", 0)
+    weighted = likes + (comments * 3) + (shares * 5)
+    return (weighted / views) * 100
+
+
 def pull_pending_metrics():
     history = _load_history()
     now = time.time()
@@ -120,6 +146,8 @@ def pull_pending_metrics():
                 metrics = _fetch_tiktok_metrics(record["post_id"])
                 if metrics:
                     record["metrics"] = metrics
+                    score = _compute_engagement_score(metrics)
+                    time_optimizer.update_engagement_score(record["post_id"], score)
             updated += 1
         except Exception as e:
             print(f"[metrics] failed for {record['post_id']}: {e}")

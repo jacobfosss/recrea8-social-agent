@@ -1,5 +1,5 @@
 """
-Posts a photo or Reel to Instagram via the Meta Graph API.
+Posts a photo, Reel, Story, or carousel to Instagram via the Meta Graph API.
 Docs: https://developers.facebook.com/docs/instagram-platform/content-publishing
 """
 import os
@@ -57,7 +57,6 @@ def post_reel(video_url: str, caption: str, poll_seconds=10, timeout_seconds=300
     create.raise_for_status()
     creation_id = create.json()["id"]
 
-    # Instagram processes the video asynchronously — poll until FINISHED.
     waited = 0
     while waited < timeout_seconds:
         status = requests.get(
@@ -83,6 +82,47 @@ def post_reel(video_url: str, caption: str, poll_seconds=10, timeout_seconds=300
     return publish.json()["id"]
 
 
+def post_carousel(media_urls: list, caption: str, media_types: list = None) -> str:
+    """Posts a multi-image (or mixed image/video) carousel. media_types, if
+    given, should be a parallel list of "image"/"video" per URL — defaults
+    to all images if not specified. Carousels support 2-10 items."""
+    if not (2 <= len(media_urls) <= 10):
+        raise ValueError(f"Carousels need 2-10 items, got {len(media_urls)}")
+
+    ig_id = _ig_user_id()
+    token = _token()
+    media_types = media_types or ["image"] * len(media_urls)
+
+    child_ids = []
+    for url, mtype in zip(media_urls, media_types):
+        data = {"is_carousel_item": "true", "access_token": token}
+        data["video_url" if mtype == "video" else "image_url"] = url
+        resp = requests.post(f"{BASE}/{ig_id}/media", data=data, timeout=30)
+        resp.raise_for_status()
+        child_ids.append(resp.json()["id"])
+
+    create = requests.post(
+        f"{BASE}/{ig_id}/media",
+        data={
+            "media_type": "CAROUSEL",
+            "children": ",".join(child_ids),
+            "caption": caption,
+            "access_token": token,
+        },
+        timeout=30,
+    )
+    create.raise_for_status()
+    creation_id = create.json()["id"]
+
+    publish = requests.post(
+        f"{BASE}/{ig_id}/media_publish",
+        data={"creation_id": creation_id, "access_token": token},
+        timeout=30,
+    )
+    publish.raise_for_status()
+    return publish.json()["id"]
+
+
 def post_story(media_url: str, media_type: str) -> str:
     """Stories don't take a caption field the way feed posts do — text should
     already be baked into the image/video itself if you want copy on it."""
@@ -97,7 +137,6 @@ def post_story(media_url: str, media_type: str) -> str:
     creation_id = create.json()["id"]
 
     if media_type == "video":
-        # Stories videos are processed async too, same as Reels
         waited, poll_seconds, timeout_seconds = 0, 10, 180
         while waited < timeout_seconds:
             status = requests.get(

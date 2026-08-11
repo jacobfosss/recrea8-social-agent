@@ -95,17 +95,35 @@ def _fetch_abstracts(pmids: list[str]) -> list[dict]:
 
 
 def _is_relevant_to_nutrition(article: dict) -> bool:
-    """Quick relevance filter — PubMed's search sometimes matches studies
-    that share keywords but aren't actually about food/nutrition (e.g. a
-    sweetener study about vaping products). Skip those before spending
-    effort simplifying them into a post."""
+    """Relevance filter — PubMed's search sometimes matches studies that
+    share keywords but aren't actually useful for a nutrition-education
+    brand: genuinely unrelated topics, detection/lab-technique studies, or
+    veterinary/animal-agriculture-product research (pet food efficacy,
+    livestock/aquaculture outcomes) that happens to mention a relevant
+    ingredient but has nothing to do with human health."""
     client = _client()
-    prompt = f"""Is this study genuinely about food, nutrition, diet, or eating
-habits (as opposed to an unrelated topic that just happens to share some
-keywords, like tobacco/vaping products, cosmetics, or pharmaceuticals)?
+    prompt = f"""Would this study make a good source for a nutrition/health
+education social media post aimed at humans? Answer YES only if the study
+reports an actual health, nutritional, or physiological EFFECT relevant to
+HUMAN health — this includes legitimate rodent (rat/mouse) studies used as
+standard research models for human physiology, since those are valid
+evidence even though the subject is an animal.
+
+Answer NO if this is:
+- Not about food/nutrition/diet at all
+- A lab technique, detection method, sensor, or analytical chemistry
+  procedure (even if it involves food) — these measure something, they
+  don't report a health effect
+- About food safety/pathogen testing rather than nutritional/health impact
+- A veterinary or animal-agriculture-product study where the animal IS the
+  point (e.g. pet food improving a cat's coat, aquaculture fish disease
+  resistance, livestock feed additives) — these are about animal industry
+  outcomes, not human health, even if a relevant-sounding ingredient like
+  an omega fatty acid or spirulina is involved
+- About an unrelated food category with no bearing on general human nutrition
 
 Title: {article['title']}
-Abstract: {article['abstract'][:300]}
+Abstract: {article['abstract'][:400]}
 
 Answer with exactly one word: YES or NO.
 """
@@ -139,7 +157,7 @@ Write:
 
 Separate the two parts with "---". No preamble.
 """
-    resp = client.messages.create(model=MODEL, max_tokens=800,
+    resp = client.messages.create(model=MODEL, max_tokens=600,
                                    messages=[{"role": "user", "content": prompt}])
     text = "".join(b.text for b in resp.content if b.type == "text")
     parts = text.split("---")

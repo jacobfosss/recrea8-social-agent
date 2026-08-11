@@ -1,20 +1,6 @@
 """
 Optional human-approval step before anything actually posts. Uses GitHub
-Issues as the review UI — free, no extra service to set up, and you already
-get notified on your phone via the GitHub app.
-
-Flow:
-1. main.py generates content, hosts the media, and (if
-   posting.require_approval is true in config.yaml) calls
-   create_approval_request() instead of posting immediately. That opens a
-   GitHub issue with the image/caption and saves the draft to
-   data/pending_posts.json.
-2. You review the issue on GitHub (mobile or web) and comment "approve" if
-   it's good to go (or just close the issue / do nothing to reject it).
-3. A separate frequent workflow (approval_check.yml) calls
-   check_and_publish_approved(), which looks for an "approve" comment on any
-   open pending-approval issue, publishes that draft for real, and closes
-   the issue.
+Issues as the review UI — free, no extra service to set up.
 """
 import json
 import os
@@ -48,14 +34,20 @@ def _save_pending(pending):
     PENDING_PATH.write_text(json.dumps(pending, indent=2))
 
 
-def create_approval_request(content, public_url, platforms):
+def _tiktok_preview_block(tiktok_public_url):
+    if not tiktok_public_url:
+        return ""
+    return f"\n**TikTok video:** {tiktok_public_url}\n"
+
+
+def create_approval_request(content, public_url, platforms, tiktok_public_url=None):
     repo = os.environ["GITHUB_REPO"]
     media_preview = (
         f"![preview]({public_url})" if content["media_type"] == "image"
         else f"[video preview]({public_url})"
     )
     body = f"""{media_preview}
-
+{_tiktok_preview_block(tiktok_public_url)}
 **Source:** {content.get('source')}
 **Topic:** {content.get('topic', 'n/a')}
 **Platforms queued:** {', '.join(p for p, on in platforms.items() if on)}
@@ -85,9 +77,53 @@ to skip this post — nothing publishes until you approve.
         "platforms": platforms,
         "topic": content.get("topic", "unknown"),
         "source": content.get("source", "unknown"),
+        "tiktok_public_url": tiktok_public_url,
     }
     _save_pending(pending)
     print(f"[approval] opened issue #{issue_number} for review")
+    return issue_number
+
+
+def create_carousel_approval_request(content, public_urls, platforms, tiktok_public_url=None):
+    repo = os.environ["GITHUB_REPO"]
+    previews = "\n".join(f"![slide {i+1}]({url})" for i, url in enumerate(public_urls))
+    body = f"""**{len(public_urls)}-slide carousel**
+
+{previews}
+{_tiktok_preview_block(tiktok_public_url)}
+**Source:** {content.get('source')}
+**Topic:** {content.get('topic', 'n/a')}
+**Platforms queued:** {', '.join(p for p, on in platforms.items() if on)}
+
+**Caption:**
+{content['caption']}
+
+---
+Comment `approve` on this issue to publish it. Close the issue (or ignore it)
+to skip this post — nothing publishes until you approve.
+"""
+    resp = requests.post(
+        f"{GITHUB_API_BASE}/repos/{repo}/issues",
+        headers=_headers(),
+        json={"title": f"[Pending approval] Carousel: {content.get('topic', content['source'])}",
+              "body": body, "labels": ["pending-approval"]},
+        timeout=30,
+    )
+    resp.raise_for_status()
+    issue_number = resp.json()["number"]
+
+    pending = _load_pending()
+    pending[str(issue_number)] = {
+        "public_urls": public_urls,
+        "media_type": "carousel",
+        "caption": content["caption"],
+        "platforms": platforms,
+        "topic": content.get("topic", "unknown"),
+        "source": content.get("source", "unknown"),
+        "tiktok_public_url": tiktok_public_url,
+    }
+    _save_pending(pending)
+    print(f"[approval] opened issue #{issue_number} for carousel review")
     return issue_number
 
 
@@ -123,14 +159,29 @@ def check_and_publish_approved():
                                  "source": draft.get("source", "unknown"),
                                  "media_type": draft["media_type"],
                                  "caption": draft["caption"]}
-                if platforms.get("instagram"):
-                    post_id = instagram_poster.post(draft["public_url"], draft["media_type"], draft["caption"])
-                    print(f"[approval] published to Instagram, id={post_id}")
-                    post_history.record_post("instagram", post_id, content_stub)
-                if platforms.get("tiktok") and draft["media_type"] == "video":
-                    publish_id = tiktok_poster.post_video(draft["public_url"], draft["caption"])
+
+                if draft["media_type"] == "carousel":
+                    if platforms.get("instagram"):
+                        post_id = instagram_poster.post_carousel(
+                            draft["public_urls"], draft["caption"])
+                        print(f"[approval] published carousel to Instagram, id={post_id}")
+                        post_history.record_post(
+                            "instagram", post_id, content_stub, draft["public_urls"][0])
+                else:
+                    if platforms.get("instagram"):
+                        post_id = instagram_poster.post(
+                            draft["public_url"], draft["media_type"], draft["caption"])
+                        print(f"[approval] published to Instagram, id={post_id}")
+                        post_history.record_post("instagram", post_id, content_stub, draft["public_url"])
+
+                # TikTok: independent of whether the Instagram content was a
+                # carousel or single image — the narrated video is a
+                # separate asset built specifically for TikTok
+                if platforms.get("tiktok") and draft.get("tiktok_public_url"):
+                    publish_id = tiktok_poster.post_video(draft["tiktok_public_url"], draft["caption"])
                     print(f"[approval] submitted to TikTok, publish_id={publish_id}")
-                    post_history.record_post("tiktok", publish_id, content_stub)
+                    post_history.record_post("tiktok", publish_id, content_stub, draft["tiktok_public_url"])
+
                 _close_issue(repo, issue_number)
             else:
                 still_pending[issue_number] = draft

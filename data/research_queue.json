@@ -1,177 +1,167 @@
 [
   {
-    "card_text": "Ancient recipes, modern science: real food wins again.",
-    "caption": "New research looked at the Traditional Mexican Diet \u2014 corn, beans, veggies, herbs, and techniques like nixtamalization \u2014 and found closer alignment with this pattern linked to better inflammation, insulin, and lipid markers, plus lower risk signals for several cancers. It's observational, not proof of cause and effect, but it's a strong reminder: whole, minimally processed staples have always been powerful. (Plant Foods for Human Nutrition, 2026)",
-    "source_title": "Preserving Tradition, Preventing Cancer: A Narrative Review of the Traditional Mexican Diet as a Framework for Cancer Risk Reduction.",
-    "source_journal": "Plant foods for human nutrition (Dordrecht, Netherlands)",
+    "card_text": "Your gut and your mood might be more connected than you think.",
+    "caption": "A large study followed adults 70+ for nearly six years and found those eating more ultra-processed food had a higher risk of depressive symptoms, while those eating an anti-inflammatory diet had a lower risk \u2014 regardless of genetics or baseline inflammation. It's observational, not proof of cause and effect, but it's another reason real food matters, at any age. (Molecular Psychiatry, 2026)",
+    "source_title": "Diet quality and depressive symptoms in older adults, assessing the effect modification by genetic predisposition and low-grade inflammation: a target trial emulation.",
+    "source_journal": "Molecular psychiatry",
     "source_year": "2026",
-    "pmid": "42429890",
+    "pmid": "42469454",
     "topic": "ultra-processed food inflammation",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Early food choices may shape a lifetime of health.",
-    "caption": "A 2026 scoping review looked at how complementary feeding \u2014 the foods introduced alongside breastmilk or formula \u2014 connects to immune health, allergies, and growth in kids under three. Researchers mapped existing research rather than testing new claims, and found real gaps in what we know. It's a good reminder that whole, real foods matter early on \u2014 though more research is still needed. (Allergy, 2026)",
-    "source_title": "Immunonutrition in Early Life: The Role of Complementary Feeding, Dietary Patterns, and Nutritional Exposures on the Health of Young Children-An EAACI Scoping Review.",
-    "source_journal": "Allergy",
+    "card_text": "How you cook your food may matter as much as what you cook.",
+    "caption": "New research found that diets higher in advanced glycation end products \u2014 compounds formed when foods are processed or cooked at high heat \u2014 were linked to a greater likelihood of gallstone disease in the adults studied. It's an association, not proof of cause, but it's a reminder that how food is made matters, not just what's in it. (Indian Journal of Gastroenterology, 2026)",
+    "source_title": "Association between dietary advanced glycation end products and gallstone disease: A case-control study.",
+    "source_journal": "Indian journal of gastroenterology : official journal of the Indian Society of Gastroenterology",
     "source_year": "2026",
-    "pmid": "42400030",
+    "pmid": "42463553",
     "topic": "ultra-processed food inflammation",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "What we eat may shape how we think, as we age.",
-    "caption": "A large analysis pooled data from eight long-term studies across Europe and the U.S. to look at how diet relates to cognitive health over time. It didn't pinpoint one \"brain food\" \u2014 but it reinforces that consistent, whole-food eating patterns are worth paying attention to as we age. More research is still needed. (Journal of Nutrition, 2026)",
+    "card_text": "More ultra-processed food, more metabolic risk over time.",
+    "caption": "A long-term study following thousands of adults found that higher intake of ultra-processed foods was linked to a greater chance of developing overlapping heart, kidney, and metabolic conditions over time. It's observational, not proof of direct cause \u2014 but it's a solid reminder that how a food is made matters, not just its calories or macros. Worth thinking about next time you reach for a snack. (Nutrition, Metabolism & Cardiovascular Diseases, 2026)",
+    "source_title": "The association between ultra-processed food consumption and incidence of cardio-renal-metabolic multimorbidity: Tehran Lipid and Glucose Study.",
+    "source_journal": "Nutrition, metabolism, and cardiovascular diseases : NMCD",
+    "source_year": "2026",
+    "pmid": "42469144",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": true
+  },
+  {
+    "card_text": "What you eat today shapes how you think tomorrow.",
+    "caption": "A large multi-country analysis pooled data from eight aging cohorts to get a clearer picture of how diet relates to cognitive health over time \u2014 an area where past studies often disagreed due to differences in methods. It reinforces that everyday food choices are worth paying attention to as we age, though more research is needed to pin down specifics. (Journal of Nutrition, 2026)",
     "source_title": "Diet and Cognitive Function in Aging: An Individual Participant Data Meta-Analysis from Eight Cohorts in Europe and the United States.",
     "source_journal": "The Journal of nutrition",
     "source_year": "2026",
     "pmid": "42373047",
     "topic": "ultra-processed food cardiovascular disease risk",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Kids today get half their calories from UPFs.",
-    "caption": "A new review found that in many high-income countries, children can get up to 50-60% of their daily calories from ultra-processed foods \u2014 and researchers are studying links to weight gain and metabolic health over time. It's a reminder that what fills the pantry early on shapes lifelong habits. Small swaps toward whole foods, starting young, genuinely add up. (Frontiers in Nutrition, 2026)",
-    "source_title": "Ultra-processed food consumption across early life: implications for pediatric health and disease risk.",
-    "source_journal": "Frontiers in nutrition",
-    "source_year": "2026",
-    "pmid": "42370354",
-    "topic": "ultra-processed food cardiovascular disease risk",
-    "used": false
-  },
-  {
-    "card_text": "What you eat today shapes how your brain ages.",
-    "caption": "New research links diets high in refined sugar and ultra-processed foods to inflammation and metabolic changes associated with cognitive decline \u2014 while nutrient-dense patterns like Mediterranean or MIND-style eating are tied to better outcomes. It's not proof that any single food causes Alzheimer's, but it's a good reminder: what you eat daily adds up, for your body and your mind (Critical Reviews in Food Science and Nutrition, 2026).",
+    "card_text": "What you eat today may shape your brain tomorrow.",
+    "caption": "A 2026 research review found that diets high in refined sugar, saturated fat, and ultra-processed foods are consistently linked to inflammation and metabolic changes associated with cognitive decline \u2014 while nutrient-dense patterns like the Mediterranean and MIND diets are linked to better outcomes. The evidence is observational, not proof of cause, but it's a good reminder: real, whole ingredients matter long-term. (Critical Reviews in Food Science and Nutrition, 2026)",
     "source_title": "Unhealthy dietary patterns and Alzheimer's disease: associations and underlying mechanistic pathways.",
     "source_journal": "Critical reviews in food science and nutrition",
     "source_year": "2026",
     "pmid": "42334840",
     "topic": "diet quality systemic inflammation biomarkers",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Your diet may be quietly writing your cells' age.",
-    "caption": "New research found that diets with higher inflammatory potential were linked to faster epigenetic age acceleration \u2014 partly explained by low-grade inflammation in the body. It's an observational study, so it shows association, not proof of cause. Still, it adds to the case that whole, less-processed foods may support how gracefully our bodies age over time (Clinical Nutrition, 2026).",
-    "source_title": "Associations between dietary food categories, epigenetic age acceleration and low-grade inflammation in the Lifelines-DEEP cohort.",
-    "source_journal": "Clinical nutrition (Edinburgh, Scotland)",
+    "card_text": "Citrus compounds, cellular defense \u2014 the science keeps surprising us.",
+    "caption": "New rabbit research looked at naringenin, a flavanone found in citrus fruits, and its effect on reproductive health during aflatoxin exposure (a toxin from mold-contaminated feed). Rabbits given naringenin showed better antioxidant markers and less cellular damage than those exposed to the toxin alone. It's early-stage animal research on a specific toxin exposure, not diet advice \u2014 but it's a neat reminder of how many protective compounds naturally occur in whole foods. (Developmental and Comparative Immunology, 2026)",
+    "source_title": "Naringenin mitigates aflatoxin B1-induced male reproductive toxicity in rabbits through immune and antioxidant remodeling associated with alterations in the IL-27/NLRP3 inflammasome axis.",
+    "source_journal": "Developmental and comparative immunology",
     "source_year": "2026",
-    "pmid": "42263547",
+    "pmid": "42314955",
     "topic": "diet quality systemic inflammation biomarkers",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Your teeth have opinions about sugar, too.",
-    "caption": "A 2026 review looked at how dietary sugars fuel oral bacteria \u2014 feeding biofilm formation and acid production that wear down tooth enamel over time. It's a reminder that what we eat shapes more than energy or recovery; everyday choices add up in small, cumulative ways. Nothing here is medical advice \u2014 just another reason we lean toward whole-food ingredients over added sugars. (Frontiers in Cellular and Infection Microbiology, 2026)",
-    "source_title": "Mechanisms of caries induced by sugars: a narratives review from microbial metabolism to oral ecological imbalance and public health strategies for caries prevention.",
-    "source_journal": "Frontiers in cellular and infection microbiology",
+    "card_text": "Your diet soda habit might be talking to your lungs.",
+    "caption": "New research is exploring a link between aspartame \u2014 a common artificial sweetener \u2014 and airway inflammation tied to asthma, using both human data and animal studies. It's early evidence, not a verdict, but it's a compelling reason to pay attention to what's in \"sugar-free\" products. We've always built with whole ingredients your body recognizes \u2014 no artificial sweeteners required (Respiratory Research, 2026).",
+    "source_title": "Aspartame and asthma: immunomodulatory effects on airway inflammation.",
+    "source_journal": "Respiratory research",
     "source_year": "2026",
-    "pmid": "42416280",
+    "pmid": "42464261",
     "topic": "artificial sweeteners food health effects",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "The science behind making sugar without the sugar crash.",
-    "caption": "Researchers engineered E. coli to produce D-allulose \u2014 a naturally occurring, low-calorie sweetener \u2014 directly from glucose, using a more efficient metabolic pathway. Their optimized strain hit a yield of 0.69g of allulose per gram of glucose used. This is early-stage production research, not a health study \u2014 but it shows real progress toward making functional sweeteners more sustainably. (Enzyme and Microbial Technology, 2026)",
-    "source_title": "Engineering Escherichia coli BL21(DE3) for efficient production of D-allulose from D-glucose via phosphorylation/epimerization/dephosphorylation pathway.",
-    "source_journal": "Enzyme and microbial technology",
+    "card_text": "**Hook:** Even a little sweetness may reshape how your brain handles stress.",
+    "caption": "New research in rats found that small, repeated amounts of sugar changed the structure of protective \"nets\" around neurons in brain regions tied to stress and reward \u2014 shifting how neural connections form, depending on the exact region. Stress alone didn't cause these changes; the sugar did. It's early, animal-only work, but it hints that modest natural rewards may help stabilize stress-related brain circuits (Brain Structure & Function,",
+    "source_title": "Limited sucrose intake produces subregion-specific remodeling of perineuronal nets in the medial prefrontal cortex.",
+    "source_journal": "Brain structure & function",
     "source_year": "2026",
-    "pmid": "42401081",
-    "topic": "allulose metabolic effects",
-    "used": false
+    "pmid": "42455192",
+    "topic": "artificial sweeteners food health effects",
+    "used": true
   },
   {
-    "card_text": "Your brain may respond differently to sweeteners than you'd think",
-    "caption": "New research looked at how the brain reacts to flavored water sweetened with sugar versus low/no-calorie sweeteners. Both create a sense of sweetness, but early findings suggest they can activate reward-related brain regions differently. It's a reminder that \"sweet\" isn't one-size-fits-all \u2014 and why we lean on whole food ingredients we understand. (Am J Clin Nutr, 2026)",
+    "card_text": "Your brain may know the difference sugar can't hide.",
+    "caption": "New research scanned brain activity after drinking waters sweetened with sugar vs. low/no-calorie sweeteners. Even though the artificial versions added no calories, they lit up reward and food-intake regions differently than sugar did. It's early evidence, not a verdict \u2014 but it's a good reminder that how we sweeten things matters beyond just the calorie count. (American Journal of Clinical Nutrition, 2026)",
     "source_title": "Brain and physiological responses to flavored waters with different sweeteners: a randomized crossover study in healthy young adults.",
     "source_journal": "The American journal of clinical nutrition",
     "source_year": "2026",
     "pmid": "42323164",
     "topic": "allulose metabolic effects",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "That \"diet\" label might be more complicated than it looks.",
-    "caption": "A new review digs into aspartame \u2014 the artificial sweetener in tons of \"sugar-free\" products \u2014 and how it may affect appetite, gut bacteria, and even future generations when consumed during pregnancy. Regulators still consider it safe within set limits, and researchers say more long-term studies are needed. It's a good reminder to know what's actually sweetening your food. (The Journal of Nutrition, 2026)",
+    "card_text": "Your gut may respond to carbs differently than you think.",
+    "caption": "New research explored how low-digestible carbs \u2014 the kind found in fiber-rich, whole foods \u2014 affect blood sugar, fullness hormones, and satiety after eating. Early findings suggest these carbs may support steadier glucose response and fuller feelings post-meal. It's exploratory research, not a prescription, but it's a promising nod to why whole-food carb sources matter. (Nutrients, 2026)",
+    "source_title": "Differential Modulation of Postprandial Glycemic, Incretin, and Satiety Responses by Low-Digestible Carbohydrates in Humans: An Exploratory Investigation.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42280385",
+    "topic": "allulose metabolic effects",
+    "used": true
+  },
+  {
+    "card_text": "What you eat before a workout may talk to your body's inflammation.",
+    "caption": "Researchers looked at how the mix of carbs, protein, and fat in a pre-exercise meal affects short-term inflammation markers in men with type 2 diabetes. It's a reminder that meal composition and movement interact in real time \u2014 not just proof that one macro combo is \"best.\" More research is needed before drawing firm conclusions. (Journal of Diabetes and its Complications, 2026)",
+    "source_title": "Pre-exercise meal macronutrient composition and acute inflammatory response in males with type 2 diabetes mellitus.",
+    "source_journal": "Journal of diabetes and its complications",
+    "source_year": "2026",
+    "pmid": "42442053",
+    "topic": "aspartame health effects research",
+    "used": true
+  },
+  {
+    "card_text": "Aspartame: \"diet\" doesn't always mean simple.",
+    "caption": "A new review digs into how aspartame might affect body weight \u2014 from appetite signals to gut microbiota, even hinting at effects passed to future generations. Regulators still call it safe within daily limits, but researchers say the long-term picture isn't fully settled. Our take? Skip the question entirely \u2014 real ingredients, no artificial sweeteners, ever. (The Journal of Nutrition, 2026)",
     "source_title": "Aspartame and Obesity: A Comprehensive Review of Mechanisms of Action, Transgenerational Effects, and Health Implications.",
     "source_journal": "The Journal of nutrition",
     "source_year": "2026",
     "pmid": "42314871",
     "topic": "aspartame health effects research",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Your gut might notice the difference between sweet and \"sweetener.\"",
-    "caption": "A 2026 research review looked at how common artificial sweeteners \u2014 like sucralose, aspartame, and saccharin \u2014 may interact with gut bacteria, finding they're not as inert as once thought. The research is still evolving and doesn't prove specific health outcomes, but it's a good reminder to pay attention to what's behind the \"zero sugar\" label. We just skip the question entirely \u2014 real ingredients only. (Current Nutrition Reports, 2026)",
+    "card_text": "Your gut bacteria might have opinions about artificial sweeteners.",
+    "caption": "New research found a common sucralose-based sweetener didn't change bacterial growth, but it did boost biofilm formation (a way bacteria stick together and persist) in several gut-associated strains \u2014 and increased how easily antibiotic-resistance genes spread between them in lab conditions. It's early, cell-culture-stage research, not proof of effects in humans \u2014 but it's a compelling reason to stay curious about what's really in our sweeteners. (Archives of Microbiology, 2026)",
+    "source_title": "A sucralose-based sweetener promotes biofilm formation and plasmid-mediated antibiotic resistance transfer in opportunistic gut bacteria.",
+    "source_journal": "Archives of microbiology",
+    "source_year": "2026",
+    "pmid": "42470474",
+    "topic": "sucralose gut microbiome",
+    "used": true
+  },
+  {
+    "card_text": "Your gut might notice \"sugar-free\" more than you think.",
+    "caption": "A 2026 review looked at how common artificial sweeteners \u2014 like sucralose, aspartame, and even stevia derivatives \u2014 may interact with gut bacteria and metabolic health. The research is still emerging and doesn't prove harm in everyday amounts, but it's a good reminder that \"zero sugar\" doesn't always mean zero impact. We'd rather build sweetness from things your gut already recognizes. (Current Nutrition Reports, 2026)",
     "source_title": "Artificial Sweeteners and Gut Microbiota: Mechanistic Insights and Implications for Metabolic Health.",
     "source_journal": "Current nutrition reports",
     "source_year": "2026",
     "pmid": "42142239",
-    "topic": "aspartame health effects research",
-    "used": false
-  },
-  {
-    "card_text": "Sucralose during pregnancy? New mouse research raises questions.",
-    "caption": "A 2026 mouse study found sucralose exposure during pregnancy disrupted gut bacteria and was linked to higher gestational diabetes risk, plus effects on offspring weight. It's animal research, not a human guarantee \u2014 but it adds to a growing conversation about artificial sweeteners and metabolic health. One more reason we build with real, whole-food ingredients instead. (Journal of Diabetes Research, 2026)",
-    "source_title": "Sucralose Exposure During Pregnancy Elevates Gestational Diabetes Risk via Gut Microbiota-Metabolic Axis in Mice.",
-    "source_journal": "Journal of diabetes research",
-    "source_year": "2026",
-    "pmid": "42126928",
     "topic": "sucralose gut microbiome",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Your gut might notice what \"zero calories\" doesn't.",
-    "caption": "New research is digging into how sucralose, a common artificial sweetener, may affect gut bacteria and the gut lining over time \u2014 with early studies exploring links to inflammation. It's still early-stage science, not a verdict on every diet soda you've ever had. But it's a good reminder: real, whole-food ingredients aren't just a preference \u2014 they're a gut-friendly choice backed by growing research (Biomedicines, 2026).",
-    "source_title": "Sucralose and the Gut-Immune Axis: Emerging Evidence Linking Dysbiosis, Barrier Alterations, and Implications for Colitis and Colorectal Cancer Immunotherapy.",
-    "source_journal": "Biomedicines",
-    "source_year": "2026",
-    "pmid": "42072464",
-    "topic": "sucralose gut microbiome",
-    "used": false
-  },
-  {
-    "card_text": "Your cells start working the second sugar hits your blood.",
-    "caption": "New research found that when glucose levels rise, pancreatic cells don't just adjust gene activity \u2014 they rapidly retool protein production to ramp up insulin, within minutes. It's a reminder that our bodies respond to what we eat fast and precisely. The study was done in isolated islet cells, not whole diets, but it highlights why steady, real-food eating supports smoother physiological work. (Frontiers in Endocrinology, 2026)",
-    "source_title": "Acute glucose stimulation drives coordinated translational reprogramming in primary pancreatic islets: from global remodeling to fine-tuned insulin synthesis.",
-    "source_journal": "Frontiers in endocrinology",
-    "source_year": "2026",
-    "pmid": "42395177",
-    "topic": "artificial sweeteners insulin response",
-    "used": false
-  },
-  {
-    "card_text": "Cereal isn't the enemy \u2014 but the label still matters.",
-    "caption": "New global research found that people who eat ready-to-eat cereal tend to get more fiber and key micronutrients, often supporting better overall diet quality. But researchers also flagged a persistent catch: many cereals still lean heavy on sodium and added sugar. The takeaway isn't \"cereal good or bad\" \u2014 it's that ingredients decide the outcome. Read your labels. (Frontiers in Nutrition, 2026)",
+    "card_text": "Cereal for breakfast? The research says it's complicated.",
+    "caption": "New global research on ready-to-eat cereal found it's linked to better fiber and micronutrient intake \u2014 a real breakfast upside. But the same review flags an ongoing catch: many cereals still lean heavy on sodium and added sugar. The takeaway isn't \"avoid cereal,\" it's \"read the label.\" Whole food ingredients still matter most (Frontiers in Nutrition, 2026).",
     "source_title": "The nutritional and health benefits of ready-to-eat-cereal consumption: an updated technical review of global evidence.",
     "source_journal": "Frontiers in nutrition",
     "source_year": "2026",
     "pmid": "42389703",
     "topic": "added sugar chronic disease risk",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Kefir vs. high-fructose corn syrup: an early clue",
-    "caption": "New research in juvenile rats found kefir helped offset some cardiovascular effects linked to high-fructose corn syrup, a common ultra-processed sweetener. It's animal research, not a human guarantee \u2014 but it's another data point supporting what we already believe: real, fermented whole foods deserve a bigger place on the plate than HFCS-laden ones. (Histology and Histopathology, 2026)",
-    "source_title": "Impacts of kefir on HFCS-induced cardiopulmonary vascular diseases in juvenile rats.",
-    "source_journal": "Histology and histopathology",
+    "card_text": "Another reason to swap soda for something real.",
+    "caption": "A 2026 rat study found that high-fructose corn syrup triggered inflammation and cell damage in testicular tissue \u2014 while kefir, a fermented probiotic food, helped reduce that damage and protect healthy tissue structure. It's early animal research, not proof of human effects, but it adds to a growing pattern: whole, fermented foods may help offset the strain of heavily processed sugars. Worth keeping in mind next time you reach for a snack. (Reproductive Sciences, 2026)",
+    "source_title": "Kefir Mitigates Testicular Histopathological and Immunohistochemical Alterations Induced by High-fructose Corn Syrup in Juvenile Wistar Rats.",
+    "source_journal": "Reproductive sciences (Thousand Oaks, Calif.)",
     "source_year": "2026",
-    "pmid": "42165119",
+    "pmid": "42458199",
     "topic": "high fructose corn syrup metabolic effects",
-    "used": false
+    "used": true
   },
   {
-    "card_text": "Your gut and brain are talking about that soda you drank.",
-    "caption": "New rat research found that fructose-heavy diets shifted gut bacteria and specific bile acid metabolites, which were linked to changes in brain regions tied to memory and mood. A probiotic strain helped counter some of these shifts. It's early, animal-based research \u2014 but it adds to why whole-food, lower-sugar eating supports gut and brain health long-term. (Molecular Medicine, 2026)",
-    "source_title": "Gut-brain axis: beneficial impact of Shouchella clausii spores on fructose induced dysfunction is associated with modulation of the deoxycholic acid - TGR5 pathway.",
-    "source_journal": "Molecular medicine (Cambridge, Mass.)",
-    "source_year": "2026",
-    "pmid": "42106599",
-    "topic": "high fructose corn syrup metabolic effects",
-    "used": false
-  },
-  {
-    "card_text": "That gum in your deli meat? It's not so innocent.",
-    "caption": "A 2025 rat study found that common thickeners like \u03ba-carrageenan and xanthan gum \u2014 often used in processed meats \u2014 altered gut bacteria and increased oxidative stress markers when mixed into pork. It's animal research, not proof of human harm, but it's a good reminder to check labels and lean toward whole, minimally processed ingredients when you can. (Current Research in Food Science, 2025)",
+    "card_text": "That smooth texture in processed meat? It's not free.",
+    "caption": "New research found that two common thickeners \u2014 \u03ba-carrageenan and xanthan gum \u2014 added to processed pork changed gut bacteria, protein digestion, and oxidative stress markers in rats. It's an animal study using concentrated amounts, not proof of human harm, but it's a good reminder to check labels on processed foods. We just skip the hydrocolloids altogether. (Current Research in Food Science, 2025)",
     "source_title": "Food hydrocolloids \u03ba-carrageenan and xanthan gum in processed red meat modify gut health in rats.",
     "source_journal": "Current research in food science",
     "source_year": "2025",
@@ -180,8 +170,8 @@
     "used": false
   },
   {
-    "card_text": "That \"smooth\" texture in your food? Worth a second look.",
-    "caption": "A large French cohort study followed thousands of adults and found that higher intake of certain food additive emulsifiers \u2014 common in many processed foods \u2014 was associated with increased type 2 diabetes risk over time. It's an observational link, not proof of cause and effect, but it adds to a growing conversation about how processed ingredients may interact with our metabolism. Worth knowing what's in your food. (The Lancet Diabetes & Endocrinology, 2024)",
+    "card_text": "That ingredient list on your ice cream? It matters.",
+    "caption": "A large French cohort study followed adults over several years and found certain food additive emulsifiers \u2014 common in many processed foods \u2014 were associated with higher rates of type 2 diabetes. It's observational, so it shows a link, not proof of cause. Still, it's a good reminder to check labels and lean toward whole-food ingredients when you can. (The Lancet Diabetes & Endocrinology, 2024)",
     "source_title": "Food additive emulsifiers and the risk of type 2 diabetes: analysis of data from the NutriNet-Sant\u00e9 prospective cohort study.",
     "source_journal": "The lancet. Diabetes & endocrinology",
     "source_year": "2024",
@@ -190,8 +180,18 @@
     "used": false
   },
   {
-    "card_text": "That pasta emulsifier in your pantry? Worth a second look.",
-    "caption": "A 2026 mouse study found that calcium stearyl lactylate \u2014 a common emulsifier in pasta and other packaged foods \u2014 was linked to liver stress markers and gut barrier disruption at higher doses, along with shifts in gut bacteria diversity. It's animal data, not a verdict on human diets, but it's a good reminder to check labels and know what's actually in your food (Current Research in Toxicology, 2026).",
+    "card_text": "Your body keeps a tab on every additive you eat.",
+    "caption": "A 2026 review looked at how common food additives in ultra-processed foods add up in our diets over time. Researchers note that while these ingredients fall within regulatory safety limits, scientists are still studying their long-term effects on gut health and metabolism. It's less about panic, more about awareness \u2014 knowing what's actually in your food is always a good place to start. (Frontiers in Public Health, 2026)",
+    "source_title": "Dietary exposure to food additives in ultra-processed foods: implications for gut microbiome, metabolic health, and risk assessment.",
+    "source_journal": "Frontiers in public health",
+    "source_year": "2026",
+    "pmid": "42454291",
+    "topic": "food emulsifiers gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "That pasta emulsifier on the label? Worth a second look.",
+    "caption": "A 2026 mouse study found that calcium stearyl lactylate \u2014 a common emulsifier used in pasta \u2014 disrupted gut bacteria and was linked to liver and colon inflammation at higher doses. It's animal research, not proof of the same effect in humans, but it's a good reminder to check ingredient labels, even on foods that seem simple. (Current Research in Toxicology, 2026)",
     "source_title": "Exposure to calcium stearyl lactylate induces hepatointestinal toxicity and gut microbiota dysbiosis in mice.",
     "source_journal": "Current research in toxicology",
     "source_year": "2026",
@@ -200,38 +200,8 @@
     "used": false
   },
   {
-    "card_text": "What's really in your food might matter more than calories",
-    "caption": "A new review found that people eating the most ultra-processed food had a 10-30% higher rate of colorectal cancer, with possible links to stomach and esophageal cancers too. Researchers point to low fiber, additives, and gut microbiome disruption as likely factors. It's observational, not proof of cause \u2014 but it's a compelling reason to read labels. (Cancer Epidemiology, Biomarkers & Prevention, 2026)",
-    "source_title": "Ultra-Processed Foods and Gastrointestinal Cancer: Epidemiologic Evidence, Mechanistic Pathways, and Clinical Implications.",
-    "source_journal": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
-    "source_year": "2026",
-    "pmid": "42257587",
-    "topic": "food emulsifiers gut microbiome",
-    "used": false
-  },
-  {
-    "card_text": "Better tests, safer meat: science is catching hidden risks.",
-    "caption": "New research optimized a lab technique (PMAxx real-time PCR) that can detect live Salmonella in retail meat \u2014 including sneaky \"dormant\" cells that hide from standard tests. It's a food-safety science advancement, not a claim about any specific product or brand. Good reminder that how food is handled and cooked matters as much as what's in it (Journal of Microbiological Methods, 2026).",
-    "source_title": "Detection of viable and VBNC Salmonella in retail meat using optimized PMAxx real-time PCR.",
-    "source_journal": "Journal of microbiological methods",
-    "source_year": "2026",
-    "pmid": "42229763",
-    "topic": "artificial food dye health effects",
-    "used": false
-  },
-  {
-    "card_text": "Scientists just built a sharper way to spot artificial dye.",
-    "caption": "Researchers engineered a copper nanocluster sensor that detects Sunset Yellow, a common artificial food dye, with impressive precision \u2014 even in complex food samples. It's not a health verdict on the dye itself, but it shows how far food-safety science has come in tracking exactly what's in our food. We're all for that kind of transparency (Analytical Methods, 2026).",
-    "source_title": "Rational design of L-histidine-stabilized fluorescent copper nanoclusters for highly selective and sensitive detection of sunset yellow.",
-    "source_journal": "Analytical methods : advancing methods and applications",
-    "source_year": "2026",
-    "pmid": "42200410",
-    "topic": "artificial food dye health effects",
-    "used": false
-  },
-  {
-    "card_text": "That bright yellow dye in your food? Let's talk about it.",
-    "caption": "A 2025 review looked at tartrazine (Yellow 5), a common synthetic dye, across lab and animal studies. Researchers found links to oxidative stress, and in some studies, behavioral effects like hyperactivity. The evidence is still developing and doesn't prove harm in typical human amounts \u2014 but it's part of why we build recipes around real, recognizable ingredients instead. (Toxics, 2025)",
+    "card_text": "That bright yellow dye in your kid's snack? Let's talk.",
+    "caption": "A 2025 research review looked at tartrazine (Yellow No. 5), a common synthetic food dye, and found links to oxidative stress and, in animal studies, effects on liver and nervous system function \u2014 plus behavioral changes like hyperactivity in some children. The evidence is still developing, but it's part of why we build recipes around whole food ingredients your body actually recognizes. (Toxics, 2025)",
     "source_title": "Toxicological Effects of Tartrazine Exposure: A Review of In Vitro and Animal Studies with Human Health Implications.",
     "source_journal": "Toxics",
     "source_year": "2025",
@@ -240,8 +210,8 @@
     "used": false
   },
   {
-    "card_text": "Tartrazine: the yellow dye worth a second look.",
-    "caption": "A 2025 rat study found that tartrazine (Yellow 5) exposure during pregnancy was linked to changes in fetal bone development and organ tissue. It's animal research, not a human conclusion \u2014 but it's a reminder to know what's in your food. We just choose to build ours without synthetic dyes in the first place, real ingredients only. (Heliyon, 2025)",
+    "card_text": "Yellow dye, real questions \u2014 even before birth.",
+    "caption": "A 2025 animal study looked at tartrazine (Yellow 5), a common synthetic food dye, and its effects on fetal development in rats \u2014 including bone growth and organ tissue. Results raised concerns worth further research. It's one study in rats, not humans, but it's a reminder to check labels and know what's actually in your food. (Heliyon, 2025)",
     "source_title": "Evaluation of bone development and organs in rat fetuses exposed to tartrazine.",
     "source_journal": "Heliyon",
     "source_year": "2025",
@@ -250,18 +220,38 @@
     "used": false
   },
   {
-    "card_text": "Grape seeds are quietly fascinating.",
-    "caption": "Early lab research looked at a compound from black grape seed oil and its effects on liver cancer cells and mice \u2014 finding it triggered cancer cell death and outperformed a common chemo drug on several markers. It's early-stage science (cell and animal models, not humans), but it points to real promise in grape seed's phenolic and phytosterol compounds. Another reason we love keeping whole, real ingredients on the table. (Scientific Reports, 2026)",
-    "source_title": "Unsaponifiable fraction of black Vitis vinifera seed oil attenuates liver cancer progression by targeting apoptosis and key tumor-associated genes: In vitro, in vivo, and in silico studies.",
-    "source_journal": "Scientific reports",
+    "card_text": "Two plant compounds, one stressed-out body, big antioxidant payoff.",
+    "caption": "In a new rat study, researchers found that quercetin (found in foods like apples and onions) paired with black seed oil helped counter oxidative stress and inflammation triggered by high testosterone levels and intense physical stress. It's early-stage animal research, not a human recommendation \u2014 but it's a nice reminder that whole, antioxidant-rich foods play a real role in how our bodies handle stress. (Veterinary Medicine and Science, 2026)",
+    "source_title": "The Combination of Nigella sativa Oil-Based Nanoemulsion and Quercetin Alleviates Oxidative Stress From Exogenous Testosterone Through Antioxidant and Anti-Inflammatory Mechanisms in Rats.",
+    "source_journal": "Veterinary medicine and science",
     "source_year": "2026",
-    "pmid": "41957112",
+    "pmid": "42464454",
     "topic": "seed oil inflammation research",
     "used": false
   },
   {
-    "card_text": "Good fats aren't just a human thing.",
-    "caption": "A recent study found that pets given a PUFA-rich oil supplement showed improved coat condition \u2014 a reminder that healthy fats support more than just how we feel inside. The research was done on cats and dogs, not people, so it's not direct proof of human benefits, but it's a nice nod to how consistently these fats show up as building blocks for healthy tissue, fur included. (Open Veterinary Journal, 2026)",
+    "card_text": "Your brain runs on what's on your plate.",
+    "caption": "New research explores how the KetoFLEX 12/3 pattern \u2014 rich in vegetables, healthy fats, and seafood, with mindful meal timing \u2014 may support brain metabolism and reduce inflammation linked to cognitive decline. The evidence so far is mostly mechanistic and observational, not definitive proof. Still, it's a compelling reminder that whole, real food choices may matter for long-term brain health. (Nutrients, 2026)",
+    "source_title": "KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspective on Mechanisms, Emerging Evidence, and Future Directions.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42451206",
+    "topic": "seed oil inflammation research",
+    "used": false
+  },
+  {
+    "card_text": "Fasting doesn't just change when you eat.",
+    "caption": "New research found intermittent fasting may raise arachidonic acid, a fatty acid that helps produce compounds tied to inflammation and metabolism. It's a reminder that dietary patterns don't just affect calories in, calories out \u2014 they shift the building blocks your body uses at a cellular level. More research is needed to know what this means long-term. (Prostaglandins, Leukotrienes, and Essential Fatty Acids, 2026)",
+    "source_title": "Intermittent fasting increases plasma arachidonic acid.",
+    "source_journal": "Prostaglandins, leukotrienes, and essential fatty acids",
+    "source_year": "2026",
+    "pmid": "42456402",
+    "topic": "omega-6 omega-3 ratio inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Even pets glow from the inside out.",
+    "caption": "New research found that pets given polyunsaturated fatty acid (PUFA)-rich oil supplements showed improved hair condition \u2014 a nice reminder that healthy fats support the body from the inside out, in animals and humans alike. This study was on cats and dogs, not people, so it's not medical advice \u2014 but it's a fun nod to why we care about quality fats in general. (Open Veterinary Journal, 2026)",
     "source_title": "PUFA-rich oil supplement improves hair condition of cats and dogs.",
     "source_journal": "Open veterinary journal",
     "source_year": "2026",
@@ -270,8 +260,8 @@
     "used": false
   },
   {
-    "card_text": "More plants, more variety \u2014 your gut notices the difference.",
-    "caption": "A 6-week randomized trial found that adults who ate a more diverse, whole-food plant-based diet saw improvements in gut microbiome composition along with better digestion, energy, and hunger regulation compared to a control group. It's a solid reminder that fiber variety \u2014 not just fiber quantity \u2014 matters for gut health. More research is needed to confirm long-term effects. (British Journal of Nutrition, 2026)",
+    "card_text": "More plants, more fiber, happier gut\u2014science says so.",
+    "caption": "A 2026 randomized trial followed nearly 400 adults over six weeks, comparing a diverse, whole-food plant-based diet to typical eating patterns. Those eating more varied plant foods saw improvements in gut microbiome diversity and reported fewer digestive symptoms. It's a reminder that variety\u2014not just fiber quantity\u2014may matter for gut health. More research is needed to understand long-term effects. (British Journal of Nutrition, 2026)",
     "source_title": "Does a diverse whole-food plant-based dietary intervention improve gut microbiome composition, gut symptoms, energy and hunger in healthy adults? A randomised controlled trial.",
     "source_journal": "The British journal of nutrition",
     "source_year": "2026",
@@ -280,8 +270,8 @@
     "used": false
   },
   {
-    "card_text": "How you prep grains changes everything about them.",
-    "caption": "New research on foxtail millet found that soaking and sprouting it for a full 84 hours boosted polyphenols and GABA, and produced more gut-friendly short-chain fatty acids during fermentation than raw, steamed, or extruded versions. Interesting caveat: it also raised levels of Proteobacteria, a bacterial group worth watching. A good reminder that how we prepare whole grains matters as much as the grain itself. (Food Research International, 2026)",
+    "card_text": "How you prep grains changes what they actually give you.",
+    "caption": "New research on foxtail millet found that sprouting it for 84 hours (versus steaming, extruding, or just eating it raw) boosted polyphenols and GABA, and produced more beneficial short-chain fatty acids during gut fermentation \u2014 a sign of solid prebiotic potential. One caveat: sprouting also increased certain bacteria that can be opportunistic in excess, so more research is needed. A good reminder that how whole foods are prepared matters as much as what they are. (Food Research International, 2026)",
     "source_title": "Effects of different processing methods on the nutritional components and in vitro digestion and fermentation characteristics of foxtail millet (Setaria italica).",
     "source_journal": "Food research international (Ottawa, Ont.)",
     "source_year": "2026",
@@ -290,8 +280,18 @@
     "used": false
   },
   {
-    "card_text": "Basil and thyme aren't just for flavor.",
-    "caption": "New research looked at farmed tilapia, not humans, but the findings are still fascinating: fish fed diets with basil and thyme essential oils showed better growth and stronger immune responses when facing a bacterial challenge. It's a good reminder that whole, real ingredients \u2014 herbs included \u2014 often carry benefits beyond taste. Worth watching as more research explores these effects (Fish Physiology and Biochemistry, 2026).",
+    "card_text": "Your body's \"recovery molecule\" may calm brain inflammation, too",
+    "caption": "New research on \u03b2-hydroxybutyrate (BHB) \u2014 a compound your body naturally produces, including during fasting or low-carb states \u2014 found it helped calm inflammatory activity in brain immune cells, working through a receptor called CB2R. The findings come from mouse and cell studies, not humans, so it's early. Still, it's a fascinating look at how metabolism and inflammation are connected. (Journal of Physiology and Biochemistry, 2026)",
+    "source_title": "Unveiling the role of CB2 receptor in beta-hydroxybutyrate mediated modulation of.",
+    "source_journal": "Journal of physiology and biochemistry",
+    "source_year": "2026",
+    "pmid": "42423995",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  },
+  {
+    "card_text": "Basil and thyme aren't just for the kitchen.",
+    "caption": "New research on Nile tilapia found that diets with basil or thyme essential oils improved growth and immune markers, and helped fish resist a common bacterial infection, compared to a standard diet. It's animal research, not human, but it's a nice reminder: whole, aromatic plants often carry benefits beyond flavor. (Fish Physiology and Biochemistry, 2026)",
     "source_title": "Protective effects of dietary Ocimum basilicum and Thymus vulgaris essential oils on growth performance, immune response, and disease resistance following challenge with Aeromonas hydrophila in Nile Tilapia (Oreochromis niloticus).",
     "source_journal": "Fish physiology and biochemistry",
     "source_year": "2026",
@@ -300,18 +300,8 @@
     "used": false
   },
   {
-    "card_text": "That everyday tomato sauce might be doing more than you think.",
-    "caption": "A recent clinical trial found that a lycopene-rich sauce made from fully vine-ripened tomatoes helped reduce liver fat in adults with fatty liver disease over several weeks. It's a small but promising reminder that ripeness and real ingredients matter \u2014 not just what's on the label, but how the food was grown. More research is needed before drawing firm conclusions. (European Journal of Nutrition, 2026)",
-    "source_title": "A carotenoid-rich functional tomato sauce (OsteoCol\u00ae) reduces liver fat content in adults with metabolic dysfunction-associated steatotic liver disease: a randomized clinical trial.",
-    "source_journal": "European journal of nutrition",
-    "source_year": "2026",
-    "pmid": "42397564",
-    "topic": "anti-inflammatory diet clinical trial",
-    "used": false
-  },
-  {
-    "card_text": "Your late-night bowl of ice cream might actually help you sleep.",
-    "caption": "A small study in resistance-trained adults found that whey protein eaten 30 minutes before bed improved sleep onset, efficiency, and total sleep time compared to a non-protein control \u2014 casein showed no such effect. Whey eaters also reported less muscle soreness the next day. It's early research with just nine participants, but it's a compelling reason to make your evening whey count. (Int J Sport Nutr Exerc Metab, 2026)",
+    "card_text": "Your evening bowl might be doing more than satisfying a craving.",
+    "caption": "A small crossover study found that resistance-trained adults who had whey protein before bed fell asleep faster, slept longer, and rated their sleep better than with a maltodextrin control \u2014 casein didn't show the same effect. Muscle soreness was also lower the next day. It's a small study (9 people), but an interesting reason to make that presleep bowl whey-based. (Int J Sport Nutr Exerc Metab, 2026)",
     "source_title": "Presleep Whey but Not Casein Protein Ingestion Improves Sleep Quality After Resistance Exercise When Compared With an Isocaloric Control in Resistance Trained Individuals.",
     "source_journal": "International journal of sport nutrition and exercise metabolism",
     "source_year": "2026",
@@ -320,8 +310,8 @@
     "used": false
   },
   {
-    "card_text": "Recovery isn't just a whey thing anymore.",
-    "caption": "New research compared a salmon-derived protein peptide to whey and a carb-only control after intense leg workouts. Both protein sources showed a similar, modest edge over carbs alone \u2014 mainly in jump performance days later. It's not proof protein erases soreness, but it suggests sustainable protein sources can hold their own against whey for recovery (Int J Sport Nutr Exerc Metab, 2026).",
+    "card_text": "Your protein doesn't have to come from the usual sources.",
+    "caption": "New research compared a salmon-derived protein peptide to whey and a carb-only control after intense exercise. Both protein sources performed similarly, and higher protein intake overall showed a modest edge in later-stage recovery (jump height at 72 hours). It's early evidence, but it suggests quality protein \u2014 whatever the source \u2014 deserves a place in recovery. (International Journal of Sport Nutrition and Exercise Metabolism, 2026)",
     "source_title": "Investigating the Effects of a Novel Salmon-Derived Protein Peptide on Markers of Recovery From Exercise-Induced Muscle Damage.",
     "source_journal": "International journal of sport nutrition and exercise metabolism",
     "source_year": "2026",
@@ -330,18 +320,8 @@
     "used": false
   },
   {
-    "card_text": "A peek at how smarter food systems get built",
-    "caption": "Not every study we read is about ice cream \u2014 sometimes it's about the food behind our food. This one looked at swapping fishmeal for alternative proteins in farmed fish diets, finding a specific replacement level that kept fish nutrition on track. It's a good reminder that rethinking ingredients, even upstream, is how better food systems get built. (Aquaculture Nutrition, 2026)",
-    "source_title": "Optimal Dietary Replacement of Fishmeal With ",
-    "source_journal": "Aquaculture nutrition",
-    "source_year": "2026",
-    "pmid": "42375396",
-    "topic": "spirulina antioxidant health benefits",
-    "used": false
-  },
-  {
-    "card_text": "Everyday foods, ancient defense mechanisms.",
-    "caption": "A 2026 review looked at animal research on antioxidants \u2014 spirulina, curcumin, garlic, vitamin C, and vitamin E \u2014 and their potential to help the body cope with lead exposure. Researchers found promising mechanisms, but stress that human clinical trials and safe dosing are still needed. It's a reminder that whole, antioxidant-rich foods have real science behind them \u2014 even if the full picture is still unfolding. (International Journal of Molecular Sciences, 2026)",
+    "card_text": "Everyday antioxidants, doing quiet work behind the scenes.",
+    "caption": "A 2026 review looked at animal research on lead exposure and found antioxidants like spirulina, curcumin, garlic, and vitamins C and E may help the body respond to that stress. It's early-stage science \u2014 human dosing and long-term effects still need study \u2014 but it's a nice reminder that whole, real-food ingredients often carry benefits beyond taste. (International Journal of Molecular Sciences, 2026)",
     "source_title": "Potential Antidote Against Lead Toxicity-A Review.",
     "source_journal": "International journal of molecular sciences",
     "source_year": "2026",
@@ -350,8 +330,18 @@
     "used": false
   },
   {
-    "card_text": "Cocoa flavanols might do more for hearts than we thought.",
-    "caption": "A new look at a major cocoa trial used a smarter statistical method (accounting for how serious each event was, not just whether it happened) and found cocoa flavanols may meaningfully lower cardiovascular risk in older adults \u2014 where the original analysis fell just short of significance. It's one study, not a green light to self-treat, but it's a compelling reminder that real cocoa carries real science behind it. (European Journal of Epidemiology, 2026)",
+    "card_text": "Spirulina isn't just a superfood buzzword \u2014 it works in the wild too.",
+    "caption": "New research on Egyptian catfish farms found that adding spirulina to fish feed helped catfish better withstand polluted water and bacterial infection, alongside efforts to track antibiotic resistance. It's animal aquaculture research, not human nutrition science \u2014 but it's another data point on spirulina's long-studied role in supporting immune resilience across species. (Environmental Science and Pollution Research International, 2026)",
+    "source_title": "Enhancing disease resilience in striped catfish (Pangasianodon hypophthalmus): an integrated assessment of environmental stressors, pathogen dynamics, and the protective efficacy of Spirulina platensis in Egyptian aquaculture.",
+    "source_journal": "Environmental science and pollution research international",
+    "source_year": "2026",
+    "pmid": "42118491",
+    "topic": "spirulina antioxidant health benefits",
+    "used": false
+  },
+  {
+    "card_text": "Your dark chocolate habit might be doing more than you think.",
+    "caption": "A new look at the COSMOS trial found that cocoa flavanols may lower cardiovascular risk more than earlier analyses suggested \u2014 researchers used a method that accounts for how serious each health event was, not just whether it happened. The original stats showed no clear effect; this refined approach did. It's one study, not a green light to overdo it \u2014 but it's a solid reminder that whole, minimally processed foods often carry benefits we're still learning to measure. (European Journal of Epidemiology, 2026)",
     "source_title": "Cocoa flavanol supplementation and prevention of cardiovascular disease: a novel analysis of the COSMOS randomized trial using \"win ratio\".",
     "source_journal": "European journal of epidemiology",
     "source_year": "2026",
@@ -360,8 +350,8 @@
     "used": false
   },
   {
-    "card_text": "Your dark chocolate habit might be doing more than you think.",
-    "caption": "New research looked at cocoa flavanols \u2014 the antioxidant compounds in dark chocolate \u2014 and found promising links to heart and liver health, including better blood vessel function and improved cholesterol markers. The catch? Most studies were small and short-term, so it's early evidence, not a prescription. Still, a reminder that moderate dark chocolate can be part of a balanced, whole-food way of eating. (Nutrients, 2026)",
+    "card_text": "Dark chocolate: the indulgence your heart might actually thank you for.",
+    "caption": "New research reviewed how cocoa flavanols in dark chocolate may support heart and liver health \u2014 improving blood vessel function, cholesterol levels, and markers of inflammation. It's a promising reminder that some indulgences and wellness aren't opposites. That said, the research is early, with small studies and short timeframes, so it's not a green light to overdo it \u2014 just another reason to enjoy quality dark chocolate in moderation. (Nutrients, 2026)",
     "source_title": "Beyond Taste: The Impact of Chocolate on Cardiovascular and Steatotic Liver Disease Risk Factors.",
     "source_journal": "Nutrients",
     "source_year": "2026",

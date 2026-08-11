@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 .venv/
 data/voices/
+.DS_Store
+content/.DS_Store
+content/generated/
+content-bot/
+reddit-bot/
+research-posts/

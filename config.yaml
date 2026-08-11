@@ -1,5 +1,4 @@
 # Recrea8 Social Agent — full configuration
-# Fill in any remaining bracketed placeholders as needed.
 
 brand_name: "Recrea8"
 
@@ -26,29 +25,32 @@ brand_context: >
   recovery really demand.
 
 topics:
-  # Core brand education
   - "how ultra-processed ingredients affect the body"
   - "reading a nutrition label like a pro"
   - "what 'natural flavors' actually means"
   - "whole food swaps for common pantry staples"
-
-  # Ingredient spotlight series — what IS in our label
   - "why we use honey instead of refined sugar"
   - "grass-fed whey protein and why it matters"
   - "spirulina in our mint cacao flavor"
   - "why magnesium glycinate specifically"
   - "cacao vs regular cocoa"
   - "why real egg yolk instead of stabilizers"
-
-  # "What's NOT in our label" series — research-backed
+  - "A2 grass-fed milk and why it's different"
+  - "amino acids and protein quality in whey"
   - "why we don't use allulose"
-  - "artificial sweeteners hidden in 'healthy' ice cream"
-  - "corn syrup in conventional ice cream"
-  - "gums and stabilizers — what they do to your gut"
-  - "seed oils in frozen desserts"
-  - "artificial food coloring in ice cream"
-
-  # Lifestyle / occasion-based
+  - "why we don't use aspartame"
+  - "why we don't use sucralose"
+  - "why we don't use corn syrup"
+  - "why we don't use xanthan gum"
+  - "why we don't use carrageenan"
+  - "why we don't use guar gum"
+  - "why we don't use canola or soybean seed oils"
+  - "why we don't use artificial food dyes"
+  - "why 'sugar-free' doesn't mean healthy"
+  - "why 'low calorie' ice cream numbers can be misleading"
+  - "what 'high protein' claims don't tell you about ingredient quality"
+  - "why 'keto-friendly' desserts often rely on unnatural ingredients"
+  - "why a short ingredient list matters more than a marketing claim"
   - "post-workout recovery ice cream"
   - "picnic dessert ideas"
   - "affogato and coffee dessert pairings"
@@ -61,28 +63,28 @@ aesthetic:
     space. Bold confident typography. Feels premium and trustworthy, not
     clinical or sterile — approachable "healthy indulgence," not deprivation.
 
+# Instagram is PAUSED — proving the system out on TikTok first. The pipeline
+# still generates all the same visuals internally (TikTok's video is built
+# by animating these same images), it just doesn't post them to Instagram
+# until this is flipped back to true.
 platforms:
-  instagram: true
+  instagram: false
   tiktok: true
 
 posting:
   mode: auto
   caption_max_words: 60
   hashtag_count: 5
-  # If true, nothing posts automatically — every piece of content becomes a
-  # GitHub issue for you to review and comment "approve" on first. Strongly
-  # recommended for at least the first few weeks.
   require_approval: true
   content_mix:
-    library: 0.25       # your own uploaded photos/videos
-    educational: 0.45   # research-backed nutrition science posts
-    lifestyle: 0.30      # generated on-brand quote/graphic cards
+    library: 0.25
+    educational: 0.45
+    lifestyle: 0.30
 
 content_generation:
   image_style: "clean minimal quote card, bold sans-serif text, soft natural color palette"
-  # If true, educational posts become short narrated videos (Piper voiceover)
-  # instead of static graphic cards.
   educational_as_video: false
+  educational_as_carousel: true
 
 content_calendar:
   monday:
@@ -97,35 +99,25 @@ content_calendar:
 
 research:
   topics:
-    # Ultra-processed food & inflammation
     - "ultra-processed food inflammation"
     - "ultra-processed food cardiovascular disease risk"
     - "diet quality systemic inflammation biomarkers"
-
-    # Artificial sweeteners & sugar substitutes
     - "artificial sweeteners food health effects"
     - "allulose metabolic effects"
     - "aspartame health effects research"
     - "sucralose gut microbiome"
     - "artificial sweeteners insulin response"
-
-    # Sugar & metabolic health
     - "added sugar chronic disease risk"
     - "added sugar insulin resistance"
     - "high fructose corn syrup metabolic effects"
-
-    # Additives, stabilizers, emulsifiers
     - "carrageenan gum gut health"
     - "food emulsifiers gut microbiome"
     - "gums stabilizers digestive health"
+    - "guar gum digestive health"
     - "artificial food dye health effects"
     - "food dye hyperactivity children research"
-
-    # Fats & oils
     - "seed oil inflammation research"
     - "omega-6 omega-3 ratio inflammation"
-
-    # Whole foods & positive nutrition
     - "whole foods gut microbiome"
     - "anti-inflammatory diet clinical trial"
     - "whey protein muscle recovery research"
@@ -135,21 +127,15 @@ research:
   per_topic: 2
 
 engagement:
-  # Auto-replies to comments on YOUR OWN posts (sanctioned use of the API).
   auto_reply_to_own_comments: false
-  # For the weekly human-in-the-loop digest: public Instagram Business/Creator
-  # accounts (usernames, no @) you'd like suggested comments drafted for.
-  # You review data/engagement_digest.md and post them yourself.
   accounts_to_monitor:
     - "example_account_1"
     - "example_account_2"
   posts_per_account: 3
 
+# Stories are Instagram-only in what's built so far, and Instagram is
+# paused — this is off for now, flip alongside platforms.instagram above.
 stories:
-  enabled: true
-  # "auto" alternates between a fresh quick-tip card and reposting your most
-  # recent feed post. "quick_tip" or "repost" to force one.
+  enabled: false
   mode: auto
-  # Stories are ephemeral/24hr and lower-stakes than feed posts, so these
-  # default to posting directly rather than through the approval queue.
   require_approval: false
