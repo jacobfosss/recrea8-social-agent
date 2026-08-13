@@ -5,3 +5,4 @@ PyYAML>=6.0
 python-dotenv>=1.0.0
 piper-tts>=1.4.0
 moviepy>=2.1.0
+pydub
