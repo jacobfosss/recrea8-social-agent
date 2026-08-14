@@ -112,6 +112,8 @@ def post_video(video_path, caption: str) -> str:
         json=init_body,
         timeout=30,
     )
+    if init_resp.status_code >= 400:
+        print(f"[tiktok] init request rejected ({init_resp.status_code}): {init_resp.text}")
     init_resp.raise_for_status()
     init_data = init_resp.json().get("data", {})
     upload_url = init_data.get("upload_url")
