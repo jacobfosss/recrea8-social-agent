@@ -161,11 +161,14 @@ def main():
         print(f"[hosted] {public_url}")
 
     tiktok_public_url = None
+    tiktok_local_path = None
     if is_already_video:
         # creative pillar: same video, same hosted URL, both platforms
         tiktok_public_url = public_url
+        tiktok_local_path = content["media_path"]
     elif tiktok_video_path:
         tiktok_public_url = media_host.publish_to_public_url(tiktok_video_path)
+        tiktok_local_path = tiktok_video_path
         print(f"[hosted] tiktok video: {tiktok_public_url}")
 
     # Creative posts always require approval, regardless of the global
@@ -216,7 +219,7 @@ def main():
 
     if platforms.get("tiktok") and tiktok_public_url:
         try:
-            publish_id = tiktok_poster.post_video(tiktok_public_url, content["caption"])
+            publish_id = tiktok_poster.post_video(tiktok_local_path, content["caption"])
             print(f"[tiktok] submitted, publish_id={publish_id}")
             post_history.record_post("tiktok", publish_id, content, tiktok_public_url)
             if content.get("source") == "educational":
