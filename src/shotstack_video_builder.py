@@ -59,16 +59,22 @@ def _submit_render(payload: dict, use_production: bool) -> str:
     return resp.json()["response"]["id"]
 
 
-def _poll_render(render_id: str, use_production: bool, timeout_seconds: int = 300) -> str:
+def _poll_render(render_id: str, use_production: bool, timeout_seconds: int = 900) -> str:
     stage = _stage(use_production)
     headers = {"x-api-key": _api_key(use_production)}
     start = time.time()
+    last_status = None
 
     while time.time() - start < timeout_seconds:
         resp = requests.get(f"{SHOTSTACK_BASE}/{stage}/render/{render_id}", headers=headers, timeout=30)
         resp.raise_for_status()
         data = resp.json()["response"]
         status = data["status"]
+
+        if status != last_status:
+            elapsed = int(time.time() - start)
+            print(f"[shotstack] render status: {status} (at {elapsed}s)")
+            last_status = status
 
         if status == "done":
             return data["url"]
@@ -77,7 +83,12 @@ def _poll_render(render_id: str, use_production: bool, timeout_seconds: int = 30
 
         time.sleep(5)
 
-    raise TimeoutError(f"Shotstack render {render_id} did not finish within {timeout_seconds}s")
+    raise TimeoutError(
+        f"Shotstack render {render_id} did not finish within {timeout_seconds}s "
+        f"— last known status was '{last_status}'. If this keeps happening with "
+        f"real product video included, the video file may be too large/long — "
+        f"check its size and consider trimming it."
+    )
 
 
 def _download(url: str, out_path: Path) -> Path:
