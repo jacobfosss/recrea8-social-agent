@@ -43,18 +43,18 @@ def _access_token() -> str:
 
 
 def _compute_chunks(video_size: int) -> tuple:
-    """Returns (chunk_size, total_chunk_count) per TikTok's documented rules:
-    files under 5MB go as a single chunk; otherwise chunks are 5-64MB, with
-    total_chunk_count = video_size // chunk_size (rounded down) — meaning
-    the actual final chunk absorbs the remainder and can exceed chunk_size
-    (up to 128MB), which is expected and documented, not an edge-case bug."""
-    if video_size < MIN_CHUNK_SIZE:
+    """Returns (chunk_size, total_chunk_count). If the whole file fits
+    within a single chunk's max size, chunk_size MUST equal the actual
+    video_size exactly — TikTok rejects a declared chunk_size that
+    doesn't match what's actually sent when there's only one chunk (this
+    was the exact bug: we were declaring a fixed 10MB chunk_size even
+    when the real single chunk was smaller). Only split into multiple
+    fixed-size chunks once the file genuinely exceeds one chunk's max."""
+    if video_size <= MAX_CHUNK_SIZE:
         return video_size, 1
 
-    chunk_size = 10 * 1024 * 1024  # 10MB — a reasonable middle value in the allowed 5-64MB range
+    chunk_size = 10 * 1024 * 1024  # 10MB, within the allowed 5-64MB range
     total_chunk_count = video_size // chunk_size
-    if total_chunk_count < 1:
-        total_chunk_count = 1
     return chunk_size, total_chunk_count
 
 

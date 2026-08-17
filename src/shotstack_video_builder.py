@@ -118,6 +118,29 @@ def _combine_audio(audio_paths: list) -> tuple:
     return combined_path, durations
 
 
+def _wait_until_fetchable(url: str, max_attempts: int = 10, delay_seconds: float = 2.0) -> bool:
+    """GitHub's raw content CDN can have a brief propagation delay right
+    after a file is first committed via the Contents API — Shotstack can
+    try to fetch a freshly-hosted asset before GitHub's CDN has actually
+    caught up, failing with a confusing 'asset could not be found' error
+    even though the file is completely fine moments later. This polls
+    until the URL is genuinely fetchable before we ever hand it to
+    Shotstack, rather than finding out only after a wasted render attempt."""
+    for attempt in range(max_attempts):
+        try:
+            resp = requests.head(url, timeout=10)
+            if resp.status_code == 200:
+                return True
+        except requests.RequestException:
+            pass
+        time.sleep(delay_seconds)
+
+    print(f"[shotstack] WARNING: {url} still not fetchable after "
+          f"{max_attempts} attempts — proceeding anyway, but this render "
+          f"may fail the same way.")
+    return False
+
+
 def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str = "shotstack",
                   caption_intensity: str = "calm", music_path: Path = None,
                   use_production: bool = False, caption_palette: str = "light_on_dark") -> Path:
@@ -151,6 +174,14 @@ def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str
     ]
     audio_url = media_host.publish_to_public_url(combined_audio_path)
     music_url = media_host.publish_to_public_url(music_path) if music_path else None
+
+    # Verify every hosted asset is actually fetchable before submitting to
+    # Shotstack — GitHub's CDN can lag a few seconds behind a fresh upload.
+    for url, _ in visual_urls:
+        _wait_until_fetchable(url)
+    _wait_until_fetchable(audio_url)
+    if music_url:
+        _wait_until_fetchable(music_url)
 
     visual_clips = []
     cursor = 0.0
