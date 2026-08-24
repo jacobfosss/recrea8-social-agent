@@ -9,9 +9,10 @@ domain, not ours, so we can never satisfy that requirement. FILE_UPLOAD
 sends the video bytes directly to TikTok instead, sidestepping domain
 ownership entirely.
 
-NOTE: Until your app passes TikTok's "Direct Post" audit, videos posted
-this way land in the user's TikTok inbox as a draft they must confirm
-manually — this is a TikTok anti-spam requirement, not a bug in this code.
+Audit status: APPROVED. privacy_level is now PUBLIC_TO_EVERYONE. Before
+this, unaudited clients were restricted to SELF_ONLY (private) regardless
+of what privacy_level was requested — see the code comment history if you
+ever need to revert to testing mode.
 """
 import os
 from pathlib import Path
@@ -20,13 +21,12 @@ import requests
 
 API_ROOT = "https://open.tiktokapis.com/v2"
 
-MIN_CHUNK_SIZE = 5 * 1024 * 1024    # 5 MB
-MAX_CHUNK_SIZE = 64 * 1024 * 1024   # 64 MB
-MAX_FINAL_CHUNK_SIZE = 128 * 1024 * 1024  # 128 MB, final chunk only
+MIN_CHUNK_SIZE = 5 * 1024 * 1024
+MAX_CHUNK_SIZE = 64 * 1024 * 1024
+MAX_FINAL_CHUNK_SIZE = 128 * 1024 * 1024
 
 
 def _access_token() -> str:
-    """Exchange the stored refresh token for a fresh short-lived access token."""
     resp = requests.post(
         f"{API_ROOT}/oauth/token/",
         data={
@@ -43,17 +43,15 @@ def _access_token() -> str:
 
 
 def _compute_chunks(video_size: int) -> tuple:
-    """Returns (chunk_size, total_chunk_count). If the whole file fits
-    within a single chunk's max size, chunk_size MUST equal the actual
-    video_size exactly — TikTok rejects a declared chunk_size that
-    doesn't match what's actually sent when there's only one chunk (this
-    was the exact bug: we were declaring a fixed 10MB chunk_size even
-    when the real single chunk was smaller). Only split into multiple
-    fixed-size chunks once the file genuinely exceeds one chunk's max."""
+    """If the whole file fits within a single chunk's max size, chunk_size
+    MUST equal the actual video_size exactly — TikTok rejects a declared
+    chunk_size that doesn't match what's actually sent when there's only
+    one chunk. Only split into multiple fixed-size chunks once the file
+    genuinely exceeds one chunk's max."""
     if video_size <= MAX_CHUNK_SIZE:
         return video_size, 1
 
-    chunk_size = 10 * 1024 * 1024  # 10MB, within the allowed 5-64MB range
+    chunk_size = 10 * 1024 * 1024
     total_chunk_count = video_size // chunk_size
     return chunk_size, total_chunk_count
 
@@ -82,8 +80,8 @@ def _upload_file_chunks(upload_url: str, video_path: Path, video_size: int,
 
 
 def post_video(video_path, caption: str) -> str:
-    """video_path: a LOCAL file path (not a hosted URL — FILE_UPLOAD reads
-    directly from disk, no hosting step needed)."""
+    """video_path: a LOCAL file path (FILE_UPLOAD reads directly from
+    disk, no hosting step needed)."""
     video_path = Path(video_path)
     video_size = video_path.stat().st_size
     chunk_size, total_chunk_count = _compute_chunks(video_size)
@@ -93,7 +91,7 @@ def post_video(video_path, caption: str) -> str:
     init_body = {
         "post_info": {
             "title": caption,
-            "privacy_level": "SELF_ONLY",  # change once you're comfortable / audited
+            "privacy_level": "PUBLIC_TO_EVERYONE",  # audit approved — was SELF_ONLY during testing
             "disable_duet": False,
             "disable_comment": False,
             "disable_stitch": False,
