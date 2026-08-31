@@ -988,5 +988,135 @@
     "pmid": "40966617",
     "topic": "cacao flavanols cardiovascular health",
     "used": false
+  },
+  {
+    "card_text": "**Hook:**\nMore ultra-processed food, more inflammatory potential in your diet.",
+    "caption": "**Caption:**\nA large Brazilian study found that people eating more ultra-processed foods tended to have higher Dietary Inflammatory Index scores \u2014 a measure of how \"pro-inflammatory\" a diet looks on paper. It's an association, not proof of cause and effect, and it doesn't diagnose disease risk for any one person. Still, it's a solid reminder that ingredient quality matters, not just calories or macros. (Journal of the Academy of Nutrition and Dietetics, 2026)",
+    "source_title": "Ultra-processed food consumption and pro-inflammatory potential of the diet: a cross-sectional analysis of the NutriNet-Brasil study, 2020-2025.",
+    "source_journal": "Journal of the Academy of Nutrition and Dietetics",
+    "source_year": "2026",
+    "pmid": "42668084",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "What you eat may quietly shape inflammation after menopause.",
+    "caption": "Researchers built a dietary pattern linked to inflammation levels in postmenopausal women, then looked at whether it varied by menopause timing. Diets higher in this inflammatory pattern were associated with elevated inflammatory markers \u2014 though the study doesn't prove cause and effect. It's a good reminder that whole, real-food choices are worth paying attention to at every life stage (Frontiers in Nutrition, 2026).",
+    "source_title": "Inflammation-oriented dietary pattern and menopause timing in postmenopausal women: evidence from the Health and Retirement Study.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42656212",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "",
+    "caption": "",
+    "source_title": "Ultra-Processed Foods and Metabolic Dysfunction: Mechanisms, Clinical Implications, and Public Health Perspectives. Position Paper of the Italian Association of Dietetics and Clinical Nutrition (ADI).",
+    "source_journal": "Current nutrition reports",
+    "source_year": "2026",
+    "pmid": "42645708",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Your gut keeps score of every ingredient you eat.",
+    "caption": "A 2026 research review looked at how ultra-processed foods and certain additives may affect gut inflammation and the intestinal lining in Crohn's disease. While diet alone doesn't cause the condition, the researchers found real ingredients tend to support a healthier gut environment than heavily processed ones. A good reminder that what's *not* in your food can matter as much as what is. (Nutrients, 2026)",
+    "source_title": "Diet, Ultra-Processed Foods, and Food Additives in Crohn's Disease: A Comprehensive Review.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42654232",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your \"diet\" sweetener might be doing more than you think.",
+    "caption": "A new review looked at high-intensity sweeteners \u2014 the kind in many \"sugar-free\" products \u2014 and their possible links to hormone disruption and reproductive health in girls and women. The research is still early and doesn't prove cause and effect, but it's a good reminder to check labels and lean toward whole-food ingredients when you can. (International Journal of Women's Health, 2026)",
+    "source_title": "Effect of High Intensity Sweeteners on the Reproductive System: From the Onset of Puberty to Menstrual Health: A Comprehensive Review of Human and Animal Evidence.",
+    "source_journal": "International journal of women's health",
+    "source_year": "2026",
+    "pmid": "42657207",
+    "topic": "aspartame health effects research",
+    "used": false
+  },
+  {
+    "card_text": "Your gut and your stress levels might be talking to sweeteners.",
+    "caption": "New mouse research found that sucralose exposure after chronic stress altered gut bacteria, gut metabolites, and gut-serotonin signaling tied to stress response. It's early-stage animal research, not proof of human effects \u2014 but it's a reminder that non-nutritive sweeteners aren't necessarily \"neutral\" for the gut, especially under stress. Another reason we build with whole-food ingredients instead. (Nutrients, 2026)",
+    "source_title": "Sucralose Alters Gut Microbiota, Intestinal Metabolites, and Epithelial Serotonergic Responses to Visceral Stimulation in Mice Exposed to Chronic Restraint Stress.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42654240",
+    "topic": "sucralose gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Blood sugar science is evolving \u2014 here's what's new.",
+    "caption": "Early research published in the Journal of Microbiology and Biotechnology looked at how a specific compound may influence blood sugar regulation in models of type 2 diabetes. The findings are preliminary and don't translate directly into dietary advice, but they add to a growing body of science exploring how what we eat interacts with glucose metabolism. Worth watching, not acting on yet. (Journal of Microbiology and Biotechnology, 2026)",
+    "source_title": "Effects of ",
+    "source_journal": "Journal of microbiology and biotechnology",
+    "source_year": "2026",
+    "pmid": "42661360",
+    "topic": "artificial sweeteners insulin response",
+    "used": false
+  },
+  {
+    "card_text": "Too much dextrose, too little grace on your gut.",
+    "caption": "A new rat study found that high-dose dextrose (a sugar common in sports drinks/gels) over 8 weeks affected the small intestine's lining and antioxidant defenses \u2014 with older rats showing more pronounced changes than younger ones. Blood sugar regulation stayed normal throughout. It's animal research, not a human verdict, but it's a reminder that how our bodies handle added sugar may shift with age. (International Journal of Molecular Sciences, 2026)",
+    "source_title": "Effects of High-Dextrose Intake on the Structural and Functional Properties of the Small Intestine in Young-Maturing and Middle-Aged Rats.",
+    "source_journal": "International journal of molecular sciences",
+    "source_year": "2026",
+    "pmid": "42653181",
+    "topic": "artificial sweeteners insulin response",
+    "used": false
+  },
+  {
+    "card_text": "Inflammation, blood sugar, and belly fat are connected.",
+    "caption": "New research looked at a combined marker of inflammation (CRP) and blood sugar/fat metabolism (triglyceride-glucose index) alongside body fat, finding it tracked with higher odds of developing multiple heart, liver, and metabolic conditions together. It's observational, not proof of cause \u2014 but it adds to why keeping inflammation and blood sugar in check through whole-food choices is worth caring about. (Cardiovascular Diabetology, 2026)",
+    "source_title": "Composite C-reactive protein-triglyceride-glucose adiposity indices and incident cardiovascular-liver-metabolic multimorbidity: a prospective cohort study.",
+    "source_journal": "Cardiovascular diabetology",
+    "source_year": "2026",
+    "pmid": "42665793",
+    "topic": "added sugar insulin resistance",
+    "used": false
+  },
+  {
+    "card_text": "**Hook:**\nYour gut may shape sugar's effect on your body more than you think.",
+    "caption": "**Caption:**\nNew mouse research found that how the small intestine breaks down fructose can influence fat absorption by remodeling tiny gut structures called lacteals \u2014 a process tied to shifts in gut bacteria and immune cells. When researchers blocked this fructose breakdown, mice were more protected from diet-induced obesity and insulin resistance. It's early, animal-based science \u2014 not a green light or red flag for any food \u2014 but it's a fascinating look at how gut biology, not just calories, may shape how sugar and fat affect us. (Science Advances, 2026)",
+    "source_title": "Intestinal fructose catabolism promotes obesity and insulin resistance via ileal lacteal remodeling.",
+    "source_journal": "Science advances",
+    "source_year": "2026",
+    "pmid": "42664326",
+    "topic": "high fructose corn syrup metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Your brain runs on what's on your plate.",
+    "caption": "New research explores how the KetoFLEX 12/3 approach \u2014 think leafy greens, healthy fats, seafood, and minimally processed foods \u2014 may support brain metabolism and reduce inflammation linked to cognitive decline. The findings are still early (mostly observational and mechanistic), but they point to something we believe in daily: real, whole ingredients matter for how our bodies and minds function. (Nutrients, 2026)",
+    "source_title": "KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspective on Mechanisms, Emerging Evidence, and Future Directions.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42451206",
+    "topic": "seed oil inflammation research",
+    "used": false
+  },
+  {
+    "card_text": "Even hospitals are questioning what's really in \"nutrition.\"",
+    "caption": "A new paper looking at ICU feeding research makes an interesting point: decades of studies focused on *how much* and *when* to feed critically ill patients, but largely overlooked *what* \u2014 many formulas rely on corn-derived carbs, isolated fibers, and processed oils. The authors argue ingredient quality deserves more research attention. It's a reminder that what food is made of matters, not just how much you eat. (Critical Care Explorations, 2026)",
+    "source_title": "What Are We Actually Feeding ICU Patients? The Case for Studying Formula Composition.",
+    "source_journal": "Critical care explorations",
+    "source_year": "2026",
+    "pmid": "42640598",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your dark chocolate habit might be doing more than you think.",
+    "caption": "A 2025 review looked at cocoa flavanols \u2014 natural compounds in cocoa \u2014 and their effect on small blood vessels (microvasculature), not just the bigger ones. The evidence for larger vessels is solid, but effects on smaller vessels were less consistent across studies. Good reminder that real food compounds are complex \u2014 and worth choosing quality cocoa either way. (Nutrition, 2025)",
+    "source_title": "The role of cocoa flavanols in modulating peripheral and cerebral microvascular function in healthy individuals and populations at-risk of cardiovascular disease: a systematic review.",
+    "source_journal": "Nutrition journal",
+    "source_year": "2025",
+    "pmid": "40217225",
+    "topic": "cacao flavanols cardiovascular health",
+    "used": false
   }
 ]
