@@ -1118,5 +1118,75 @@
     "pmid": "40217225",
     "topic": "cacao flavanols cardiovascular health",
     "used": false
+  },
+  {
+    "card_text": "Your joints might be listening to what you eat.",
+    "caption": "New research followed women's diets and blood markers to explore links between ultra-processed food intake and osteoarthritis risk. The findings suggest a connection worth paying attention to \u2014 though this is observational data, not proof of cause and effect. Still, it's a good reminder that swapping in whole-food ingredients when you can is a small choice that may support your body long-term. (International Journal of Women's Health, 2026)",
+    "source_title": "Ultra-Processed Food Intake, Circulating NMR Metabolomic Signatures and Risk of Osteoarthritis in Women.",
+    "source_journal": "International journal of women's health",
+    "source_year": "2026",
+    "pmid": "42688824",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might notice what's in your \"sugar-free\" treats.",
+    "caption": "A new study found that erythritol, a common sugar substitute, worsened intestinal inflammation and disrupted gut bacteria in mice with induced colitis. It's mouse research, not proof of the same effect in healthy humans \u2014 but it adds to a growing conversation about how some non-nutritive sweeteners may interact with gut health. One more reason we build with real, whole ingredients (Microorganisms, 2026).",
+    "source_title": "Erythritol Exacerbates DSS-Induced Colitis and Influences Behavioral Responses in Mice Through Gut Microbiota and Metabolic Alterations.",
+    "source_journal": "Microorganisms",
+    "source_year": "2026",
+    "pmid": "42655041",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Not all \"plant-based\" food is automatically better for you.",
+    "caption": "New research followed older adults for years to see if ultra-processed foods \u2014 plant-based or animal-based \u2014 were linked to chronic kidney disease risk. The key takeaway: how processed a food is may matter more than whether it's plant or animal-sourced. It's an observational study, so it shows association, not proof, but it's a good reminder to check ingredient lists either way. (CJASN, 2026)",
+    "source_title": "Associations of Plant- and Animal-Sourced Ultra-Processed Foods and Incident CKD in the Cardiovascular Health Study.",
+    "source_journal": "Clinical journal of the American Society of Nephrology : CJASN",
+    "source_year": "2026",
+    "pmid": "42684835",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Science finds odd new ally in blood sugar control.",
+    "caption": "Researchers tested an extract from an edible insect byproduct (Eupolyphaga sinensis Walker molt) and found it slowed starch breakdown and helped regulate blood sugar in lab and mouse studies. The extract's fatty acids and plant-like compounds appeared to block digestive enzymes and improve glucose uptake. Early-stage research, not a supplement or human study yet \u2014 but a fascinating look at how unexpected sources may inspire lower-glycemic foods (Food Research International, 2026).",
+    "source_title": "A mechanistic study of how a lipid-rich Eupolyphaga sinensis Walker molt extract attenuates starch digestion and improves glucose homeostasis.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "42692746",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your sweetener choice might matter more than you think.",
+    "caption": "A 2026 review looked at sucralose and its possible links to gut bacteria and immune therapy outcomes in cancer patients. The evidence so far is early and observational \u2014 not proof of cause and effect, and not a reason to change treatment. But it's a good reminder that what sweetens our food isn't neutral, which is why we build with whole, recognizable ingredients from the start. (Frontiers in Nutrition, 2026)",
+    "source_title": "Non-nutritive sweeteners, the gut microbiome, and tumor immunity: evidence hierarchy and a sucralose-centered translational model.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42683394",
+    "topic": "sucralose gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your gut bacteria might care about your heart, too.",
+    "caption": "New research suggests the way your diet feeds your gut microbiome \u2014 not just your cells \u2014 could influence heart health. Gut microbes break down food into compounds (some helpful, some not) that interact with your cardiovascular system. It's a reminder that consistent, whole-food choices matter beyond calories or macros. This is an evolving area of research, not a treatment protocol. (Current Nutrition Reports, 2026)",
+    "source_title": "Nutritional Modulation of the Gut Microbiome-Metabolite Axis in Cardiovascular Disease: From Dietary Patterns to Cardiovascular Risk.",
+    "source_journal": "Current nutrition reports",
+    "source_year": "2026",
+    "pmid": "42684538",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Recovery isn't just rest \u2014 it's what you refuel with.",
+    "caption": "A recent research synthesis looked at how soccer players recover, examining tools like magnesium, gut-supporting nutrients, and grape-derived compounds alongside training load and metabolic stress. Magnesium stood out as a consistent piece of the recovery puzzle. It's early-stage, synthesis-level research \u2014 not proof of a magic fix \u2014 but it's a reminder that recovery starts with what's on your plate (or in your bowl). (Journal of the International Society of Sports Nutrition, 2026)",
+    "source_title": "Mechanism-based nutritional strategies for performance and recovery in soccer players: a qualitative research synthesis.",
+    "source_journal": "Journal of the International Society of Sports Nutrition",
+    "source_year": "2026",
+    "pmid": "42679097",
+    "topic": "spirulina antioxidant health benefits",
+    "used": false
   }
 ]
