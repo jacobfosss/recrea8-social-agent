@@ -1188,5 +1188,25 @@
     "pmid": "42679097",
     "topic": "spirulina antioxidant health benefits",
     "used": false
+  },
+  {
+    "card_text": "Your blood sugar health might affect more than energy levels.",
+    "caption": "A large study of over 23,000 adults found that lower insulin sensitivity (measured via a marker called eGDR) was linked to a higher likelihood of having kidney stones \u2014 with the association growing stronger as insulin resistance increased. It's a reminder that metabolic health connects to more parts of the body than we often realize. This was observational research, so it shows association, not cause and effect (Medical Science Monitor, 2026).",
+    "source_title": "Association of Estimated Glucose Disposal Rate With Prevalent Kidney Stones: A Large-Scale Cross-Sectional Study in China.",
+    "source_journal": "Medical science monitor : international medical journal of experimental and clinical research",
+    "source_year": "2026",
+    "pmid": "42696503",
+    "topic": "artificial sweeteners insulin response",
+    "used": false
+  },
+  {
+    "card_text": "Your gut has opinions about that prickly pear fruit.",
+    "caption": "New research followed cactus fruit compounds (prickly pear) through digestion and into the gut microbiome. Some plant pigments broke down quickly, but a phenolic compound called piscidic acid stuck around the whole way through \u2014 and fed beneficial bacteria, boosting short-chain fatty acids linked to gut health. A reminder that whole foods bring complex benefits science is still mapping out. (Food Research International, 2026)",
+    "source_title": "Digestive fate of betalains and phenolics from Opuntia fruits and their interaction with human colonic microbiota in a dynamic in vitro gut model.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "42680277",
+    "topic": "whole foods gut microbiome",
+    "used": false
   }
 ]
