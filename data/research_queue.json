@@ -1208,5 +1208,115 @@
     "pmid": "42680277",
     "topic": "whole foods gut microbiome",
     "used": false
+  },
+  {
+    "card_text": "Your gut bacteria might love a good chestnut starch glow-up.",
+    "caption": "Researchers modified starch from Castanea henryi (a type of chestnut) to create a more \"resistant\" starch \u2014 one your body digests more slowly. In animal studies, this modified starch supported a healthier gut microbiome balance and improved markers linked to fat accumulation and inflammation from a high-fat diet. It's early-stage animal research, not a human recommendation \u2014 but it's a promising look at how food processing can change how starch behaves in the body. (International Journal of Biological Macromolecules, 2026)",
+    "source_title": "Castanea henryi-resistant starch prepared with autoclave-assisted pullulanase treatment attenuated high-fat diet-induced obesity by regulating gut microbiota and metabolism.",
+    "source_journal": "International journal of biological macromolecules",
+    "source_year": "2026",
+    "pmid": "42716162",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "**Hook:** Food, inflammation, and breathing \u2014 more connected than you'd think.",
+    "caption": "**Caption:** A small pilot study looked at how a Mediterranean-style diet might affect obese children with asthma, given the known link between excess weight, inflammation, and breathing issues. As an early, single-arm study without a comparison group, it can't prove cause and effect \u2014 but it adds to a growing body of research on how whole-food eating patterns relate to inflammation. Worth watching as more research develops (Journal of Asthma, 2026).",
+    "source_title": "Mediterranean diet in obese children with asthma: a single-arm pilot study.",
+    "source_journal": "The Journal of asthma : official journal of the Association for the Care of Asthma",
+    "source_year": "2026",
+    "pmid": "42704628",
+    "topic": "diet quality systemic inflammation biomarkers",
+    "used": false
+  },
+  {
+    "card_text": "Zero-calorie sweeteners aren't as simple as \"zero calories.\"",
+    "caption": "A new review looked at kids with type 1 and type 2 diabetes and found the link between artificial sweeteners and body weight is still unclear \u2014 results were mixed, and researchers say more consistent, long-term research is needed before drawing firm conclusions. It's a good reminder that \"sugar-free\" doesn't always mean simple, and whole-food ingredients remain the easiest thing to trust. (Frontiers in Nutrition, 2026)",
+    "source_title": "Non-nutritive sweeteners and body weight in children with type 1 and type 2 diabetes: a critical narrative review of current evidence, methodological challenges, biological mechanisms, and clinical implications.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42724515",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your gut bacteria might be quietly supporting your blood sugar.",
+    "caption": "Researchers reviewed how butyrate \u2014 a compound your gut bacteria make when you eat fiber \u2014 may support glucose metabolism and immune balance, two systems closely tied to diabetes risk. It's still early science on mechanisms, not a green light to self-treat any condition, but it's a good reminder that fiber-rich, whole foods feed more than just your appetite. (Molecular Nutrition & Food Research, 2026)",
+    "source_title": "Mechanisms of Butyrate in Diabetes Through the Metabolism-Immunity Axis and Targeted Therapeutic Strategies.",
+    "source_journal": "Molecular nutrition & food research",
+    "source_year": "2026",
+    "pmid": "42717778",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "**Hook:**\nYour cells' energy pumps matter more than you'd think.",
+    "caption": "**Caption:**\nNew mouse research looked at a specific gene mutation affecting the Na,K-ATPase \u2014 a cellular pump critical for energy use \u2014 and found it disrupted liver glucose processing, leading to glucose intolerance. It's a reminder that metabolic flexibility starts at the cellular level, not just on your plate. This was a genetic mouse model, not a diet study, so no direct eating takeaways \u2014 just fascinating science on how our cells manage energy. (Acta Physiologica, 2026)",
+    "source_title": "Impaired Hepatic Glucose Metabolism Is Associated With Glucose Intolerance in Mice Carrying \u03b1",
+    "source_journal": "Acta physiologica (Oxford, England)",
+    "source_year": "2026",
+    "pmid": "42717423",
+    "topic": "artificial sweeteners insulin response",
+    "used": false
+  },
+  {
+    "card_text": "Your brain might care about that soda more than you think.",
+    "caption": "New rat research found that heavy, prolonged high fructose corn syrup intake was linked to oxidative stress, inflammation, and changes in brain-aging markers \u2014 while a protective compound (dexpanthenol) helped offset some of that damage. It's early animal research, not proof of effects in humans from typical consumption, but it's a good reminder why we build recipes around real, whole-food ingredients instead. (Molecular Neurobiology, 2026)",
+    "source_title": "Dexpanthenol Attenuates High Fructose Corn Syrup-Induced Brain Injury by Modulating Oxidative Stress, Neuroinflammation, Apoptotic Signaling and Amyloidogenic Gene Expression.",
+    "source_journal": "Molecular neurobiology",
+    "source_year": "2026",
+    "pmid": "42709289",
+    "topic": "high fructose corn syrup metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might be talking to your mood more than you think.",
+    "caption": "A 2026 mouse study found that a specially processed mulberry extract eased stress-related behaviors better than a standard version \u2014 likely by shifting gut bacteria and boosting short-chain fatty acids linked to calmer stress responses. It's early animal research, not proof for humans yet, but it's a compelling reminder: what we eat and our gut health are deeply connected. (Journal of Agricultural and Food Chemistry, 2026)",
+    "source_title": "Emulsified Mulberry Extract Alleviates CUMS-Induced Anxiety- and Depressive-Like Behaviors in Mice in Association with Gut Microbiota and Short-Chain Fatty Acids.",
+    "source_journal": "Journal of agricultural and food chemistry",
+    "source_year": "2026",
+    "pmid": "42715956",
+    "topic": "food emulsifiers gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "More plant compounds, less inflammation? The link is real.",
+    "caption": "A 2026 cross-sectional study of older adults in Tehran found that higher intake of phytochemical-rich foods \u2014 fruits, veggies, legumes, whole grains \u2014 was associated with lower markers of inflammation and better metabolic health. It's an observational snapshot, not proof of cause and effect, but it adds to the case for building meals around real, colorful, whole foods. (Journal of Diabetes and Metabolic Disorders, 2026)",
+    "source_title": "The association between dietary phytochemical index, metabolic health, and inflammation in older adults: a cross-sectional study.",
+    "source_journal": "Journal of diabetes and metabolic disorders",
+    "source_year": "2026",
+    "pmid": "42712772",
+    "topic": "seed oil inflammation research",
+    "used": false
+  },
+  {
+    "card_text": "Not all bread is created equal \u2014 your gut agrees.",
+    "caption": "A recent controlled study found that swapping refined white bread for whole wheat improved post-meal blood sugar responses in adults with prediabetes \u2014 though the benefit varied person to person, likely tied to gut microbiome differences. It's a reminder that food quality matters, and that \"healthy\" can look different for every body. Not medical advice, just food for thought. (Frontiers in Nutrition, 2026)",
+    "source_title": "Whole wheat bread improves postprandial glucose tolerance in adults with prediabetes: a controlled-feeding randomized crossover trial with microbiome-associated variation in response.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42729417",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Protein isn't just for athletes \u2014 it's for life.",
+    "caption": "New research highlights that protein needs shift across life stages \u2014 supporting fertility, healthy aging, and lean mass \u2014 and that many people benefit from intakes above the standard RDA. The key takeaway: quality and consistency matter, whether protein comes from plants, whey, or both. Good news for anyone building recovery-friendly habits, one real-food choice at a time. (American Journal of Lifestyle Medicine, 2026)",
+    "source_title": "Protein Intake Across the Lifespan: Optimizing Health, Function, and Longevity.",
+    "source_journal": "American journal of lifestyle medicine",
+    "source_year": "2026",
+    "pmid": "42718819",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "**Hook:**\nNutrient levels in, nutrient levels out \u2014 even before birth.",
+    "caption": "**Caption:**\nNew research followed pregnant women given either a standard or higher-biotin prenatal vitamin for 24 weeks. Those on the higher dose showed meaningfully higher biotin levels in their blood \u2014 and so did their babies at delivery, via cord blood. It's a good reminder that what a body takes in shows up downstream, quite literally. The study didn't look at long-term outcomes, so it's not a verdict on ideal biotin needs \u2014 just solid evidence that intake and status are closely linked. (Journal of Dietary Supplements, 2026)",
+    "source_title": "A Higher-Biotin Prenatal Multivitamin Formulation Improves Maternal and Cord Blood Biotin Biomarkers: A 24-Week Double-Blind, Randomized, Controlled Trial.",
+    "source_journal": "Journal of dietary supplements",
+    "source_year": "2026",
+    "pmid": "42693884",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
   }
 ]
