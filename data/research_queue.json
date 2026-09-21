@@ -1318,5 +1318,85 @@
     "pmid": "42693884",
     "topic": "anti-inflammatory diet clinical trial",
     "used": false
+  },
+  {
+    "card_text": "The rise in ultra-processed foods, mapped against rising cancer rates.",
+    "caption": "Researchers reviewed emerging evidence linking ultra-processed food intake to rising cancer rates, including cases diagnosed earlier in life. The link isn't fully proven \u2014 it's associational, with real gaps in how \"ultra-processed\" gets defined and measured. But scientists point to plausible mechanisms: inflammation, gut disruption, and nutrient displacement. It's a reason to lean toward whole, recognizable ingredients when you can. (Carcinogenesis, 2026)",
+    "source_title": "Ultra-processed Foods, Cancer, and Early-onset Cancer: A Comprehensive Review.",
+    "source_journal": "Carcinogenesis",
+    "source_year": "2026",
+    "pmid": "42753230",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might be missing something ultra-processed foods take away.",
+    "caption": "New research linking ultra-processed foods to Crohn's disease risk points to something specific: lower levels of DHA, an omega-3 fatty acid, showed up as a key biological link. It's early, observational research \u2014 not proof of cause and effect \u2014 but it's a compelling reminder that what's *missing* from processed foods may matter as much as what's added. Worth knowing, not worrying about. (Clinical Gastroenterology and Hepatology, 2026)",
+    "source_title": "Integrated metabolomic and genetic profiling implicate loss of docosahexaenoic acid in the link between ultra-processed foods and Crohn's disease.",
+    "source_journal": "Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association",
+    "source_year": "2026",
+    "pmid": "42749102",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "",
+    "caption": "",
+    "source_title": "Adherence to the 2025-2030 dietary guidelines (DGA) and risk of all-cause and cause-specific mortality: A prospective analysis in a middle-aged cohort.",
+    "source_journal": "Clinical nutrition (Edinburgh, Scotland)",
+    "source_year": "2026",
+    "pmid": "42753340",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Food that heals can still feel like a treat.",
+    "caption": "Researchers coined the term \"glow-food\" to describe a strategy for chronic kidney disease patients: minimally processed, seasonal Mediterranean ingredients prepared to look and taste genuinely enjoyable. The idea isn't a new diet \u2014 it's a reminder that clinically sound eating and real pleasure aren't opposites. Something we believe applies far beyond any one condition. (Journal of Nephrology, 2026)",
+    "source_title": "Glow-food illuminating nutritional value and enhancing taste in chronic kidney disease: a Mediterranean perspective.",
+    "source_journal": "Journal of nephrology",
+    "source_year": "2026",
+    "pmid": "42742154",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Your sugar habits might be talking to your hormones.",
+    "caption": "A 2026 review looked at how high-fructose corn syrup and ultra-processed foods may relate to metabolic issues like insulin resistance and inflammation \u2014 and how those, in turn, connect to hormone balance and sperm health. It's a review of existing research, not new proof of cause and effect, but it's a solid reminder that what's on your plate is quietly connected to more than digestion. (Oxidative Medicine and Cellular Longevity, 2026)",
+    "source_title": "New Insight Into Male Infertility: Deviation From Basic Tenets of Life.",
+    "source_journal": "Oxidative medicine and cellular longevity",
+    "source_year": "2026",
+    "pmid": "42670173",
+    "topic": "high fructose corn syrup metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Your gut and brain are talking. Fiber and plants join the chat.",
+    "caption": "A 2026 research review looked at how fiber and plant compounds might influence brain inflammation through gut health. The most promising pathway: fermentable fiber feeding gut bacteria that support a healthy gut lining and calmer immune signaling. But human evidence is still mixed, and no single \"superfood\" fix is proven. Takeaway: consistent, real, fiber-rich food matters more than any one ingredient. (Frontiers in Nutrition, 2026)",
+    "source_title": "Plant-food components at the microbiota-neuroinflammation interface: human evidence, translational limits, and sustainable dietary translation.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42746492",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Salt doesn't just affect blood pressure \u2014 it talks to your bones.",
+    "caption": "New research found that higher salt intake raised cortisol (a stress hormone) and lowered FGF23, a hormone your bones use to help regulate phosphate and vitamin D. The study \u2014 done in people and confirmed in mice and cells \u2014 suggests salt's effects on the body may reach further than we thought. More reason to build meals around whole foods, where sodium comes naturally in balance. (Pfl\u00fcgers Archiv, 2026)",
+    "source_title": "High-salt diet modulates endocrine regulation between cortisol and FGF23.",
+    "source_journal": "Pflugers Archiv : European journal of physiology",
+    "source_year": "2026",
+    "pmid": "42760427",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  },
+  {
+    "card_text": "Your snack choices might be talking to your brain.",
+    "caption": "Researchers are launching a trial to see whether a balanced between-meal snack \u2014 built with anti-inflammatory foods like oat bran and chickpeas \u2014 can support brain health in older adults by easing low-grade inflammation. It's a protocol, so results aren't in yet, but it's a great reminder: what's between meals matters too. (JMIR Research Protocols, 2026)",
+    "source_title": "Effects of a Nutritionally Balanced Between-Meal Food Product on Brain Function in Older Adults: Protocol for a Randomized Controlled Trial (the MiniMeal Study).",
+    "source_journal": "JMIR research protocols",
+    "source_year": "2026",
+    "pmid": "42752400",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
   }
 ]
