@@ -1398,5 +1398,25 @@
     "pmid": "42752400",
     "topic": "anti-inflammatory diet clinical trial",
     "used": false
+  },
+  {
+    "card_text": "What's on your plate today might matter more than you think.",
+    "caption": "A new research review found that diets high in ultra-processed foods are linked to increased breast cancer risk, with researchers pointing to inflammation, hormone disruption, and gut health as possible explanations. The science is still developing and doesn't prove cause and effect \u2014 but it's another reason we're intentional about real, whole-food ingredients. Small swaps toward less processed foods can be part of a proactive approach to health. (Carcinogenesis, 2026)",
+    "source_title": "Ultra-Processed Foods and Breast Cancer: Epidemiology, Mechanisms, and Prognostic Implications.",
+    "source_journal": "Carcinogenesis",
+    "source_year": "2026",
+    "pmid": "42740691",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your gut microbiome does more than digest \u2014 it helps you heal.",
+    "caption": "A 2026 rat study found that a whole-food-based nutrition formula (amaranth flour + pea protein) shaped gut bacteria differently during recovery from colon injury, compared to standard feeding. It's early-stage animal research, not proof of human results \u2014 but it adds to a growing picture: what your gut is fed may influence how well it functions and recovers. Food quality matters, even at the microbial level. (International Journal of Molecular Sciences, 2026)",
+    "source_title": "Enteral Nutrition Is Associated with a Distinct Gut Microbiome Composition and Fermentation Capacity Profile After Acute Colonic Injury in Rats.",
+    "source_journal": "International journal of molecular sciences",
+    "source_year": "2026",
+    "pmid": "42737764",
+    "topic": "whole foods gut microbiome",
+    "used": false
   }
 ]
