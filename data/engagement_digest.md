@@ -1,4 +1,4 @@
-# Engagement digest — 2026-09-14
+# Engagement digest — 2026-09-21
 
 Suggested comments for you to review and post yourself — nothing here is posted automatically.
 
