@@ -1418,5 +1418,135 @@
     "pmid": "42737764",
     "topic": "whole foods gut microbiome",
     "used": false
+  },
+  {
+    "card_text": "Your kidneys notice what's on your plate, too.",
+    "caption": "New research links diets high in ultra-processed foods to a greater risk of kidney health decline over time \u2014 likely tied to sodium, additives, and low fiber intake. The studies are observational, so they show a connection, not direct cause. Still, it's a good reminder: choosing whole, recognizable ingredients more often is a simple way to support your body long-term (Nutrients, 2026).",
+    "source_title": "The Impact of Ultra-Processed Foods on Chronic Kidney Disease Progression.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42797038",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your arteries are keeping score of what you eat.",
+    "caption": "New research followed a large group of UK adults and found that higher intake of ultra-processed foods was linked to greater risk of developing atherosclerosis, the buildup that underlies heart disease. Researchers also spotted related changes in blood markers tied to metabolism. It's an association, not proof of cause \u2014 but it's one more reason whole-food ingredients deserve a place on your plate. (Frontiers in Nutrition, 2026)",
+    "source_title": "Ultra-processed food consumption and atherosclerosis risk: a prospective cohort study of UK Biobank.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42787153",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Plant-based for teens? Quality is everything.",
+    "caption": "New research on adolescents found that plant-based diets aren't automatically \"good\" or \"bad\" \u2014 it depends on what's actually in them. Whole-food versions supported healthier blood sugar, cholesterol, and weight markers, while ultra-processed plant foods didn't. Researchers also flagged common gaps in B12, iron, zinc, calcium, and vitamin D worth being mindful of. Real, whole ingredients matter more than the \"plant-based\" label itself. (Nutrients, 2026)",
+    "source_title": "Plant-Based Diets in Adolescence: Cardiometabolic Benefits, Developmental Risks, and the Role of Fortification.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42797002",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "**1. Hook:**\nEven after a heart attack, food choices kept mattering.",
+    "caption": "**2. Caption:**\nResearchers followed heart attack survivors for years, tracking how much ultra-processed food they ate. Those with higher UPF intake showed a greater long-term risk of dying from cardiovascular causes. It's an observational study \u2014 it shows a pattern, not proof of cause \u2014 but it's a reminder that what's on your plate keeps counting, recovery or not. (Current Developments in Nutrition, 2026)",
+    "source_title": "Ultra-processed Food Intake and Long-Term Risk of Cardiovascular Disease Mortality among Patients with Myocardial Infarction: A Prospective Analysis of the Alpha Omega Cohort.",
+    "source_journal": "Current developments in nutrition",
+    "source_year": "2026",
+    "pmid": "42787947",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Your liver's secret switches for blood sugar control",
+    "caption": "New research found specific microRNAs in liver cells help regulate blood sugar, cholesterol, and fat metabolism \u2014 and turning them down improved these markers in mice with diabetes and obesity. It's early-stage, animal-based science, not a human treatment yet, but it's a compelling reminder of how deeply connected our metabolism is to liver health. Fascinating groundwork for future research. (Nature Communications, 2026)",
+    "source_title": "Combinatorial targeting of the miR-379/miR-410 cluster normalizes glucose and lipid homeostasis in male models of diabetes and obesity.",
+    "source_journal": "Nature communications",
+    "source_year": "2026",
+    "pmid": "42768048",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "Sucralose and gut health: what the science actually says",
+    "caption": "A new meta-analysis of 10 clinical trials found sucralose didn't significantly change gut microbial diversity in healthy adults. That's reassuring, but researchers note the evidence is still limited and effects on specific bacteria and long-term metabolic health remain unclear. It's part of why we build recipes around whole foods we can explain \u2014 not because every sweetener is proven harmful. (International Journal of Molecular Sciences, 2026)",
+    "source_title": "Effect of Sucralose Consumption on Gut Microbiota: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+    "source_journal": "International journal of molecular sciences",
+    "source_year": "2026",
+    "pmid": "42794802",
+    "topic": "sucralose gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might notice the difference between fruit and syrup.",
+    "caption": "A new review looks at why colorectal cancer is rising in younger adults, and points to high-fructose corn syrup and sugar-sweetened drinks as one area researchers are studying closely. Early lab research suggests excess fructose may affect gut bacteria and the intestinal lining, though human data is still limited. It's early science, but a good reminder to know what's sweetening your food (Microorganisms, 2026).",
+    "source_title": "Dietary Fructose and Early-Onset Colorectal Cancer: Metabolic, Microbial, and Translational Perspectives.",
+    "source_journal": "Microorganisms",
+    "source_year": "2026",
+    "pmid": "42795627",
+    "topic": "high fructose corn syrup metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Sunflower on the skin? Try healthy fats on the inside.",
+    "caption": "Lab research on peony seed oil found its unsaturated fats \u2014 oleic and linolenic acid \u2014 helped calm inflammation and oxidative stress in skin cells exposed to UV light, partly by easing overactive stress pathways. It's early-stage cell research, not proof of sunscreen-level protection, but it's a nice reminder that the same healthy fats we look for in food show up doing good work elsewhere in the body too. (Fitoterapia, 2026)",
+    "source_title": "Paeonia delavayi seed oil rich in oleic acid and linolenic acid alleviates UVB-induced inflammation and oxidative stress in keratinocytes through inhibition of PI3K/Akt and NF-\u03baB pathways.",
+    "source_journal": "Fitoterapia",
+    "source_year": "2026",
+    "pmid": "42800589",
+    "topic": "seed oil inflammation research",
+    "used": false
+  },
+  {
+    "card_text": "Your fat ratio might matter more than you think.",
+    "caption": "New research followed patients after weight-loss surgery for nine months, tracking body composition, metabolism, and inflammation. One interesting thread: the balance of omega-6 to omega-3 fats in the diet was linked to some of these changes. It's early, exploratory research \u2014 not proof of cause and effect \u2014 but it's a nice reminder that fat quality, not just quantity, deserves attention (Metabolites, 2026).",
+    "source_title": "Longitudinal Changes in Body Composition, Resting Metabolic Rate, and Inflammation After Sleeve Gastrectomy: Associations with Dietary Polyunsaturated Fatty Acid Balance.",
+    "source_journal": "Metabolites",
+    "source_year": "2026",
+    "pmid": "42783789",
+    "topic": "omega-6 omega-3 ratio inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your gut's inner lining has a bouncer, and hemp seed oil might be on the list.",
+    "caption": "New mouse research found hemp seed oil helped calm gut inflammation and supported the proteins that keep the intestinal barrier tight and functioning well. It worked by shifting certain metabolic and inflammatory pathways in the colon. Early-stage animal research, not a human treatment \u2014 but a compelling reason to appreciate hemp seed's fatty acid profile in whole-food form. (Journal of Natural Medicines, 2026)",
+    "source_title": "Hemp seed oil ameliorates DSS-induced ulcerative colitis in mice by altering transcriptomics and metabolomics.",
+    "source_journal": "Journal of natural medicines",
+    "source_year": "2026",
+    "pmid": "42766258",
+    "topic": "omega-6 omega-3 ratio inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Fermented dairy might do more than support your gut.",
+    "caption": "New research fermented skim milk with specific cultures and looked at its potential role in cognitive function. Early findings suggest fermented dairy compounds may interact with pathways tied to brain health \u2014 though this is preliminary work, not a green light to treat or prevent anything. It's a reminder that fermentation itself may add value beyond probiotics. More research is needed. (Foods, 2026)",
+    "source_title": "Effects of ",
+    "source_journal": "Foods (Basel, Switzerland)",
+    "source_year": "2026",
+    "pmid": "42794088",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "A little leucine can do a lot of work.",
+    "caption": "New research review found that in older adults, just 1.5\u20133g of leucine-enriched amino acids triggered muscle-building responses similar to 20\u201340g of whey protein \u2014 suggesting it's the leucine ratio, not total protein, that matters most. Long-term benefits and safety still need more study. A good reminder: quality and ratio of amino acids matter, not just quantity. (Nutrients, 2026)",
+    "source_title": "Leucine-Enriched Essential Amino Acids in Clinical Practice: A Narrative Review.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "42797007",
+    "topic": "whey protein muscle recovery research",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might love almonds and dark chocolate together \ud83c\udf6b",
+    "caption": "New research looked at how almonds, dark chocolate/cocoa, and the combo affect gut microbial diversity in adults with overweight or obesity. Almonds bring fiber and healthy fats; cocoa brings flavanols \u2014 both nutrients linked to gut health. It's early evidence, not a prescription, but a nice reminder that indulgent foods can double as gut-friendly ones (Clinical Nutrition ESPEN, 2026).",
+    "source_title": "Associations of almond, dark chocolate, and cocoa consumption with stool microbial diversity and composition among adults with overweight or obesity: An analysis of secondary outcomes from a 4-period crossover clinical trial.",
+    "source_journal": "Clinical nutrition ESPEN",
+    "source_year": "2026",
+    "pmid": "42320568",
+    "topic": "cacao flavanols cardiovascular health",
+    "used": false
   }
 ]
