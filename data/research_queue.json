@@ -1548,5 +1548,85 @@
     "pmid": "42320568",
     "topic": "cacao flavanols cardiovascular health",
     "used": false
+  },
+  {
+    "card_text": "Your kid's gut remembers every ultra-processed bite.",
+    "caption": "A 2026 review looked at how ultra-processed foods may affect kids' gut microbiomes and inflammation over time. Researchers proposed a new (still unvalidated) framework for studying this link \u2014 it's early-stage science, not a diagnosis tool. Still, it's a good reminder: what fills the pantry early on may shape more than taste preferences. (Frontiers in Nutrition, 2026)",
+    "source_title": "The \"pro-inflammatory imprint\" of ultra-processed food exposure: a review of mechanisms affecting child and adolescent health and development via the gut microbiome-inflammation axis.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42819986",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your heart cares more about food quality than any single nutrient.",
+    "caption": "A major cardiology group just reaffirmed something simple: whole, minimally processed foods beat isolated nutrient-counting for heart health. The review found diets rich in fiber, whole grains, and healthy fats \u2014 paired with less sodium and fewer ultra-processed foods \u2014 are consistently linked to better cardiovascular outcomes. It's a pattern, not a quick fix. (Journal of the American College of Cardiology, 2026)",
+    "source_title": "Food and Health: Nutrition for Prevention and Management of Cardiovascular Disease: 2026 ACC Scientific Statement: A Report of the American College of Cardiology.",
+    "source_journal": "Journal of the American College of Cardiology",
+    "source_year": "2026",
+    "pmid": "42814074",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Fat quality may matter more than we think.",
+    "caption": "Early mouse research found a capybara-oil nanoemulsion helped reduce obesity-related kidney stress \u2014 lowering inflammation, oxidative damage, and scarring markers, alongside improved body weight and blood pressure. It's a reminder that the type of fat matters for how our bodies handle metabolic stress. Still animal research, not a human recommendation \u2014 but it adds to the case for prioritizing real, stable sources of fat in our diets. (Cell Biochemistry and Function, 2026)",
+    "source_title": "Capybara Oil-Based Nanoemulsion Attenuates Obesity-Induced Renal Injury Through Modulation of Inflammation, Oxidative Stress, and Fibrosis in Mice.",
+    "source_journal": "Cell biochemistry and function",
+    "source_year": "2026",
+    "pmid": "42831236",
+    "topic": "diet quality systemic inflammation biomarkers",
+    "used": false
+  },
+  {
+    "card_text": "A tiny dose of sugar, a big lesson in blood sugar science.",
+    "caption": "A new neonatal study tested a small oral glucose dose for newborns with low blood sugar. It raised blood sugar levels faster than placebo, though it didn't significantly reduce the need for IV treatment. It's a good reminder of how directly glucose affects blood sugar \u2014 but this research is specific to newborn care, not every",
+    "source_title": "Oral glucose solution for the treatment of persistent asymptomatic neonatal hypoglycemia: a randomized, double-blind, placebo-controlled trial.",
+    "source_journal": "European journal of pediatrics",
+    "source_year": "2026",
+    "pmid": "42809131",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "Blood sugar balance may matter more than we think.",
+    "caption": "A new population study followed rural adults in China to see how different levels of blood sugar regulation \u2014 not just full diabetes \u2014 related to future stroke risk and mortality. Early findings suggest even mild glucose irregularities may carry measurable risk. It's observational and population-specific, but a solid reminder that steady blood sugar, not just avoiding diabetes, is worth paying attention to daily. (Frontiers in Endocrinology, 2026)",
+    "source_title": "Glucose tolerance phenotypes and risks of incident first-ever stroke and all-cause mortality in low-income rural Chinese adults: a population-based prospective cohort study.",
+    "source_journal": "Frontiers in endocrinology",
+    "source_year": "2026",
+    "pmid": "42824145",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Your blood sugar and waist size are talking to each other.",
+    "caption": "New research followed hypertensive patients and found that combining cholesterol, HDL, and glucose levels with waist or BMI measurements helped predict cardiovascular risk more accurately than either marker alone \u2014 reinforcing how closely insulin resistance ties to heart health. It's observational, not a how-to guide, but it's a good reminder that whole-body metabolic health (not just blood pressure) deserves attention. (Cardiovascular Diabetology, 2026)",
+    "source_title": "Predicting all-cause and cardiovascular mortality in hypertensive patients by combining the CHG index and its obesity indicators: a prospective cohort study with survival prediction model.",
+    "source_journal": "Cardiovascular diabetology",
+    "source_year": "2026",
+    "pmid": "42706568",
+    "topic": "added sugar insulin resistance",
+    "used": false
+  },
+  {
+    "card_text": "Recovery isn't just rest \u2014 it's what you eat after.",
+    "caption": "A 2026 scoping review looked at how soccer players recover after exercise, mapping out which nutrition and supplement strategies researchers have studied \u2014 from timing to specific nutrients. The takeaway isn't one magic food, but a reminder that what you eat post-activity genuinely plays a role in how your body bounces back. The review also flagged gaps where more research is still needed. (International Journal of Sports Physiology and Performance, 2026)",
+    "source_title": "Enhancing Recovery in Soccer: A Scoping Review on Nutritional and Supplementation Strategies.",
+    "source_journal": "International journal of sports physiology and performance",
+    "source_year": "2026",
+    "pmid": "42772735",
+    "topic": "whey protein muscle recovery research",
+    "used": false
+  },
+  {
+    "card_text": "Spirulina: the tiny algae with big protective potential.",
+    "caption": "New research looked at whether spirulina could help protect the body from acute lead exposure \u2014 a serious toxicity concern. In animal models, spirulina showed measurable protective effects against the damage lead causes to organs, likely thanks to its antioxidants, vitamins, and minerals. It's early-stage research, not a human treatment, but it's a great reminder of how much power whole, nutrient-dense foods can carry. (Avicenna Journal of Phytomedicine, 2026)",
+    "source_title": "Ameliorative effects of ",
+    "source_journal": "Avicenna journal of phytomedicine",
+    "source_year": "2026",
+    "pmid": "42770103",
+    "topic": "spirulina antioxidant health benefits",
+    "used": false
   }
 ]
