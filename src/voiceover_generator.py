@@ -43,14 +43,11 @@ def _try_elevenlabs(text: str, out_path: Path) -> bool:
             headers={"xi-api-key": api_key, "Content-Type": "application/json"},
             json={
                 "text": text,
-                "model_id": "eleven_flash_v2_5",
-                "voice_settings": {
-                    "stability": 0.5,
-                    "similarity_boost": 0.75,
-                    "speed": ELEVENLABS_SPEED,
-                },
+                "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_v4"),
+                # no voice_settings override: Derek's natural cadence
+                # (speed 1.0, his stored settings) sounded more human
             },
-            timeout=30,
+            timeout=60,
         )
         resp.raise_for_status()
         out_path.write_bytes(resp.content)
