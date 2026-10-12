@@ -150,4 +150,25 @@ def post_video(video_path, caption: str) -> str:
         print("----- CAPTION -----")
         print(caption)
         print("-------------------")
+        _notify_caption(caption)
     return publish_id
+
+def _notify_caption(caption):
+    """Opens a GitHub issue with the caption, so it reaches your phone via
+    the GitHub app when the draft is made by the scheduled (cloud) run."""
+    token, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPO")
+    if not token or not repo:
+        return
+    try:
+        first = caption.strip().splitlines()[0][:60]
+        body = ("A new video is in your TikTok inbox. Tap the TikTok notification, "
+                "then Next, paste this caption, and Post:\n\n```\n" + caption +
+                "\n```\n\nClose this issue once it's posted.")
+        r = requests.post(f"https://api.github.com/repos/{repo}/issues",
+                          headers={"Authorization": f"Bearer {token}",
+                                   "Accept": "application/vnd.github+json"},
+                          json={"title": f"TikTok draft ready: {first}", "body": body}, timeout=20)
+        r.raise_for_status()
+        print(f"[tiktok] caption sent to GitHub: {r.json().get('html_url')}")
+    except Exception as e:
+        print(f"[tiktok] couldn't create caption issue ({e}) — caption is in the log above")

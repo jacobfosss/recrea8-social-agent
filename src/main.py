@@ -20,6 +20,16 @@ from src import (content_selector, media_host, instagram_poster, tiktok_poster,
 ROOT = Path(__file__).resolve().parent.parent
 
 
+EDU_HASHTAGS = "#Recrea8 #nutrition #nutritionscience #healthyeating #wholefoods"
+
+
+def _tiktok_caption(content):
+    cap = content["caption"]
+    if content.get("source") == "educational" and "#" not in cap:
+        cap = f"{cap}\n\n{EDU_HASHTAGS}"
+    return cap
+
+
 def load_config():
     with open(ROOT / "config.yaml") as f:
         return yaml.safe_load(f)
@@ -139,6 +149,7 @@ def main():
             return
 
         print(f"[scheduler] posting educational now (hour={current_hour} UTC)")
+        time_optimizer.record_scheduled_post("educational", current_hour)
 
     content = content_selector.select_content(config, forced_content_type=args.content_type)
     is_carousel = content["media_type"] == "carousel"
@@ -237,9 +248,12 @@ def main():
 
     if platforms.get("tiktok") and tiktok_local_path:
         try:
-            publish_id = tiktok_poster.post_video(tiktok_local_path, content["caption"])
+            publish_id = tiktok_poster.post_video(tiktok_local_path, _tiktok_caption(content))
             print(f"[tiktok] submitted, publish_id={publish_id}")
-            post_history.record_post("tiktok", publish_id, content, tiktok_public_url)
+            try:
+                post_history.record_post("tiktok", publish_id, content, tiktok_public_url)
+            except Exception as e:
+                print(f"[history] couldn't log post ({e}) — not critical")
             if content.get("source") == "educational":
                 from . import time_optimizer
                 from datetime import datetime, timezone

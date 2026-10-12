@@ -13,7 +13,7 @@ from pathlib import Path
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "post_timing.json"
 MIN_SAMPLES = 10
 BEST_HOUR_TOLERANCE = 1
-POSTS_PER_DAY = 2
+POSTS_PER_DAY = 1
 
 
 def _load():
