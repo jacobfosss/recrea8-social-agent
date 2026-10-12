@@ -143,7 +143,7 @@ def _wait_until_fetchable(url: str, max_attempts: int = 10, delay_seconds: float
 
 def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str = "shotstack",
                   caption_intensity: str = "calm", music_path: Path = None,
-                  use_production: bool = False, caption_palette: str = "light_on_dark") -> Path:
+                  use_production: bool = False, caption_palette: str = "light_on_dark", caption_size: int = None) -> Path:
     """scene_visuals: list of (path, is_video) tuples — one raw background
     per scene, no baked-in text. scene_audio_paths: list of Paths, same
     length and order — one narration clip per scene. Each scene's on-screen
@@ -218,7 +218,7 @@ def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str
                 "src": "alias://speech",
                 "font": {
                     "family": CAPTION_FONT_FAMILY,
-                    "size": 32 if caption_intensity == "calm" else 38,
+                    "size": caption_size or (32 if caption_intensity == "calm" else 38),
                     "color": base_font_color,
                     "weight": 500,  # medium, not bold — matches the poster's
                                      # own refined, lighter-weight typography
@@ -284,7 +284,7 @@ def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str
                     "font": {
                         "color": CAPTION_FONT_COLOR,
                         "family": CAPTION_FONT_FAMILY,
-                        "size": 32 if caption_intensity == "calm" else 38,
+                        "size": caption_size or (32 if caption_intensity == "calm" else 38),
                         "stroke": CAPTION_STROKE_COLOR,
                         "strokeWidth": 1.5,
                     },

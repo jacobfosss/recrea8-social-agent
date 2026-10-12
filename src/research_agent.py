@@ -34,6 +34,25 @@ DEFAULT_TOPICS = [
 ]
 
 
+REFUSAL_MARKERS = (
+    "skip", "no connection", "not related to", "unrelated to",
+    "fabricat", "i don't want", "i do not want", "i can't", "i cannot",
+    "i won't", "i'm not able", "doesn't exist in the research",
+    "force a connection", "conflicts with the accuracy",
+)
+
+
+def looks_like_refusal(text: str) -> bool:
+    """True if the text reads like the model declining or explaining itself
+    rather than a post. Belt-and-braces so a refusal can never be published."""
+    t = (text or "").strip().lower()
+    if not t:
+        return True
+    if t.startswith("skip"):
+        return True
+    return any(m in t for m in REFUSAL_MARKERS if m != "skip")
+
+
 def _client():
     import os
     return Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -103,27 +122,29 @@ def _is_relevant_to_nutrition(article: dict) -> bool:
     ingredient but has nothing to do with human health."""
     client = _client()
     prompt = f"""Would this study make a good source for a nutrition/health
-education social media post aimed at humans? Answer YES only if the study
-reports an actual health, nutritional, or physiological EFFECT relevant to
-HUMAN health — this includes legitimate rodent (rat/mouse) studies used as
-standard research models for human physiology, since those are valid
-evidence even though the subject is an animal.
+education social media post aimed at humans?
 
-Answer NO if this is:
-- Not about food/nutrition/diet at all
-- A lab technique, detection method, sensor, or analytical chemistry
-  procedure (even if it involves food) — these measure something, they
-  don't report a health effect
-- About food safety/pathogen testing rather than nutritional/health impact
-- A veterinary or animal-agriculture-product study where the animal IS the
-  point (e.g. pet food improving a cat's coat, aquaculture fish disease
-  resistance, livestock feed additives) — these are about animal industry
-  outcomes, not human health, even if a relevant-sounding ingredient like
-  an omega fatty acid or spirulina is involved
-- About an unrelated food category with no bearing on general human nutrition
+Answer YES only if a FOOD, DRINK, DIET, EATING PATTERN, NUTRIENT, or FOOD
+INGREDIENT (including additives, sweeteners, dyes, oils, processing methods)
+is the main thing being studied, AND the study reports an actual health,
+nutritional, or physiological EFFECT relevant to HUMAN health. Legitimate
+rodent (rat/mouse) studies used as models for human physiology count.
+
+Answer NO if:
+- Food/diet is not the main exposure or intervention. For example, studies
+  of medications, drugs, inhalers, steroids, surgery, devices, or disease
+  treatments are NO even if they measure blood sugar, weight, or
+  inflammation.
+- It is a lab technique, detection method, sensor, or analytical chemistry
+  procedure (even if it involves food)
+- It is about food safety/pathogen testing rather than nutritional impact
+- It is a veterinary or animal-agriculture study where the animal IS the
+  point (pet food, livestock feed, aquaculture)
+- It is about an unrelated food category with no bearing on general human
+  nutrition
 
 Title: {article['title']}
-Abstract: {article['abstract'][:400]}
+Abstract: {article['abstract'][:600]}
 
 Answer with exactly one word: YES or NO.
 """
@@ -156,10 +177,15 @@ Write:
    direct link.
 
 Separate the two parts with "---". No preamble.
+
+If this study has no genuine connection to food, diet, or nutrition, do not
+write anything else: reply with exactly the single word SKIP.
 """
     resp = client.messages.create(model=MODEL, max_tokens=600,
                                    messages=[{"role": "user", "content": prompt}])
     text = "".join(b.text for b in resp.content if b.type == "text")
+    if text.strip().upper().startswith("SKIP") or looks_like_refusal(text):
+        return None
     parts = text.split("---")
     return {
         "card_text": parts[0].strip(),
@@ -189,6 +215,9 @@ def refresh_research_queue(topics=None, brand_voice="", brand_context="", per_to
                 if not _is_relevant_to_nutrition(article):
                     continue
                 idea = _simplify_for_social(article, brand_voice, brand_context)
+                if idea is None:
+                    seen_pmids.add(article["pmid"])
+                    continue
                 idea["topic"] = topic
                 idea["used"] = False
                 queue.append(idea)
@@ -210,8 +239,11 @@ def get_next_unused_item():
         return None
     queue = json.loads(QUEUE_PATH.read_text())
     for item in queue:
-        if not item.get("used"):
-            return item
+        if item.get("used") or item.get("rejected"):
+            continue
+        if looks_like_refusal(item.get("caption", "")) or looks_like_refusal(item.get("card_text", "")):
+            continue
+        return item
     return None
 
 

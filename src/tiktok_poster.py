@@ -1,18 +1,23 @@
 """
-Posts a video to TikTok via the Content Posting API.
-Docs: https://developers.tiktok.com/doc/content-posting-api-get-started
+Sends a video to TikTok via the Content Posting API.
 
-Uses FILE_UPLOAD, not PULL_FROM_URL. PULL_FROM_URL requires verifying
-ownership of the domain the video is hosted on (DNS record or meta tag) —
-our videos are hosted at raw.githubusercontent.com, which is GitHub's
-domain, not ours, so we can never satisfy that requirement. FILE_UPLOAD
-sends the video bytes directly to TikTok instead, sidestepping domain
-ownership entirely.
+Two modes, picked by the TIKTOK_POST_MODE env var:
 
-Audit status: APPROVED. privacy_level is now PUBLIC_TO_EVERYONE. Before
-this, unaudited clients were restricted to SELF_ONLY (private) regardless
-of what privacy_level was requested — see the code comment history if you
-ever need to revert to testing mode.
+- "draft" (default): Upload endpoint, /v2/post/publish/inbox/video/init/
+  (scope video.upload). The video lands in the TikTok app as a draft with an
+  inbox notification; you open it, paste the caption, and tap Post. This needs
+  no Direct Post audit and works on a public account. TikTok caps this at
+  5 pending (un-posted) drafts per 24 hours, and the API can't set a caption,
+  so the caption is printed in the log for you to paste.
+
+- "direct": Direct Post endpoint, /v2/post/publish/video/init/ (scope
+  video.publish). Publishes straight to the profile. Until the Direct Post
+  audit is approved, TikTok only allows this to a PRIVATE account
+  (unaudited_client_can_only_post_to_private_accounts).
+
+Both use FILE_UPLOAD (video bytes sent directly), not PULL_FROM_URL, because
+PULL_FROM_URL requires verifying ownership of the host domain and our files
+live on raw.githubusercontent.com, which we don't own.
 """
 import os
 from pathlib import Path
@@ -21,9 +26,22 @@ import requests
 
 API_ROOT = "https://open.tiktokapis.com/v2"
 
-MIN_CHUNK_SIZE = 5 * 1024 * 1024
+DRAFT_INIT_URL = f"{API_ROOT}/post/publish/inbox/video/init/"
+DIRECT_INIT_URL = f"{API_ROOT}/post/publish/video/init/"
+
 MAX_CHUNK_SIZE = 64 * 1024 * 1024
-MAX_FINAL_CHUNK_SIZE = 128 * 1024 * 1024
+MULTI_CHUNK_SIZE = 10 * 1024 * 1024
+
+
+def _post_mode() -> str:
+    mode = os.environ.get("TIKTOK_POST_MODE", "draft").strip().lower()
+    return "direct" if mode == "direct" else "draft"
+
+
+def _direct_privacy_level() -> str:
+    # SELF_ONLY while unaudited (also requires the account itself to be private);
+    # set TIKTOK_PRIVACY_LEVEL=PUBLIC_TO_EVERYONE once the Direct Post audit passes.
+    return os.environ.get("TIKTOK_PRIVACY_LEVEL", "SELF_ONLY")
 
 
 def _access_token() -> str:
@@ -43,83 +61,93 @@ def _access_token() -> str:
 
 
 def _compute_chunks(video_size: int) -> tuple:
-    """If the whole file fits within a single chunk's max size, chunk_size
-    MUST equal the actual video_size exactly — TikTok rejects a declared
-    chunk_size that doesn't match what's actually sent when there's only
-    one chunk. Only split into multiple fixed-size chunks once the file
-    genuinely exceeds one chunk's max."""
+    """A file that fits in one chunk must declare chunk_size == video_size
+    (TikTok rejects a mismatch with 'The chunk size is invalid'). Larger
+    files split into 10MB chunks; the last chunk absorbs the remainder."""
     if video_size <= MAX_CHUNK_SIZE:
         return video_size, 1
-
-    chunk_size = 10 * 1024 * 1024
-    total_chunk_count = video_size // chunk_size
-    return chunk_size, total_chunk_count
+    return MULTI_CHUNK_SIZE, video_size // MULTI_CHUNK_SIZE
 
 
 def _upload_file_chunks(upload_url: str, video_path: Path, video_size: int,
-                          chunk_size: int, total_chunk_count: int):
+                        chunk_size: int, total_chunk_count: int):
     with open(video_path, "rb") as f:
         for i in range(total_chunk_count):
             start = i * chunk_size
             is_last = (i == total_chunk_count - 1)
             end = video_size - 1 if is_last else (start + chunk_size - 1)
-
             f.seek(start)
-            chunk_bytes = f.read((end - start) + 1)
-
+            chunk_bytes = f.read(end - start + 1)
             resp = requests.put(
                 upload_url,
                 headers={
                     "Content-Range": f"bytes {start}-{end}/{video_size}",
+                    "Content-Length": str(len(chunk_bytes)),
                     "Content-Type": "video/mp4",
                 },
                 data=chunk_bytes,
                 timeout=120,
             )
+            if resp.status_code >= 400:
+                print(f"[tiktok] chunk {i} upload rejected ({resp.status_code}): {resp.text}")
             resp.raise_for_status()
 
 
-def post_video(video_path, caption: str) -> str:
-    """video_path: a LOCAL file path (FILE_UPLOAD reads directly from
-    disk, no hosting step needed)."""
-    video_path = Path(video_path)
-    video_size = video_path.stat().st_size
-    chunk_size, total_chunk_count = _compute_chunks(video_size)
-
-    token = _access_token()
-
-    init_body = {
+def build_init_body(mode: str, caption: str, video_size: int,
+                    chunk_size: int, total_chunk_count: int) -> dict:
+    source_info = {
+        "source": "FILE_UPLOAD",
+        "video_size": video_size,
+        "chunk_size": chunk_size,
+        "total_chunk_count": total_chunk_count,
+    }
+    if mode == "draft":
+        # The inbox/upload endpoint takes only source_info; caption is added
+        # by hand in the TikTok app when finishing the draft.
+        return {"source_info": source_info}
+    return {
         "post_info": {
             "title": caption,
-            "privacy_level": "PUBLIC_TO_EVERYONE",  # audit approved — was SELF_ONLY during testing
+            "privacy_level": _direct_privacy_level(),
             "disable_duet": False,
             "disable_comment": False,
             "disable_stitch": False,
         },
-        "source_info": {
-            "source": "FILE_UPLOAD",
-            "video_size": video_size,
-            "chunk_size": chunk_size,
-            "total_chunk_count": total_chunk_count,
-        },
+        "source_info": source_info,
     }
 
+
+def post_video(video_path, caption: str) -> str:
+    """video_path: a LOCAL file path. Returns TikTok's publish_id."""
+    video_path = Path(video_path)
+    video_size = video_path.stat().st_size
+    chunk_size, total_chunk_count = _compute_chunks(video_size)
+    mode = _post_mode()
+
+    token = _access_token()
     init_resp = requests.post(
-        f"{API_ROOT}/post/publish/video/init/",
-        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
-        json=init_body,
+        DRAFT_INIT_URL if mode == "draft" else DIRECT_INIT_URL,
+        headers={"Authorization": f"Bearer {token}",
+                 "Content-Type": "application/json; charset=UTF-8"},
+        json=build_init_body(mode, caption, video_size, chunk_size, total_chunk_count),
         timeout=30,
     )
     if init_resp.status_code >= 400:
         print(f"[tiktok] init request rejected ({init_resp.status_code}): {init_resp.text}")
     init_resp.raise_for_status()
-    init_data = init_resp.json().get("data", {})
-    upload_url = init_data.get("upload_url")
-    publish_id = init_data.get("publish_id", "unknown")
 
+    data = init_resp.json().get("data", {})
+    upload_url = data.get("upload_url")
+    publish_id = data.get("publish_id", "unknown")
     if not upload_url:
         raise RuntimeError(f"TikTok init response had no upload_url: {init_resp.text}")
 
     _upload_file_chunks(upload_url, video_path, video_size, chunk_size, total_chunk_count)
 
+    if mode == "draft":
+        print("[tiktok] sent to your TikTok drafts. Open the TikTok app, tap the "
+              "inbox notification, paste this caption, and post:")
+        print("----- CAPTION -----")
+        print(caption)
+        print("-------------------")
     return publish_id

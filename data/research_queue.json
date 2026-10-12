@@ -17,7 +17,7 @@
     "source_year": "2026",
     "pmid": "42429890",
     "topic": "ultra-processed food inflammation",
-    "used": false
+    "used": true
   },
   {
     "card_text": "Maternal health today shapes tomorrow's met",
@@ -27,7 +27,7 @@
     "source_year": "2026",
     "pmid": "42438413",
     "topic": "artificial sweeteners health effects",
-    "used": false
+    "used": true
   },
   {
     "card_text": "Your cells are always listening to what fuels them.",
@@ -37,7 +37,7 @@
     "source_year": "2026",
     "pmid": "42435175",
     "topic": "artificial sweeteners health effects",
-    "used": false
+    "used": true
   },
   {
     "card_text": "More plants, more variety, happier gut.",
@@ -47,7 +47,7 @@
     "source_year": "2026",
     "pmid": "42423005",
     "topic": "whole foods gut microbiome",
-    "used": false
+    "used": true
   },
   {
     "card_text": "How you prep grains can change what your gut gets out of them",
@@ -57,7 +57,7 @@
     "source_year": "2026",
     "pmid": "42409563",
     "topic": "whole foods gut microbiome",
-    "used": false
+    "used": true
   },
   {
     "card_text": "Cereal for breakfast? The science says: it depends on the box.",
@@ -67,7 +67,7 @@
     "source_year": "2026",
     "pmid": "42389703",
     "topic": "added sugar chronic disease risk",
-    "used": false
+    "used": true
   },
   {
     "card_text": "This study is about inhaled corticosteroids and blood sugar in COPD patients \u2014 it has no connection to food, nutrition, or eating habits. Writing a nutrition-brand caption \"explaining why it matters for everyday eating\" would require fabricating a link that doesn't exist in the research, which conflicts with the accuracy and honesty standards you've set.\n\nI don't want to force a connection just to hit the format (e.g., vague parallels like \"comb",
@@ -77,7 +77,7 @@
     "source_year": "2026",
     "pmid": "42371832",
     "topic": "added sugar chronic disease risk",
-    "used": false
+    "used": true
   },
   {
     "card_text": "Better detection tech means safer meat, sooner.",
@@ -87,7 +87,8 @@
     "source_year": "2026",
     "pmid": "42229763",
     "topic": "artificial food dye health effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "There's now a more precise way to catch dye in food.",
@@ -97,7 +98,8 @@
     "source_year": "2026",
     "pmid": "42200410",
     "topic": "artificial food dye health effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "**Hook:** New brain research spotlights inflammation's role in memory health.",
@@ -107,7 +109,8 @@
     "source_year": "2026",
     "pmid": "42432263",
     "topic": "anti-inflammatory diet clinical trial",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Your brain's ketones might have a calming trick up their sleeve.",
@@ -117,7 +120,8 @@
     "source_year": "2026",
     "pmid": "42423995",
     "topic": "anti-inflammatory diet clinical trial",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Your mood might start in your kitchen.",
@@ -127,7 +131,7 @@
     "source_year": "2026",
     "pmid": "42469454",
     "topic": "ultra-processed food inflammation",
-    "used": false
+    "used": true
   },
   {
     "card_text": "Your cooking method might matter more than you think.",
@@ -137,7 +141,7 @@
     "source_year": "2026",
     "pmid": "42463553",
     "topic": "ultra-processed food inflammation",
-    "used": false
+    "used": true
   },
   {
     "card_text": "This study (neonatal venepuncture vs. heel lance) is a pediatric pain-management review \u2014 it has no genuine connection to nutrition, food, or everyday eating. Writing a caption that ties it to diet would mean fabricating a link that doesn't exist, which conflicts with the transparency and honesty this brand voice requires.\n\nI'd need a nutrition-relevant study to write an accurate hook and caption. If you can share one, I'll draft both pieces right away.",
@@ -147,7 +151,8 @@
     "source_year": "2026",
     "pmid": "42466545",
     "topic": "artificial sweeteners health effects",
-    "used": false
+    "used": false,
+    "rejected": "caption is a refusal, not a post"
   },
   {
     "card_text": "Your gut knows the difference between real and \"diet.\"",
@@ -177,7 +182,8 @@
     "source_year": "2026",
     "pmid": "42448967",
     "topic": "whole foods gut microbiome",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "\"Ultra-processed\" isn't one thing \u2014 nuance matters.",
@@ -207,7 +213,8 @@
     "source_year": "2026",
     "pmid": "42037520",
     "topic": "artificial food dye health effects",
-    "used": false
+    "used": false,
+    "rejected": "caption is a refusal, not a post"
   },
   {
     "card_text": "Ultra-processed food is everywhere. Regulation isn't catching up.",
@@ -227,7 +234,8 @@
     "source_year": "2026",
     "pmid": "42451200",
     "topic": "anti-inflammatory diet clinical trial",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Herbs aren't just for flavor \u2014 even fish benefit.",
@@ -267,7 +275,8 @@
     "source_year": "2026",
     "pmid": "42502210",
     "topic": "artificial sweeteners health effects",
-    "used": false
+    "used": false,
+    "rejected": "caption is a refusal, not a post"
   },
   {
     "card_text": "Your liver is working overtime\u2014even before your next meal.",
@@ -277,7 +286,8 @@
     "source_year": "2026",
     "pmid": "42498412",
     "topic": "artificial sweeteners health effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Your brain eats too \u2014 feed it the whole-food way.",
@@ -317,7 +327,8 @@
     "source_year": "2026",
     "pmid": "42490328",
     "topic": "artificial food dye health effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Stress-eating link? Science is catching up on that.",
@@ -327,7 +338,8 @@
     "source_year": "2026",
     "pmid": "42412896",
     "topic": "anti-inflammatory diet clinical trial",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "",
@@ -337,7 +349,8 @@
     "source_year": "2026",
     "pmid": "42525211",
     "topic": "ultra-processed food inflammation",
-    "used": false
+    "used": false,
+    "rejected": "caption is a refusal, not a post"
   },
   {
     "card_text": "What you eat after diagnosis may matter more than we thought.",
@@ -367,7 +380,8 @@
     "source_year": "2026",
     "pmid": "42533618",
     "topic": "artificial sweeteners health effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Fermented onions, happier chickens, less waste \u2014 nature knows best.",
@@ -397,7 +411,8 @@
     "source_year": "2026",
     "pmid": "42540663",
     "topic": "artificial food dye health effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "**Even during cancer treatment, food choices can matter**",
@@ -437,7 +452,8 @@
     "source_year": "2026",
     "pmid": "42565878",
     "topic": "artificial sweeteners health effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "What your bottled water and toast have",
@@ -457,7 +473,8 @@
     "source_year": "2026",
     "pmid": "42570940",
     "topic": "whole foods gut microbiome",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Your childhood taste buds might be shaping your health decades later.",
@@ -477,7 +494,8 @@
     "source_year": "2026",
     "pmid": "42553409",
     "topic": "anti-inflammatory diet clinical trial",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Your heart has rhythm \u2014 feed it accordingly.",
@@ -487,7 +505,8 @@
     "source_year": "2026",
     "pmid": "42462800",
     "topic": "anti-inflammatory diet clinical trial",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "There's no single \"right\" way to eat for gut health.",
@@ -557,7 +576,8 @@
     "source_year": "2026",
     "pmid": "42586512",
     "topic": "allulose metabolic effects",
-    "used": false
+    "used": false,
+    "rejected": "caption is a refusal, not a post"
   },
   {
     "card_text": "Sugar vs. sweeteners: neither is the real answer.",
@@ -627,7 +647,8 @@
     "source_year": "2026",
     "pmid": "42514406",
     "topic": "artificial sweeteners insulin response",
-    "used": false
+    "used": false,
+    "rejected": "caption is a refusal, not a post"
   },
   {
     "card_text": "",
@@ -637,7 +658,8 @@
     "source_year": "2026",
     "pmid": "42588147",
     "topic": "added sugar chronic disease risk",
-    "used": false
+    "used": false,
+    "rejected": "caption is a refusal, not a post"
   },
   {
     "card_text": "Your liver keeps a receipt for every soda you drink.",
@@ -647,7 +669,8 @@
     "source_year": "2026",
     "pmid": "42589483",
     "topic": "high fructose corn syrup metabolic effects",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "That \"thickener\" in processed meat? Worth a second look.",
@@ -847,7 +870,8 @@
     "source_year": "2026",
     "pmid": "42480151",
     "topic": "aspartame health effects research",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "What HFCS does to the body \u2014 and what might help.",
@@ -967,7 +991,8 @@
     "source_year": "2026",
     "pmid": "41611130",
     "topic": "whey protein muscle recovery research",
-    "used": false
+    "used": false,
+    "rejected": "study is not about food/nutrition"
   },
   {
     "card_text": "Dark chocolate might love your heart back.",

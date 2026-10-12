@@ -49,17 +49,31 @@ def _build_tiktok_video(content):
         slide_texts = content["slide_texts"]
         total_slides = len(slide_texts)
 
-        scene_visuals = []
-        for i in range(total_slides):
-            bg_path = content_generator.render_video_background(
-                slide_index=i + 1, total_slides=total_slides,
-            )
-            scene_visuals.append((bg_path, False))
-
         scene_audio_paths = voiceover_generator.generate_voiceover_batch(
             texts=slide_texts,
             filename_hints=[f"educational_scene{i}" for i in range(total_slides)],
         )
+
+        # Background style rotates: 3 "Better Informed" poster, then 3 pasture
+        # footage, repeat (see src/pasture_backgrounds.py). Falls back to the
+        # poster if Pexels doesn't return enough footage.
+        from src import pasture_backgrounds
+        style = pasture_backgrounds.next_style()
+        scene_visuals = None
+        caption_palette = "dark_on_light"
+        caption_size = None
+        if style == "pasture":
+            scene_visuals = pasture_backgrounds.build_pasture_visuals(scene_audio_paths)
+            if scene_visuals:
+                caption_palette = "light_on_dark"
+                caption_size = 60
+        if not scene_visuals:
+            style = "poster"
+            scene_visuals = [
+                (content_generator.render_video_background(slide_index=i + 1, total_slides=total_slides), False)
+                for i in range(total_slides)
+            ]
+        print(f"[educational] background style: {style}")
 
         return shotstack_video_builder.build_video(
             scene_visuals=scene_visuals,
@@ -67,7 +81,8 @@ def _build_tiktok_video(content):
             filename_hint="educational",
             caption_intensity="calm",  # word-synced, not full karaoke bounce —
                                          # matches educational content's calmer tone
-            caption_palette="dark_on_light",  # near-black text — the new
+            caption_palette=caption_palette,  # near-black text — the new
+            caption_size=caption_size,
                                                 # cream background would make
                                                 # the old cream text invisible
             use_production=True,  # LIVE — educational is confirmed 10/10
@@ -167,7 +182,10 @@ def main():
         tiktok_public_url = public_url
         tiktok_local_path = content["media_path"]
     elif tiktok_video_path:
-        tiktok_public_url = media_host.publish_to_public_url(tiktok_video_path)
+        try:
+            tiktok_public_url = media_host.publish_to_public_url(tiktok_video_path)
+        except Exception as e:
+            print(f"[hosted] skipped GitHub copy of the video ({e}) - not needed for TikTok upload")
         tiktok_local_path = tiktok_video_path
         print(f"[hosted] tiktok video: {tiktok_public_url}")
 
@@ -217,7 +235,7 @@ def main():
         except Exception as e:
             print(f"[instagram] FAILED: {e}")
 
-    if platforms.get("tiktok") and tiktok_public_url:
+    if platforms.get("tiktok") and tiktok_local_path:
         try:
             publish_id = tiktok_poster.post_video(tiktok_local_path, content["caption"])
             print(f"[tiktok] submitted, publish_id={publish_id}")
