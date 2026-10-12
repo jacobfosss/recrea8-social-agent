@@ -1663,5 +1663,125 @@
     "pmid": "42806724",
     "topic": "artificial sweeteners food health effects",
     "used": false
+  },
+  {
+    "card_text": "Your plate's pattern may matter more than any single food.",
+    "caption": "A new case-control study found that closer alignment with a Westernized dietary pattern \u2014 processed foods, red meat, refined grains, added sugar \u2014 was linked to higher odds of gastric cancer, along with more inflammation, more oxidative stress, and a less favorable metabolic profile. It's observational, so it shows association, not proof of cause \u2014 but it's a solid reminder that how we eat overall tends to matter more than any single food. (Nutrition Research, 2026)",
+    "source_title": "Westernized diet is related to gastric cancer risk and inflammation, oxidative stress, and metabolic dysregulation: evidence from an incidence case-control study.",
+    "source_journal": "Nutrition research (New York, N.Y.)",
+    "source_year": "2026",
+    "pmid": "42832846",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Sodium hides in plain sight \u2014 and it adds up.",
+    "caption": "New research highlights why cutting sodium is so hard: most of it is baked into packaged and prepared foods before we even add a pinch of salt ourselves. For people managing kidney health, that invisibility makes moderation tricky. It's a good reminder to check labels on the foods you eat often, not just the saltshaker. (Seminars in Nephrology, 2026)",
+    "source_title": "Reducing Dietary Sodium Exposure in Chronic Kidney Disease: Challenges and Opportunities.",
+    "source_journal": "Seminars in nephrology",
+    "source_year": "2026",
+    "pmid": "42850177",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Not all sweeteners are treated equally by your gut.",
+    "caption": "New research compared common sugar substitutes head-to-head in mice and lab models. Sucralose stood out \u2014 linked to lower microbial diversity, a weaker gut barrier, and more inflammation under digestive stress, while allulose and inulin supported more beneficial bacteria growth. It's early-stage research, not a verdict on any single food, but it's a reminder to read labels and know what's actually sweetening your food. (Food Research International, 2026)",
+    "source_title": "Comparative evaluation of sugar substitutes reveals greater intestinal perturbation associated with sucralose under inflammatory stress.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "42859009",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "Fiber's shape matters as much as its source.",
+    "caption": "New research found that the *length* of a fiber's molecular chain \u2014 not just the fiber itself \u2014 changes how gut bacteria break it down. In lab fermentation tests, longer-chain glucan fed butyrate-producing bacteria, while shorter chains shifted microbes toward different byproducts entirely. It's early-stage, in vitro work (not a human trial), but it's a reminder that \"fiber\" isn't one-size-fits-all. (Food Research International, 2026)",
+    "source_title": "Polymerization-dependent gut microbiome responses to curdlan \u03b2-1,3-glucan and its oligosaccharides.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "42859003",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "A rare sugar with surprising effects on liver health",
+    "caption": "In diabetic mice, a rare sugar called D-psicose was linked to healthier liver fat levels, improved gut barrier function, and shifts toward beneficial gut bacteria. Researchers also saw changes in metabolites tied to inflammation. It's early-stage animal research, not proof of human benefits \u2014 but it's a fascinating look at how sugar structure, not just sugar amount, may matter. (Food Science & Nutrition, 2026)",
+    "source_title": "D-Psicose Attenuates Hepatic Steatosis and Inflammatory Injury in HFD/STZ-Induced T2DM Mice and Is Associated With Alterations in Gut Microbiota, Tryptophan Metabolism, and Hepatic AhR-Related Signaling.",
+    "source_journal": "Food science & nutrition",
+    "source_year": "2026",
+    "pmid": "42856840",
+    "topic": "allulose metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Another safety checkmark for allulose, the rare sugar.",
+    "caption": "A new rat study tested high doses of D-allulose (a low-calorie sweetener popping up in more foods) during pregnancy and found no signs of developmental toxicity, even at the highest dose given. It's one more data point supporting allulose's safety profile \u2014 though this was an animal study, not a human one, so it speaks to food safety research rather than personal dietary advice. (Regulatory Toxicology and Pharmacology, 2026)",
+    "source_title": "Developmental toxicity assessment of D-allulose produced by genetically engineered Escherichia coli.",
+    "source_journal": "Regulatory toxicology and pharmacology : RTP",
+    "source_year": "2026",
+    "pmid": "42665120",
+    "topic": "allulose metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Low protein, high sugar \u2014 tough on muscle and bone.",
+    "caption": "A pilot study in young mice looked at what happens when a diet is low in protein but high in fructose corn syrup \u2014 a combo common in many processed foods. Researchers found signs of reduced muscle and bone health over time. It's early animal research, not a human study, but it's a reminder that protein quality and sugar sources both matter for how our bodies recover and rebuild (Physical Activity and Nutrition, 2026).",
+    "source_title": "Effects of a low-protein, high-fructose corn syrup diet on skeletal muscle and bone in young adult mice: a pilot study.",
+    "source_journal": "Physical activity and nutrition",
+    "source_year": "2026",
+    "pmid": "42860729",
+    "topic": "high fructose corn syrup metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Why *how* you absorb nutrients matters, too.",
+    "caption": "Curcumin (turmeric's star compound) is notoriously hard for the body to absorb. Researchers built a tiny particle made from lignin (a plant fiber byproduct) to protect curcumin through digestion \u2014 and in mice, it released more in the small intestine, supported gut bacteria byproducts, and was well tolerated. Early-stage science, not a supplement recommendation \u2014 but a reminder that ingredient quality and delivery both matter. (Food Research International, 2026)",
+    "source_title": "Lignin nanoparticles-stabilized Pickering emulsions for delivery of curcumin: Gastrointestinal release, gut microbiota modulation and in vivo intestinal responses.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "42858977",
+    "topic": "food emulsifiers gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might help your brain handle tough environments.",
+    "caption": "In mice, a selenium-enriched probiotic strain helped offset brain changes caused by high-altitude, low-oxygen stress \u2014 partly by shifting gut bacteria linked to neurotransmitter balance. It's an early, animal-only finding, not proof for humans, but it adds to growing evidence that gut health and brain health are closely connected. (Journal of Food Science, 2026)",
+    "source_title": "Selenium-Enriched Lacticaseibacillus rhamnosus Alleviates Hypobaric Hypoxia-Induced Brain Injury via Regulation of Gut Microbiota and Neurotransmitter Homeostasis.",
+    "source_journal": "Journal of food science",
+    "source_year": "2026",
+    "pmid": "42859391",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your gut bacteria might turn peanuts into immune-calming compounds.",
+    "caption": "Early research suggests gut microbes can metabolize peanuts into byproducts that may help regulate immune responses \u2014 part of why early peanut introduction is linked to lower allergy risk. It's a reminder that what we eat doesn't just feed us, it feeds a whole ecosystem working on our behalf. Still early-stage science, not medical guidance (Gut Microbes, 2026).",
+    "source_title": "Gut microbial metabolism of peanuts generates immunoregulatory metabolites.",
+    "source_journal": "Gut microbes",
+    "source_year": "2026",
+    "pmid": "42845237",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Food choices may do more than fuel you \u2014 they may help you rest.",
+    "caption": "A recent clinical trial found that teaching breast cancer patients undergoing chemotherapy about anti-inflammatory eating was linked to improvements in sleep disturbances and certain inflammation markers. It's a reminder that what's on your plate connects to more than just digestion \u2014 though this research was specific to chemo patients, not a general sleep fix. (Supportive Care in Cancer, 2026)",
+    "source_title": "Effects of anti-inflammatory dietary education on sleep disturbances among patients with breast cancer undergoing chemotherapy: A randomized controlled trial.",
+    "source_journal": "Supportive care in cancer : official journal of the Multinational Association of Supportive Care in Cancer",
+    "source_year": "2026",
+    "pmid": "42859245",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  },
+  {
+    "card_text": "Protein's role in recovery isn't just for athletes.",
+    "caption": "A 2026 study followed heart surgery patients given a whey protein isolate supplement starting just 1-2 days after their operation. Over 30 days, significantly more patients hit their daily protein and calorie targets compared to before supplementation began. It's a reminder that whey protein is a well-studied recovery tool in serious medical contexts, not just a gym staple. This study looked at surgical patients, not everyday nutrition. (Cureus, 2026)",
+    "source_title": "Effects of Early Postoperative Whey Protein Isolate-Based Oral Supplementation on Nutritional Outcomes in Patients Undergoing Coronary Artery Bypass Grafting: A Prospective Multicentre Real-World Study.",
+    "source_journal": "Cureus",
+    "source_year": "2026",
+    "pmid": "42852298",
+    "topic": "whey protein muscle recovery research",
+    "used": false
   }
 ]
