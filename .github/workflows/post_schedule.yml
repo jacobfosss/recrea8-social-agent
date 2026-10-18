@@ -7,14 +7,7 @@ on:
     # best-performing hour once enough real engagement data exists (see
     # src/time_optimizer.py). This is intentionally MORE checks than
     # posts — most checks will just print "not posting" and exit quickly.
-    - cron: "0 8 * * *"
-    - cron: "0 10 * * *"
-    - cron: "0 12 * * *"
-    - cron: "0 14 * * *"
-    - cron: "0 16 * * *"
-    - cron: "0 18 * * *"
-    - cron: "0 20 * * *"
-    - cron: "0 22 * * *"
+    - cron: "5 11,13,15,17,19,21,23 * * *"
     # Lifestyle/library and creative are PAUSED from the automatic
     # schedule until they're brought up to the same standard as
     # educational — both still work fine via manual workflow_dispatch
@@ -26,6 +19,10 @@ on:
         required: false
         type: choice
         options: ["", "educational", "lifestyle", "library", "creative"]
+
+concurrency:
+  group: social-posting
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -87,12 +84,13 @@ jobs:
             CMD="$CMD --content-type ${{ steps.run_config.outputs.type }}"
           fi
           if [ "${{ steps.run_config.outputs.scheduled_check }}" = "true" ]; then
-            CMD="$CMD --scheduled-check --check-hours 8,10,12,14,16,18,20,22"
+            CMD="$CMD --scheduled-check --check-hours 11,13,15,17,19,21,23"
           fi
           echo "Running: $CMD"
           $CMD
 
       - name: Commit updated state
+        if: always()
         run: |
           git config user.name "social-agent-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -103,8 +101,8 @@ jobs:
           # entirely if ANY path is missing, silently losing real updates.
           git add data/posted_log.json 2>/dev/null || true
           git add data/post_timing.json 2>/dev/null || true
-          git add content/posted/ 2>/dev/null || true
-          git add content/generated/ 2>/dev/null || true
+          git add data/research_queue.json 2>/dev/null || true
+          git add data/educational_style.json 2>/dev/null || true
 
           if ! git diff --cached --quiet; then
             git commit -m "Update posted log / timing data [skip ci]"
