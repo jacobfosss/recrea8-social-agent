@@ -7,7 +7,9 @@ on:
     # best-performing hour once enough real engagement data exists (see
     # src/time_optimizer.py). This is intentionally MORE checks than
     # posts — most checks will just print "not posting" and exit quickly.
-    - cron: "5 11,13,15,17,19,21,23 * * *"
+    # hourly 7am-6pm New York time; GitHub sometimes delays or drops
+    # scheduled runs, so more check-ins = one dropped run can't cost a day
+    - cron: "5 11-22 * * *"
     # Lifestyle/library and creative are PAUSED from the automatic
     # schedule until they're brought up to the same standard as
     # educational — both still work fine via manual workflow_dispatch
@@ -84,10 +86,11 @@ jobs:
             CMD="$CMD --content-type ${{ steps.run_config.outputs.type }}"
           fi
           if [ "${{ steps.run_config.outputs.scheduled_check }}" = "true" ]; then
-            CMD="$CMD --scheduled-check --check-hours 11,13,15,17,19,21,23"
+            CMD="$CMD --scheduled-check --check-hours 11,12,13,14,15,16,17,18,19,20,21,22"
           fi
           echo "Running: $CMD"
-          $CMD
+          set -o pipefail
+          $CMD 2>&1 | tee run.log
 
       - name: Commit updated state
         if: always()
@@ -115,3 +118,36 @@ jobs:
           else
             echo "Nothing to commit this run."
           fi
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          S1: ${{ secrets.ANTHROPIC_API_KEY }}
+          S2: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          S3: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          S4: ${{ secrets.ELEVENLABS_API_KEY }}
+          S5: ${{ secrets.SHOTSTACK_PRODUCTION_API_KEY }}
+          S6: ${{ secrets.SHOTSTACK_SANDBOX_API_KEY }}
+          S7: ${{ secrets.PEXELS_API_KEY }}
+          S8: ${{ secrets.IG_ACCESS_TOKEN }}
+          S9: ${{ secrets.JAMENDO_CLIENT_ID }}
+          S10: ${{ secrets.TIKTOK_CLIENT_KEY }}
+        run: |
+          # Opens an issue assigned to you (pushes to your phone) with the
+          # end of the log, secrets scrubbed, so the failure can be fixed.
+          python3 - << 'PYEOF'
+          import os, pathlib
+          log = pathlib.Path("run.log").read_text(errors="replace") if pathlib.Path("run.log").exists() else "(no log captured)"
+          log = "\n".join(log.splitlines()[-80:])
+          for i in range(1, 11):
+              v = os.environ.get(f"S{i}", "")
+              if len(v) >= 6:
+                  log = log.replace(v, "***")
+          run = f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+          pathlib.Path("alert.md").write_text(
+              "Today's TikTok draft run failed, so no draft was sent.\n\n"
+              f"Run: {run}\n\nEnd of the log:\n\n```\n{log}\n```\n")
+          PYEOF
+          gh issue create --title "Daily post failed ($(date -u +%Y-%m-%d))" \
+            --body-file alert.md --assignee "${{ github.repository_owner }}"

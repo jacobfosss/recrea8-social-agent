@@ -89,7 +89,9 @@ def should_post_now(pillar: str, current_hour_utc: int, check_hours: list,
     # the LAST check of the day and we're still short, post anyway even if
     # it violates the minimum gap. Missing the daily quota is worse than
     # imperfect spacing.
-    if current_hour_utc == max(check_hours) and still_needed > 0:
+    # >= not ==: GitHub often runs scheduled jobs late, so the last check
+    # can land after its hour — it must still count as the last chance.
+    if current_hour_utc >= max(check_hours) and still_needed > 0:
         return True
 
     # Enforce minimum spacing from today's most recent post, so multiple
