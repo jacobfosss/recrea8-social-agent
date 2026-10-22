@@ -89,5 +89,12 @@
     "hour_utc": 23,
     "post_id": null,
     "engagement_score": null
+  },
+  {
+    "pillar": "educational",
+    "date": "2026-10-22",
+    "hour_utc": 22,
+    "post_id": null,
+    "engagement_score": null
   }
 ]
