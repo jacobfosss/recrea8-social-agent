@@ -6,6 +6,7 @@ best once enough real engagement data has accumulated. Guarantees exactly
 POSTS_PER_DAY posts per day — never fewer, never more.
 """
 import json
+import os
 import random
 from datetime import datetime, timezone
 from pathlib import Path
@@ -84,6 +85,13 @@ def should_post_now(pillar: str, current_hour_utc: int, check_hours: list,
         return False
 
     still_needed = posts_per_day - already_posted
+
+    # Draft mode: you post the draft yourself whenever you tap it, so the
+    # check-in time doesn't matter. Make the draft at the FIRST check-in of
+    # the day. (GitHub drops many scheduled runs, so waiting for a random or
+    # "last" check-in was skipping whole days.)
+    if os.environ.get("TIKTOK_POST_MODE", "draft").lower() != "direct":
+        return True
 
     # The guaranteed-count promise takes priority over spacing — if this is
     # the LAST check of the day and we're still short, post anyway even if
