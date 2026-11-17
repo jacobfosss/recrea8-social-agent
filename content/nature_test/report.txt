@@ -1,9 +1,0 @@
-== cacao
-[nature] screened 63 thumbnails; stop=end_turn blocks=['thinking', 'text'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=6158, output_tokens=1855, output_tokens_details=OutputTokensDetails(thinking_tokens=1784), server_tool_use=None, service_tier='standard', speed='standard') reply: '[48, 51, 55, 56, 53, 52, 49, 62, 61, 63, 57, 58, 54, 50, 59, 33, 39, 47, 36, 7, 24, 29, 31]'
-[nature] screening kept 23/63 clips for 'cacao'
-[nature] built cacao background: 12 shots, 55.3s, 19.6 MB — clips: 16754842, 11760121, 34801128, 31895918, 36271582, 34427724, 40973018, 17263116, 32064510, 34755966, 12894693, 37546403
-
-== dairy
-[nature] screened 64 thumbnails; stop=end_turn blocks=['thinking', 'text'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=6421, output_tokens=2062, output_tokens_details=OutputTokensDetails(thinking_tokens=1905), server_tool_use=None, service_tier='standard', speed='standard') reply: '```json\n[36, 29, 19, 24, 55, 64, 34, 38, 43, 48, 5, 42, 41, 40, 39, 33, 35, 37, 46, 45, 25, 22, 21, 18, 17, 23, 20, 26, 27, 28, 30, 31, 32, 61, 57, 62, 58, 60, 50, 51, 52, 54, 56, 63, 1, 4, 7, 9, 11, 47]\n```'
-[nature] screening kept 50/64 clips for 'dairy'
-[nature] built dairy background: 12 shots, 55.3s, 19.5 MB — clips: 35173081, 31618837, 31405813, 27729136, 15393637, 37708809, 32192845, 39282075, 28219888, 39282058, 34501594, 5984514

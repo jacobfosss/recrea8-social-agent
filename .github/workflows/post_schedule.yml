@@ -21,6 +21,14 @@ on:
         required: false
         type: choice
         options: ["", "educational", "lifestyle", "library", "creative"]
+      edu_style:
+        description: "Force educational background: poster or pasture (nature). Blank = normal rotation"
+        required: false
+        default: ""
+      edu_theme:
+        description: "Force nature theme: dairy, honey, cacao, vanilla, mint_greens. Blank = auto"
+        required: false
+        default: ""
 
 concurrency:
   group: social-posting
@@ -76,6 +84,8 @@ jobs:
           GITHUB_REPO: ${{ github.repository }}
           GITHUB_BRANCH: ${{ github.ref_name }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          EDU_STYLE: ${{ inputs.edu_style }}
+          EDU_THEME: ${{ inputs.edu_theme }}
           JAMENDO_CLIENT_ID: ${{ secrets.JAMENDO_CLIENT_ID }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           SHOTSTACK_SANDBOX_API_KEY: ${{ secrets.SHOTSTACK_SANDBOX_API_KEY }}
