@@ -1,4 +1,4 @@
 == dairy
-[nature] screened 60 thumbnails; reply: ''
-[nature] screening kept 0/60 clips for 'dairy'
-[nature] ran out of approved 'dairy' footage
+[nature] screened 60 thumbnails; stop=max_tokens blocks=['thinking'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=4973, output_tokens=300, output_tokens_details=OutputTokensDetails(thinking_tokens=300), server_tool_use=None, service_tier='standard', speed='standard') reply: ''
+[nature] screening failed (empty screening reply) — using unscreened footage
+[nature] built dairy background: 12 shots, 55.3s, 19.1 MB — clips: 33132433, 27952980, 4623679, 34163995, 39282054, 36075490, 36108441, 19191119, 31576664, 34808047, 39282058, 8064121
