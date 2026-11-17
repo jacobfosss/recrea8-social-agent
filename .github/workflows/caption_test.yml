@@ -1,0 +1,32 @@
+name: Caption layout test
+on:
+  workflow_dispatch:
+    inputs:
+      variants_json:
+        description: "Optional JSON of variant name -> caption clip"
+        required: false
+        default: ""
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests && sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Render test variants (sandbox, free)
+        env:
+          SHOTSTACK_SANDBOX_API_KEY: ${{ secrets.SHOTSTACK_SANDBOX_API_KEY }}
+          VARIANTS_JSON: ${{ inputs.variants_json }}
+        run: python scripts/caption_test.py
+      - name: Save frames
+        if: always()
+        run: |
+          git config user.name "social-agent-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/caption_test
+          git commit -m "Caption layout test frames [skip ci]" || exit 0
+          git pull --rebase --autostash && git push
