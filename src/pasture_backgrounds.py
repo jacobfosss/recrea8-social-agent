@@ -287,7 +287,7 @@ def _screen(theme: str, pool: dict) -> dict:
             blocks.append({"type": "image", "source": {
                 "type": "base64", "media_type": "image/jpeg", "data": b64}})
         client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-        resp = client.messages.create(model="claude-sonnet-5", max_tokens=300,
+        resp = client.messages.create(model="claude-sonnet-5", max_tokens=4000,
                                       messages=[{"role": "user", "content": blocks}])
         text = "".join(b.text for b in resp.content if b.type == "text")
         print(f"[nature] screened {len(kept_map)} thumbnails; stop={resp.stop_reason} "
