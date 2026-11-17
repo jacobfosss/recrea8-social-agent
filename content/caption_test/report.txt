@@ -1,0 +1,5 @@
+a_current: ok
+b_box: ok
+c_box_pad: ok
+bg=1794887136_educational_background_prepared_301214.png
+audio=1794887137_combined_3342_1794887128.mp3
