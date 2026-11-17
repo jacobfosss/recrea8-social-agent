@@ -113,7 +113,7 @@ THEMES = {
     },
 }
 THEME_ORDER = ["dairy", "honey", "cacao", "vanilla", "mint_greens"]
-SHOT_PATTERN = ["aerial", "wide", "close", "detail", "wide", "close", "detail", "close"]
+SHOT_PATTERN = ["aerial", "close", "wide", "detail", "close", "aerial", "detail", "close"]
 
 
 # ---------- rotation ----------
@@ -174,16 +174,22 @@ def _search(query: str, orientation: str):
     key = os.environ.get("PEXELS_API_KEY")
     if not key:
         return []
-    try:
-        r = requests.get(PEXELS_VIDEO_API, headers={"Authorization": key},
-                         params={"query": query, "orientation": orientation,
-                                 "per_page": 12, "size": "medium"},
-                         timeout=20)
-        r.raise_for_status()
-        return r.json().get("videos", [])
-    except Exception as e:
-        print(f"[nature] search failed for '{query}': {e}")
-        return []
+    import time
+    for attempt in range(3):
+        try:
+            r = requests.get(PEXELS_VIDEO_API, headers={"Authorization": key},
+                             params={"query": query, "orientation": orientation,
+                                     "per_page": 15, "size": "medium"},
+                             timeout=20)
+            if r.status_code == 429 and attempt < 2:
+                time.sleep(20 * (attempt + 1))
+                continue
+            r.raise_for_status()
+            return r.json().get("videos", [])
+        except Exception as e:
+            print(f"[nature] search failed for '{query}': {e}")
+            return []
+    return []
 
 
 def _best_file(video: dict):
@@ -212,18 +218,26 @@ def _best_file(video: dict):
 
 def _candidates(theme: str):
     """{shot_type: [candidate dicts]} — deduped, long enough, sharp enough."""
-    seen, pool = set(), {}
-    for shot_type, queries in THEMES[theme]["shots"].items():
+    seen, pool, per_user = set(), {}, {}
+    # ingredient-specific shots first, so they get searched even if the
+    # Pexels hourly limit is close
+    for shot_type in ("close", "detail", "wide", "aerial"):
+        queries = THEMES[theme]["shots"][shot_type]
         pool[shot_type] = []
         for q in queries:
             for orientation in ("portrait", "landscape"):
                 for v in _search(q, orientation):
                     if v.get("id") in seen or (v.get("duration") or 0) < 6:
                         continue
+                    uid = (v.get("user") or {}).get("id")
+                    if uid and per_user.get(uid, 0) >= 2:
+                        continue  # avoids near-identical takes from one shoot
                     f, sharp = _best_file(v)
                     if not f:
                         continue
                     seen.add(v["id"])
+                    if uid:
+                        per_user[uid] = per_user.get(uid, 0) + 1
                     thumb = (v.get("image") or
                              (v.get("video_pictures") or [{}])[0].get("picture"))
                     pool[shot_type].append({
@@ -254,12 +268,12 @@ def _screen(theme: str, pool: dict) -> dict:
     that is on-topic, natural, and cinematic. Returns the pool filtered and
     ranked best-first. If screening fails, falls back to the unscreened
     pool (sharpest first) rather than blocking the post."""
-    flat = [c for shot_type in pool for c in pool[shot_type]]
     for shot_type in pool:
         pool[shot_type].sort(key=lambda c: (-c["sharp"], -c["portrait"]))
+    # an even share of every shot type, so close-ups aren't crowded out
+    flat = [c for shot_type in pool for c in pool[shot_type][:16]]
     if not os.environ.get("ANTHROPIC_API_KEY") or not flat:
         return pool
-    flat = flat[:60]
     try:
         from anthropic import Anthropic
         blocks = [{"type": "text", "text": (
@@ -267,8 +281,10 @@ def _screen(theme: str, pool: dict) -> dict:
             f"vertical video about where a whole-food ice cream brand's ingredients "
             f"come from. This video's theme: {THEMES[theme]['label']}. Captions "
             f"will sit in the middle of the frame.\n\n"
-            f"Below are {len(flat)} numbered video thumbnails. KEEP a clip only if "
-            f"ALL are true: clearly fits the theme; beautiful, natural, real-looking "
+            f"Below are {len(flat)} numbered video thumbnails, each labeled with the "
+            f"subject it is supposed to show. KEEP a clip only if ALL are true: it "
+            f"actually shows that subject (e.g. cows must really be cows, a cacao pod "
+            f"must really be a cacao pod, bees must really be bees); beautiful, natural, real-looking "
             f"(nature-documentary quality, the kind of shot you'd see in a premium brand "
             f"film: lush, healthy, idyllic, golden-hour or soft daylight); well lit and in "
             f"focus; animals look healthy, free and content (reject tethered or penned "
@@ -285,7 +301,7 @@ def _screen(theme: str, pool: dict) -> dict:
             if not b64:
                 continue
             kept_map.append((i, c))
-            blocks.append({"type": "text", "text": f"#{i}"})
+            blocks.append({"type": "text", "text": f"#{i} (should show: {c['query']})"})
             blocks.append({"type": "image", "source": {
                 "type": "base64", "media_type": "image/jpeg", "data": b64}})
         client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -409,7 +425,7 @@ def build_nature_background(scene_audio_paths: list, topic_text: str = ""):
         for shot_type in order:
             options = [c for c in pool.get(shot_type, []) if c["id"] not in used]
             if not options:  # that shot type ran dry: borrow from the others
-                options = [c for st in ("close", "wide", "detail", "aerial")
+                options = [c for st in ("close", "detail", "wide", "aerial")
                            for c in pool.get(st, []) if c["id"] not in used]
             if not options:
                 print(f"[nature] ran out of approved '{theme}' footage")
