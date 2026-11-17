@@ -1,3 +1,0 @@
-nature: ok
-bg=1794927108_nature_dairy_195740.mp4
-audio=1794927113_combined_3481_1794927107.mp3

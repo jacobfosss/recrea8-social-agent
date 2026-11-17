@@ -359,7 +359,7 @@ def _caption_band() -> Path:
     WORK_DIR.mkdir(parents=True, exist_ok=True)
     col = Image.new("L", (1, H))
     for y in range(H):
-        a = 0.30 * math.exp(-((y - H * 0.5) ** 2) / (2 * 340 ** 2))
+        a = 0.40 * math.exp(-((y - H * 0.5) ** 2) / (2 * 340 ** 2))
         col.putpixel((0, y), int(255 * a))
     alpha = col.resize((W, H))
     band = Image.new("RGBA", (W, H), (0, 0, 0, 255))
