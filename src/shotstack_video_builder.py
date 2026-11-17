@@ -234,9 +234,15 @@ def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str
                     "font": {"color": ACTIVE_WORD_GOLD},
                 },
                 "align": {"vertical": "middle"},
+                # side padding inside the box so wrapped lines never touch the edges
+                "padding": {"top": 0, "right": 40, "bottom": 0, "left": 40},
             },
             "start": 0,
             "length": "end",
+            # A fixed box (width AND height) is what makes Shotstack wrap long
+            # sentences. With width alone, long lines ran off the frame
+            # (confirmed with sandbox test renders on 2026-11-17).
+            "height": 700,
             "width": 900,  # ~90px margin each side of the 1080-wide frame,
                             # keeping captions clear of the edges and clear
                             # of the corner design elements above/below the

@@ -1,3 +1,0 @@
-d_big60: ok
-bg=1794887136_educational_background_prepared_301214.png
-audio=1794887137_combined_3342_1794887128.mp3
