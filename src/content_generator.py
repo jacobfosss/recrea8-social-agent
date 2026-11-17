@@ -359,8 +359,15 @@ def _build_source_slide(title: str, journal: str, year: str,
 def _clean_slide_part(raw: str) -> str:
     """Strips numbering/labels Claude sometimes adds despite instructions
     (e.g. '1.', '2)', 'THE MECHANISM:') so parsing isn't thrown off by them."""
-    cleaned = raw.strip()
+    cleaned = raw.strip().replace("**", "").replace("__", "")
+    cleaned = re.sub(r"^#+\s*", "", cleaned)
     cleaned = re.sub(r"^\d+[\.\)]\s*", "", cleaned)
+    # labels in any case: "Hook:", "Slide 2:", "Slide 2 — The mechanism:",
+    # "THE TAKEAWAY:", "Caption:" — never spoken or shown on screen
+    cleaned = re.sub(r"^(slide\s*\d+\s*[—–:\-]*\s*)?((the\s+)?(hook|mechanism|"
+                     r"make it tangible|tangible|takeaway|caption|card text|source))?\s*[:—–\-]\s*",
+                     lambda m: "" if (m.group(1) or m.group(2)) else m.group(0),
+                     cleaned, flags=re.I)
     cleaned = re.sub(r"^[A-Z \-]{3,40}:\s*", "", cleaned)
     return cleaned.strip()
 
@@ -508,7 +515,9 @@ def generate_educational_carousel(research_item: dict, brand_voice: str,
     narration (can't extract text back out of a finished image).
     """
     parts = _request_carousel_slides(research_item, brand_voice, brand_context)
-    slide_texts = [research_item["card_text"]] + parts
+    # every line is narrated and captioned on screen, so strip any label or
+    # markdown Claude added ("**Hook:**", "Slide 2:") from all of them
+    slide_texts = [_clean_slide_part(t) for t in [research_item["card_text"]] + parts]
     total_slides = 5
 
     slide_paths = []

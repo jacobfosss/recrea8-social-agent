@@ -150,7 +150,7 @@ def post_video(video_path, caption: str) -> str:
         print("----- CAPTION -----")
         print(caption)
         print("-------------------")
-        _notify_caption(caption)
+        # caption GitHub issue turned off 2026-11-17: Jacob writes his own
     return publish_id
 
 def _notify_caption(caption):
