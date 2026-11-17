@@ -1,0 +1,19 @@
+== dairy
+[nature] screening kept 0/60 clips for 'dairy'
+[nature] ran out of approved 'dairy' footage
+
+== honey
+[nature] screening kept 0/60 clips for 'honey'
+[nature] ran out of approved 'honey' footage
+
+== cacao
+[nature] screening kept 0/60 clips for 'cacao'
+[nature] ran out of approved 'cacao' footage
+
+== vanilla
+[nature] screening kept 0/60 clips for 'vanilla'
+[nature] ran out of approved 'vanilla' footage
+
+== mint_greens
+[nature] screening kept 0/60 clips for 'mint_greens'
+[nature] ran out of approved 'mint_greens' footage
