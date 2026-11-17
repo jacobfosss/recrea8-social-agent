@@ -57,8 +57,8 @@ THEMES = {
                       "cattle grazing hills"],
             "close": ["cow eating grass close up", "cow face close up", "calf in pasture",
                        "dairy cow portrait"],
-            "detail": ["fresh milk pouring", "dew on grass morning sunlight",
-                        "grass blowing wind close up", "farm sunrise field"],
+            "detail": ["dew on grass morning sunlight", "grass blowing wind golden hour",
+                        "misty pasture sunrise", "wildflowers pasture breeze"],
         },
     },
     "honey": {
@@ -83,7 +83,7 @@ THEMES = {
                         "aerial jungle green hills"],
             "wide": ["vanilla plantation", "tropical farm plants", "rainforest sunlight"],
             "close": ["vanilla orchid flower", "vanilla beans", "vanilla pods"],
-            "detail": ["vanilla bean split", "vanilla extract bottle", "vanilla pods drying"],
+            "detail": ["vanilla bean split", "vanilla pods drying", "vanilla bean macro"],
         },
     },
     "cacao": {
@@ -95,8 +95,7 @@ THEMES = {
                         "aerial jungle river"],
             "wide": ["cacao farm", "cocoa plantation", "cocoa tree"],
             "close": ["cacao pod", "cocoa pod tree", "opening cacao pod", "cocoa fruit"],
-            "detail": ["cocoa beans", "cocoa beans drying", "raw cacao beans hands",
-                        "cocoa powder"],
+            "detail": ["cocoa beans", "cocoa beans drying", "raw cacao beans hands"],
         },
     },
     "mint_greens": {
@@ -270,9 +269,12 @@ def _screen(theme: str, pool: dict) -> dict:
             f"will sit in the middle of the frame.\n\n"
             f"Below are {len(flat)} numbered video thumbnails. KEEP a clip only if "
             f"ALL are true: clearly fits the theme; beautiful, natural, real-looking "
-            f"(nature-documentary quality); well lit and in focus; no visible text, "
+            f"(nature-documentary quality, the kind of shot you'd see in a premium brand "
+            f"film: lush, healthy, idyllic, golden-hour or soft daylight); well lit and in "
+            f"focus; animals look healthy, free and content (reject tethered or penned "
+            f"animals, dirt lots, mud, feed buckets, barns interiors); no visible text, "
             f"logos, watermarks, brand names or packaged products; not a factory, "
-            f"supermarket, plastic, lab, or processed food; no person's face as the "
+            f"supermarket, plastic containers, kitchen, lab, or processed food; no person's face as the "
             f"main subject (hands or a distant farmer are fine); not CGI, cartoon, "
             f"stock-photo staged, or heavily filtered.\n\n"
             f"Reply with ONLY a JSON list of the kept numbers, best first, e.g. [4, 1, 9]."
@@ -339,7 +341,7 @@ def _caption_band() -> Path:
     WORK_DIR.mkdir(parents=True, exist_ok=True)
     col = Image.new("L", (1, H))
     for y in range(H):
-        a = 0.34 * math.exp(-((y - H * 0.5) ** 2) / (2 * 340 ** 2))
+        a = 0.30 * math.exp(-((y - H * 0.5) ** 2) / (2 * 340 ** 2))
         col.putpixel((0, y), int(255 * a))
     alpha = col.resize((W, H))
     band = Image.new("RGBA", (W, H), (0, 0, 0, 255))
@@ -349,8 +351,8 @@ def _caption_band() -> Path:
 
 
 GRADE = ("scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-         "fps={fps},eq=brightness=-0.04:contrast=1.04:saturation=1.06,"
-         "vignette=angle=PI/7,format=yuv420p").format(w=W, h=H, fps=FPS)
+         "fps={fps},eq=contrast=1.03:saturation=1.07,"
+         "vignette=angle=PI/10,format=yuv420p").format(w=W, h=H, fps=FPS)
 
 
 def _cut_shot(raw: Path, length: float, out: Path):
