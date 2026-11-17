@@ -1,4 +1,73 @@
 == dairy
-[nature] screened 60 thumbnails; stop=max_tokens blocks=['thinking'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=4973, output_tokens=300, output_tokens_details=OutputTokensDetails(thinking_tokens=300), server_tool_use=None, service_tier='standard', speed='standard') reply: ''
-[nature] screening failed (empty screening reply) — using unscreened footage
-[nature] built dairy background: 12 shots, 55.3s, 19.1 MB — clips: 33132433, 27952980, 4623679, 34163995, 39282054, 36075490, 36108441, 19191119, 31576664, 34808047, 39282058, 8064121
+[nature] screened 60 thumbnails; stop=end_turn blocks=['thinking', 'text'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=5065, output_tokens=2387, output_tokens_details=OutputTokensDetails(thinking_tokens=2310), server_tool_use=None, service_tier='standard', speed='standard') reply: '[18, 10, 1, 3, 14, 6, 13, 19, 24, 45, 55, 60, 21, 48, 9, 11, 31, 33, 41, 52, 57, 58, 43, 26, 53]'
+[nature] screening kept 25/60 clips for 'dairy'
+[nature] built dairy background: 12 shots, 55.3s, 19.1 MB — clips: 12869244, 39101920, 33132433, 34196081, 33132432, 11155548, 34031149, 31983784, 18056921, 32025262, 24816130, 12236349
+
+== honey
+[nature] search failed for 'honey dripping': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=honey+dripping&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'honeycomb close up': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=honeycomb+close+up&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'honeycomb close up': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=honeycomb+close+up&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'honey dipper pouring honey': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=honey+dipper+pouring+honey&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'honey dipper pouring honey': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=honey+dipper+pouring+honey&orientation=landscape&per_page=12&size=medium
+[nature] screened 60 thumbnails; stop=end_turn blocks=['thinking', 'text'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=5063, output_tokens=2283, output_tokens_details=OutputTokensDetails(thinking_tokens=2176), server_tool_use=None, service_tier='standard', speed='standard') reply: '[18, 13, 29, 28, 51, 48, 33, 19, 3, 9, 38, 45, 1, 52, 55, 47, 12, 35, 20, 16, 22, 17, 34, 36, 37, 39, 41, 44, 58, 60, 30, 6, 10, 4, 11]'
+[nature] screening kept 35/60 clips for 'honey'
+[nature] built honey background: 12 shots, 55.3s, 19.6 MB — clips: 16923785, 36517113, 39360051, 32456864, 39445122, 12793753, 38026182, 26837864, 25559418, 12417948, 27792739, 34159265
+
+== cacao
+[nature] search failed for 'cacao pod': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cacao+pod&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'cacao pod': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cacao+pod&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'cocoa pod tree': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+pod+tree&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'cocoa pod tree': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+pod+tree&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'opening cacao pod': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=opening+cacao+pod&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'opening cacao pod': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=opening+cacao+pod&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'cocoa fruit': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+fruit&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'cocoa fruit': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+fruit&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'cocoa beans': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+beans&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'cocoa beans': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+beans&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'cocoa beans drying': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+beans+drying&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'cocoa beans drying': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=cocoa+beans+drying&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'raw cacao beans hands': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=raw+cacao+beans+hands&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'raw cacao beans hands': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=raw+cacao+beans+hands&orientation=landscape&per_page=12&size=medium
+[nature] screened 60 thumbnails; stop=end_turn blocks=['thinking', 'text'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=5063, output_tokens=1664, output_tokens_details=OutputTokensDetails(thinking_tokens=1566), server_tool_use=None, service_tier='standard', speed='standard') reply: '[1, 4, 24, 40, 53, 54, 47, 22, 17, 56, 41, 51, 52, 10, 44, 19, 26, 27, 29, 31, 28, 18, 38, 37, 14, 11, 2, 30, 13, 21, 60, 33]'
+[nature] screening kept 32/60 clips for 'cacao'
+[nature] built cacao background: 12 shots, 55.3s, 19.6 MB — clips: 16754842, 17648040, 34755966, 12307159, 36024708, 16754940, 38924524, 31594811, 35527402, 14551938, 40983469, 3435301
+
+== vanilla
+[nature] search failed for 'vanilla orchid flower': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+orchid+flower&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'vanilla beans': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+beans&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'vanilla beans': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+beans&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'vanilla pods': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+pods&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'vanilla pods': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+pods&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'vanilla bean split': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+bean+split&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'vanilla bean split': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+bean+split&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'vanilla pods drying': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+pods+drying&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'vanilla pods drying': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+pods+drying&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'vanilla bean macro': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+bean+macro&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'vanilla bean macro': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=vanilla+bean+macro&orientation=landscape&per_page=12&size=medium
+[nature] screened 60 thumbnails; stop=end_turn blocks=['thinking', 'text'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=5064, output_tokens=2713, output_tokens_details=OutputTokensDetails(thinking_tokens=2651), server_tool_use=None, service_tier='standard', speed='standard') reply: '[4, 7, 22, 42, 48, 55, 56, 59, 16, 52, 54, 53, 50, 58, 60, 51, 13, 14, 5, 1]'
+[nature] screening kept 20/60 clips for 'vanilla'
+[nature] built vanilla background: 12 shots, 55.3s, 19.6 MB — clips: 34450508, 32474474, 39112002, 16275536, 6981368, 34427719, 34312755, 31119984, 34312759, 4474291, 39387422, 31994301
+
+== mint_greens
+[nature] search failed for 'mint plants field': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=mint+plants+field&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'mint plants field': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=mint+plants+field&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'forest stream': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=forest+stream&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'forest stream': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=forest+stream&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'mint leaves close up': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=mint+leaves+close+up&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'mint leaves close up': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=mint+leaves+close+up&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'fresh mint plant': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=fresh+mint+plant&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'fresh mint plant': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=fresh+mint+plant&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'green leaves water drops': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=green+leaves+water+drops&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'green leaves water drops': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=green+leaves+water+drops&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'leaves sunlight close up': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=leaves+sunlight+close+up&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'green algae water': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=green+algae+water&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'green algae water': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=green+algae+water&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'spirulina': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=spirulina&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'spirulina': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=spirulina&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'fresh herbs harvest': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=fresh+herbs+harvest&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'fresh herbs harvest': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=fresh+herbs+harvest&orientation=landscape&per_page=12&size=medium
+[nature] search failed for 'water drops on leaf': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=water+drops+on+leaf&orientation=portrait&per_page=12&size=medium
+[nature] search failed for 'water drops on leaf': 429 Client Error: Too Many Requests for url: https://api.pexels.com/videos/search?query=water+drops+on+leaf&orientation=landscape&per_page=12&size=medium
+[nature] screened 60 thumbnails; stop=end_turn blocks=['thinking', 'text'] usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=5065, output_tokens=2184, output_tokens_details=OutputTokensDetails(thinking_tokens=2116), server_tool_use=None, service_tier='standard', speed='standard') reply: '[31, 47, 36, 39, 43, 40, 38, 30, 45, 27, 23, 22, 17, 16, 15, 12, 24, 46, 2, 3, 20, 53]'
+[nature] screening kept 22/60 clips for 'mint_greens'
+[nature] built mint_greens background: 12 shots, 55.3s, 19.6 MB — clips: 29158889, 8435972, 32617708, 4318714, 3784399, 13126269, 32011610, 5624056, 29158874, 32033615, 31693357, 27911377
