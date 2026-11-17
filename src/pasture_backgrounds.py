@@ -245,7 +245,8 @@ def _thumb_b64(url: str):
         buf = io.BytesIO()
         im.save(buf, "JPEG", quality=80)
         return base64.b64encode(buf.getvalue()).decode()
-    except Exception:
+    except Exception as e:
+        print(f"[nature] thumbnail fetch failed: {e}")
         return None
 
 
@@ -289,7 +290,9 @@ def _screen(theme: str, pool: dict) -> dict:
         resp = client.messages.create(model="claude-sonnet-5", max_tokens=300,
                                       messages=[{"role": "user", "content": blocks}])
         text = "".join(b.text for b in resp.content if b.type == "text")
-        keep = [int(x) for x in re.findall(r"\d+", text)]
+        print(f"[nature] screened {len(kept_map)} thumbnails; reply: {text[:300]!r}")
+        m = re.search(r"\[[\d,\s]*\]", text)
+        keep = [int(x) for x in re.findall(r"\d+", m.group(0) if m else text)]
         by_num = dict(kept_map)
         rank = {by_num[n]["id"]: r for r, n in enumerate(keep) if n in by_num}
         screened = {st: sorted([c for c in cs if c["id"] in rank], key=lambda c: rank[c["id"]])
