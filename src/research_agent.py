@@ -11,6 +11,7 @@ Set NCBI_API_KEY in your .env (free, from ncbi.nlm.nih.gov/account) to raise
 the rate limit from 3 requests/second to 10/second.
 """
 import json
+import re
 import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -186,10 +187,12 @@ write anything else: reply with exactly the single word SKIP.
     text = "".join(b.text for b in resp.content if b.type == "text")
     if text.strip().upper().startswith("SKIP") or looks_like_refusal(text):
         return None
-    parts = text.split("---")
+    parts = [clean_part(x) for x in text.split("---") if clean_part(x)]
+    if len(parts) < 2:
+        return None
     return {
-        "card_text": parts[0].strip(),
-        "caption": parts[1].strip() if len(parts) > 1 else parts[0].strip(),
+        "card_text": parts[0],
+        "caption": parts[1],
         "source_title": article["title"],
         "source_journal": article["journal"],
         "source_year": article["year"],
@@ -234,6 +237,25 @@ def refresh_research_queue(topics=None, brand_voice="", brand_context="", per_to
     print(f"[research] added {added} new item(s), queue size={len(queue)}")
 
 
+_LABEL_RE = re.compile(r"^\s*(\*\*)?\s*(hook|caption|card|card text|image card)\s*:?\s*(\*\*)?\s*:?\s*", re.I)
+
+
+def clean_part(text: str) -> str:
+    """Strips markdown and labels Claude sometimes adds despite instructions
+    ("**Hook:**", "**Caption:**", stray ** bold markers)."""
+    text = (text or "").strip()
+    text = _LABEL_RE.sub("", text)
+    text = text.replace("**", "").strip()
+    return text
+
+
+def is_usable(item: dict) -> bool:
+    """A queue item is only postable if both parts came through intact —
+    a malformed reply once produced a caption of just "**Ca"."""
+    card, cap = clean_part(item.get("card_text", "")), clean_part(item.get("caption", ""))
+    return len(card) >= 10 and len(cap) >= 80 and card != cap
+
+
 def get_next_unused_item():
     if not QUEUE_PATH.exists():
         return None
@@ -243,6 +265,9 @@ def get_next_unused_item():
             continue
         if looks_like_refusal(item.get("caption", "")) or looks_like_refusal(item.get("card_text", "")):
             continue
+        if not is_usable(item):
+            continue
+        item = dict(item, card_text=clean_part(item["card_text"]), caption=clean_part(item["caption"]))
         return item
     return None
 
