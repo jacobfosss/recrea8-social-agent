@@ -6,6 +6,14 @@ on:
         description: "Optional JSON of variant name -> caption clip"
         required: false
         default: ""
+      bg:
+        description: "Optional content/posted background file"
+        required: false
+        default: ""
+      audio:
+        description: "Optional content/posted audio file"
+        required: false
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -21,6 +29,8 @@ jobs:
         env:
           SHOTSTACK_SANDBOX_API_KEY: ${{ secrets.SHOTSTACK_SANDBOX_API_KEY }}
           VARIANTS_JSON: ${{ inputs.variants_json }}
+          BG: ${{ inputs.bg }}
+          AUDIO: ${{ inputs.audio }}
         run: python scripts/caption_test.py
       - name: Save frames
         if: always()

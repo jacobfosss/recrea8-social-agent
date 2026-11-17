@@ -9,8 +9,9 @@ KEY = os.environ["SHOTSTACK_SANDBOX_API_KEY"]
 BASE = "https://api.shotstack.io/stage"
 RAW = "https://raw.githubusercontent.com/jacobfosss/recrea8-social-agent/main/content/posted/"
 posted = sorted(os.listdir("content/posted"))
-bg = [f for f in posted if "educational_background_prepared" in f][-1]
-audio = [f for f in posted if f.endswith(".mp3") and "combined" in f][-1]
+bg = os.environ.get("BG") or [f for f in posted if "educational_background_prepared" in f][-1]
+audio = os.environ.get("AUDIO") or [f for f in posted if f.endswith(".mp3") and "combined" in f][-1]
+BG_TYPE = "video" if bg.endswith(".mp4") else "image"
 OUT = Path("content/caption_test"); OUT.mkdir(parents=True, exist_ok=True)
 
 def caption(extra_clip, extra_asset, size=32):
@@ -33,7 +34,7 @@ VARIANTS = json.loads(os.environ.get("VARIANTS_JSON") or "{}") or {
 def render(clip):
     payload = {"timeline": {"tracks": [
         {"clips": [clip]},
-        {"clips": [{"asset": {"type": "image", "src": RAW + bg}, "start": 0, "length": 16}]},
+        {"clips": [{"asset": {"type": BG_TYPE, "src": RAW + bg}, "start": 0, "length": 16}]},
         {"clips": [{"alias": "speech", "asset": {"type": "audio", "src": RAW + audio},
                     "start": 0, "length": 16}]}]},
         "output": {"format": "mp4", "size": {"width": 1080, "height": 1920}}}
