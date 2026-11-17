@@ -143,7 +143,8 @@ def _wait_until_fetchable(url: str, max_attempts: int = 10, delay_seconds: float
 
 def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str = "shotstack",
                   caption_intensity: str = "calm", music_path: Path = None,
-                  use_production: bool = False, caption_palette: str = "light_on_dark", caption_size: int = None) -> Path:
+                  use_production: bool = False, caption_palette: str = "light_on_dark", caption_size: int = None,
+                  continuous_background: Path = None) -> Path:
     """scene_visuals: list of (path, is_video) tuples — one raw background
     per scene, no baked-in text. scene_audio_paths: list of Paths, same
     length and order — one narration clip per scene. Each scene's on-screen
@@ -157,7 +158,7 @@ def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str
 
     Returns a local Path to the downloaded finished video.
     """
-    if len(scene_visuals) != len(scene_audio_paths):
+    if continuous_background is None and len(scene_visuals) != len(scene_audio_paths):
         raise ValueError(
             f"scene_visuals ({len(scene_visuals)}) and scene_audio_paths "
             f"({len(scene_audio_paths)}) must be the same length — one "
@@ -168,6 +169,10 @@ def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str
 
     combined_audio_path, scene_durations = _combine_audio(scene_audio_paths)
 
+    # continuous_background: one pre-edited video spanning the whole
+    # narration (the nature-footage style), instead of one visual per scene
+    if continuous_background is not None:
+        scene_visuals = [(continuous_background, True)]
     visual_urls = [
         (media_host.publish_to_public_url(path), is_video)
         for path, is_video in scene_visuals
@@ -185,7 +190,8 @@ def build_video(scene_visuals: list, scene_audio_paths: list, filename_hint: str
 
     visual_clips = []
     cursor = 0.0
-    for (url, is_video), duration in zip(visual_urls, scene_durations):
+    visual_durations = [sum(scene_durations)] if continuous_background is not None else scene_durations
+    for (url, is_video), duration in zip(visual_urls, visual_durations):
         clip = {
             "asset": {"type": "video" if is_video else "image", "src": url},
             "start": round(cursor, 2),

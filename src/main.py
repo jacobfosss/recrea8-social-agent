@@ -64,21 +64,26 @@ def _build_tiktok_video(content):
             filename_hints=[f"educational_scene{i}" for i in range(total_slides)],
         )
 
-        # Background style rotates: 3 "Better Informed" poster, then 3 pasture
-        # footage, repeat (see src/pasture_backgrounds.py). Falls back to the
-        # poster if Pexels doesn't return enough footage.
+        # Background style alternates one-for-one: the "Better Informed"
+        # poster, then real nature footage of one Recrea8 ingredient world
+        # (dairy, honey, cacao, vanilla, mint & greens) — see
+        # src/pasture_backgrounds.py. Falls back to the poster on any problem.
         from src import pasture_backgrounds
         style = pasture_backgrounds.next_style()
         scene_visuals = None
+        background = None
         caption_palette = "dark_on_light"
         caption_size = None
         if style == "pasture":
-            scene_visuals = pasture_backgrounds.build_pasture_visuals(scene_audio_paths)
-            if scene_visuals:
+            background, theme = pasture_backgrounds.build_nature_background(
+                scene_audio_paths, topic_text=" ".join(slide_texts))
+            if background:
+                style = f"nature ({theme})"
                 caption_palette = "light_on_dark"
                 caption_size = 60
-        if not scene_visuals:
-            style = "poster"
+        if not background:
+            if style == "pasture":
+                style = "poster"
             scene_visuals = [
                 (content_generator.render_video_background(slide_index=i + 1, total_slides=total_slides), False)
                 for i in range(total_slides)
@@ -86,13 +91,14 @@ def _build_tiktok_video(content):
         print(f"[educational] background style: {style}")
 
         return shotstack_video_builder.build_video(
-            scene_visuals=scene_visuals,
+            scene_visuals=scene_visuals or [],
             scene_audio_paths=scene_audio_paths,
             filename_hint="educational",
             caption_intensity="calm",  # word-synced, not full karaoke bounce —
                                          # matches educational content's calmer tone
             caption_palette=caption_palette,  # near-black text — the new
             caption_size=caption_size,
+            continuous_background=background,
                                                 # cream background would make
                                                 # the old cream text invisible
             use_production=True,  # LIVE — educational is confirmed 10/10
