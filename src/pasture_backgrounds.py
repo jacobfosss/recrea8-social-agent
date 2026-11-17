@@ -290,7 +290,10 @@ def _screen(theme: str, pool: dict) -> dict:
         resp = client.messages.create(model="claude-sonnet-5", max_tokens=300,
                                       messages=[{"role": "user", "content": blocks}])
         text = "".join(b.text for b in resp.content if b.type == "text")
-        print(f"[nature] screened {len(kept_map)} thumbnails; reply: {text[:300]!r}")
+        print(f"[nature] screened {len(kept_map)} thumbnails; stop={resp.stop_reason} "
+              f"blocks={[b.type for b in resp.content]} usage={resp.usage} reply: {text[:300]!r}")
+        if not text.strip():
+            raise RuntimeError("empty screening reply")
         m = re.search(r"\[[\d,\s]*\]", text)
         keep = [int(x) for x in re.findall(r"\d+", m.group(0) if m else text)]
         by_num = dict(kept_map)
