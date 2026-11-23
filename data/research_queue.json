@@ -1783,5 +1783,205 @@
     "pmid": "42852298",
     "topic": "whey protein muscle recovery research",
     "used": false
+  },
+  {
+    "card_text": "That gum in your ice cream? Let's talk about it.",
+    "caption": "Carrageenan is a common thickener pulled from seaweed, used to keep foods like ice cream smooth and stable. A recent review looked at the research on its safety, noting it's generally recognized as safe but still debated, with some questions around digestive effects that scientists are continuing to study. It's a good reminder to know what's actually in your food. (Annals of Nutrition & Metabolism, 2026)",
+    "source_title": "Carrageenan: Food Additive or Health Concern? A Comprehensive Review.",
+    "source_journal": "Annals of nutrition & metabolism",
+    "source_year": "2026",
+    "pmid": "43058068",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might notice the difference between real food and formulated food.",
+    "caption": "New research reviewed how the mix of refined oils, additives, and processing byproducts common in ultra-processed foods may interact with gut health, inflammation, and metabolic function over time. It's observational and mechanistic evidence, not proof of direct cause-and-effect in individuals \u2014 but it's a solid reminder that choosing recognizable, whole-food ingredients more often is a smart long-term bet. (Frontiers in Oncology, 2026)",
+    "source_title": "Ultra-processed food ingredients as environmental contributors to chronic diseases and cancer: emerging evidence linking gut dysbiosis, inflammation, oxidative stress, and metabolic dysfunction.",
+    "source_journal": "Frontiers in oncology",
+    "source_year": "2026",
+    "pmid": "43047723",
+    "topic": "ultra-processed food inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Whole grains could be Spain's biggest diet win.",
+    "caption": "A new analysis of Spain's health data found diet-related deaths are still rising in raw numbers (even as rates per person improve), largely due to low whole-grain intake, plus high red and processed meat consumption. It's a reminder that small, consistent swaps \u2014 more whole grains, less processed meat \u2014 add up at a population level over time. (International Journal of Food Sciences and Nutrition, 2026)",
+    "source_title": "National trends in diet-related mortality and disability-adjusted life years in Spain, 1990-2023: the Global Burden of Disease Study 2023.",
+    "source_journal": "International journal of food sciences and nutrition",
+    "source_year": "2026",
+    "pmid": "43069555",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "What you eat may matter most when your health is already fragile.",
+    "caption": "A large Italian study followed adults 50+ and found that those with higher health vulnerability saw even greater mortality risk when their diets leaned heavily on ultra-processed foods. It doesn't prove cause and effect, but it adds to a growing picture: whole, recognizable ingredients may matter more as our bodies age. Something worth keeping in mind at every meal (Nutrition, Metabolism and Cardiovascular Diseases, 2026).",
+    "source_title": "Mortality risk associated with health vulnerability profiles is higher among individuals with greater ultra-processed food consumption: prospective findings from the Moli-sani study.",
+    "source_journal": "Nutrition, metabolism, and cardiovascular diseases : NMCD",
+    "source_year": "2026",
+    "pmid": "43052074",
+    "topic": "ultra-processed food cardiovascular disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Lactose isn't just sugar \u2014 it's a whole package",
+    "caption": "New mouse research found that lactose (the natural sugar in dairy) had different effects on gut bacteria and metabolism than its individual building blocks, glucose and galactose, even at equal calories. Lactose-fed mice showed shifts favoring beneficial gut bacteria like Akkermansia and Bifidobacterium. It's early, animal-only research \u2014 but it's a good reminder that whole ingredients often behave differently than their isolated parts. (Food Research International, 2026)",
+    "source_title": "Lactose as disaccharide drives gut microbiota remodelling and metabolic adaptations in young mice.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "43051823",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "Your gut and kidneys notice every additive you eat.",
+    "caption": "A new review looks at how additives in processed foods \u2014 not just sodium and sugar, but emulsifiers, sweeteners, and dyes \u2014 may affect gut health, inflammation, and kidney function over time. Most evidence so far comes from lab and animal studies, so it's early. Still, it's a good reminder that recognizable ingredients are worth choosing more often. (Seminars in Nephrology, 2026)",
+    "source_title": "Beyond Potassium and Phosphorus: The Broader Health Impact of Food Additives in Chronic Kidney Disease.",
+    "source_journal": "Seminars in nephrology",
+    "source_year": "2026",
+    "pmid": "43045541",
+    "topic": "artificial sweeteners food health effects",
+    "used": false
+  },
+  {
+    "card_text": "A sweetener that may do more than just taste sweet.",
+    "caption": "New research found that D-allulose \u2014 a rare, naturally occurring sugar \u2014 helped reduce fat buildup, oxidative stress, and inflammation in the livers of rats fed a high-fat diet. It's early-stage animal research, not a human study, but it adds to a growing interest in allulose as a lower-impact alternative to traditional sugar. (Frontiers in Nutrition, 2026)",
+    "source_title": "D-allulose attenuates dyslipidemia, oxidative stress, and inflammation in high-fat-diet-induced metabolic dysfunction-associated steatotic liver disease in rats.",
+    "source_journal": "Frontiers in nutrition",
+    "source_year": "2026",
+    "pmid": "42952798",
+    "topic": "allulose metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Not all sugars act the same \u2014 even in lab cells.",
+    "caption": "New research looked at how glucose, fructose, and allulose affect placental cells in a dish under high-sugar conditions. All three changed cell behavior differently \u2014 fructose caused the most stress, while allulose behaved more like glucose in some measures. The sugar levels tested were far higher than what's in blood, so this is early, cell-level science \u2014 not dietary advice \u2014 but it's a reminder that \"sugar\" isn't one uniform thing. (International Journal of Molecular Sciences, 2026)",
+    "source_title": "Sugar-Specific Modulation of Trophoblast Function and Bioenergetics Under Metabolic Stress Conditions.",
+    "source_journal": "International journal of molecular sciences",
+    "source_year": "2026",
+    "pmid": "42884162",
+    "topic": "allulose metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Fiber's early role in metabolic health, explained.",
+    "caption": "In a rat study, offspring whose mothers ate an obesogenic diet with low-dose aspartame during pregnancy and nursing showed metabolic changes \u2014 but adding prebiotic fiber after birth appeared to help offset some obesity and insulin resistance risk. It's early, animal-only research, not a human finding, but it adds to a growing picture of why fiber-rich, whole foods matter from the start. (Nutrition, 2027)",
+    "source_title": "Effect of postnatal prebiotic fiber intake on obesity risk and insulin resistance in rat offspring exposed to a maternal obesogenic diet and low-dose aspartame.",
+    "source_journal": "Nutrition (Burbank, Los Angeles County, Calif.)",
+    "source_year": "2027",
+    "pmid": "42879945",
+    "topic": "aspartame health effects research",
+    "used": false
+  },
+  {
+    "card_text": "Diet soda might be quietly rewriting your gut's function.",
+    "caption": "New research found that diet soda consumption was linked to measurable shifts in gut microbiome activity among overweight young women \u2014 not just which bacteria were present, but how they functioned. It's early, preliminary research and doesn't prove cause and effect or long-term health outcomes, but it's a good reminder that \"zero calorie\" doesn't always mean \"zero impact.\" (medRxiv, 2026)",
+    "source_title": "Diet Soda Consumption is Associated with Shifts in Gut Microbiome Function of Overweight Young Women.",
+    "source_journal": "medRxiv : the preprint server for health sciences",
+    "source_year": "2026",
+    "pmid": "43060231",
+    "topic": "sucralose gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Not all sweeteners are created equal \u2014 science is finally asking why.",
+    "caption": "This is actually a study *design* \u2014 researchers haven't published results yet. They're testing how four common non-sugar sweeteners (like sucralose and aspartame) affect blood sugar and insulin in adults with prediabetes, since past research has been inconsistent. We'll be watching for results \u2014 real answers on sweeteners take real science. (Contemporary Clinical Trials Communications, 2026)",
+    "source_title": "Non-Sugar Sweetener Consumption and Glycemic Control in Middle-Aged and Older Adults with Prediabetes: Background, Design, and Methods of a Controlled Feeding Trial.",
+    "source_journal": "Contemporary clinical trials communications",
+    "source_year": "2026",
+    "pmid": "43034695",
+    "topic": "added sugar chronic disease risk",
+    "used": false
+  },
+  {
+    "card_text": "Sugar vs. corn syrup: your blood sugar notices either way.",
+    "caption": "A 20-week rat study found that both high-fructose corn syrup and sucrose raised fasting glucose and insulin resistance markers compared to water, with sucrose showing slightly bigger effects on glucose and triglycerides. Each sweetener also triggered different brain tissue changes. It's animal data, not a human verdict \u2014 but it's a solid reminder that added sugars, in any form, add up. (Nutrition Research, 2026)",
+    "source_title": "Chronic high-fructose corn syrup and sucrose intake impairs glucose regulation and alters cortical markers without detectable sensorimotor-gating disruption in rats.",
+    "source_journal": "Nutrition research (New York, N.Y.)",
+    "source_year": "2026",
+    "pmid": "43056839",
+    "topic": "high fructose corn syrup metabolic effects",
+    "used": false
+  },
+  {
+    "card_text": "Your gut may react to more than just food itself.",
+    "caption": "A new review looked at how common food additives \u2014 like emulsifiers and non-nutritive sweeteners \u2014 may interact with the gut microbiome, affecting things like gut bacteria balance and the intestinal barrier. Evidence is strongest for digestive and metabolic effects, weaker for other conditions, and links to chronic disease are still unproven. It's a reminder to know what's in your food \u2014 not a verdict on any single ingredient. (Nutrients, 2026)",
+    "source_title": "Food Additives as Microbiome-Active Dietary Exposures: Mechanisms, Host Susceptibility, and an Operational Case for Microbiome-Inclusive Risk Assessment.",
+    "source_journal": "Nutrients",
+    "source_year": "2026",
+    "pmid": "43030090",
+    "topic": "food emulsifiers gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Your gut might talk to your brain more than you think.",
+    "caption": "A new review looked at how common food additives \u2014 artificial sweeteners, dyes, preservatives, emulsifiers \u2014 may disrupt gut bacteria in ways linked to inflammation and barrier breakdown in the body. Researchers suggest these shifts could connect to pathways involved in brain cancer risk, though this is early, theoretical research, not proof of cause and effect. It's a good reminder to favor whole, recognizable ingredients when you can. (Frontiers in Microbiomes, 2026)",
+    "source_title": "Gut dysbiosis and brain cancer: exploring the emerging role of sweeteners and food additives.",
+    "source_journal": "Frontiers in microbiomes",
+    "source_year": "2026",
+    "pmid": "43011769",
+    "topic": "food emulsifiers gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Not just about calories \u2014 fat quality may matter for fertility too.",
+    "caption": "New research reviews how different dietary fats may influence ovarian health in obesity-related infertility, since fatty acids help build cell membranes and signaling molecules in the ovary. It's an early, mechanism-focused look \u2014 not proof that specific diets treat infertility \u2014 but it adds to why fat quality, not just quantity, deserves attention. (3 Biotech, 2026)",
+    "source_title": "Dietary fatty acid profiles in obesity-associated female infertility: mechanisms and reproductive implications.",
+    "source_journal": "3 Biotech",
+    "source_year": "2026",
+    "pmid": "42991470",
+    "topic": "omega-6 omega-3 ratio inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Grass-fed vs. grain-fed beef fat: does it matter?",
+    "caption": "New research in mice compared grass-fed and grain-fed beef fat against pork fat and found both beef fats led to similar metabolic outcomes \u2014 despite their different fatty acid profiles. In other words, the \"grass-fed is healthier\" assumption didn't hold up here. It's a good reminder that food quality is nuanced, and we should let real science (not just labels) guide how we think about what we eat (The Journal of Nutrition, 2026).",
+    "source_title": "Grass-Fed and Grain-Fed Beef Fats Similarly Improve Metabolic Outcomes Compared with Pork Fat in Diet-Induced Obese Mice.",
+    "source_journal": "The Journal of nutrition",
+    "source_year": "2026",
+    "pmid": "42863608",
+    "topic": "omega-6 omega-3 ratio inflammation",
+    "used": false
+  },
+  {
+    "card_text": "Your gut has favorite foods too \u2014 yeast mannans might be one.",
+    "caption": "New research looked at yeast mannans (fiber-like compounds from baker's yeast) and found they're well tolerated and selectively used by specific gut bacteria, potentially supporting a healthier microbial balance. It's early-stage research on one specific compound, not a verdict on yeast or fermented foods overall \u2014 but it's a good reminder that what feeds your gut matters as much as what feeds you. (Frontiers in Microbiology, 2026)",
+    "source_title": "Nutritional intervention trial of yeast mannans derived from baker's yeast enriches ",
+    "source_journal": "Frontiers in microbiology",
+    "source_year": "2026",
+    "pmid": "43032102",
+    "topic": "whole foods gut microbiome",
+    "used": false
+  },
+  {
+    "card_text": "Two eggs a day, skin health on display.",
+    "caption": "A new 12-week trial looked at whether eating two eggs daily \u2014 regular or nutrient-fortified \u2014 affected skin outcomes in adults with mild-to-moderate atopic dermatitis. Researchers tracked skin barrier function, symptom scores, and blood carotenoid/vitamin D levels. It's an early, small study, but it's a reminder that whole foods and their nutrient profiles may connect to skin health in ways we're still learning about (Food Research International, 2026).",
+    "source_title": "Impact of regular consumption of eggs and nutrient-fortified eggs on atopic dermatitis condition in Singapore individual with atopic dermatitis.",
+    "source_journal": "Food research international (Ottawa, Ont.)",
+    "source_year": "2026",
+    "pmid": "43051790",
+    "topic": "anti-inflammatory diet clinical trial",
+    "used": false
+  },
+  {
+    "card_text": "Your post-workout scoop might be doing more than you think.",
+    "caption": "In this 8-week study, athletes who added 30g of whey protein daily saw reductions in markers of muscle and liver stress compared to a placebo group \u2014 with power-trained athletes also showing lower inflammation markers. It's a reminder that quality protein isn't just about muscle \u2014 it may support your body's broader recovery process too. (European Journal of Sport Science, 2026)",
+    "source_title": "Effects of Whey Protein Supplementation on Muscle Damage, Hepatic Stress, and Inflammatory Markers in Power- and Endurance-Trained Athletes.",
+    "source_journal": "European journal of sport science",
+    "source_year": "2026",
+    "pmid": "42929456",
+    "topic": "whey protein muscle recovery research",
+    "used": false
+  },
+  {
+    "card_text": "Supplements alone didn't move the needle on brain aging markers.",
+    "caption": "A 2-year study looked at whether a multivitamin or cocoa flavanol extract changed blood markers linked to brain aging in older adults. Neither showed a significant effect compared to placebo. It's a good reminder that single supplements aren't shortcuts \u2014 overall diet quality and lifestyle likely matter more than any one pill. (Journal of Alzheimer's Disease, 2026)",
+    "source_title": "Effect of a multivitamin and cocoa flavanol extract on changes in neurofilament light, N-terminal tau fragment, and oligomeric amyloid-\u03b2 levels in COSMOS-clinic.",
+    "source_journal": "Journal of Alzheimer's disease : JAD",
+    "source_year": "2026",
+    "pmid": "42775737",
+    "topic": "cacao flavanols cardiovascular health",
+    "used": false
   }
 ]
