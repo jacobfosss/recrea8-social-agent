@@ -306,5 +306,19 @@
     "hour_utc": 0,
     "post_id": null,
     "engagement_score": null
+  },
+  {
+    "pillar": "educational",
+    "date": "2026-11-24",
+    "hour_utc": 21,
+    "post_id": null,
+    "engagement_score": null
+  },
+  {
+    "pillar": "educational",
+    "date": "2026-11-24",
+    "hour_utc": 21,
+    "post_id": "v_inbox_file~v2.7711848510676764685",
+    "engagement_score": null
   }
 ]
