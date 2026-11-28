@@ -28,8 +28,20 @@ def _save(records):
     DATA_PATH.write_text(json.dumps(records, indent=2))
 
 
+LOCAL_TZ = "America/New_York"
+
+
+def _local_now():
+    from zoneinfo import ZoneInfo
+    return datetime.now(ZoneInfo(LOCAL_TZ))
+
+
 def _today_str():
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # The posting "day" is a New York calendar day, not a UTC one. GitHub
+    # often starts the evening check-ins hours late, after midnight UTC, and
+    # with a UTC day those late runs were using up the NEXT day's post the
+    # evening before.
+    return _local_now().strftime("%Y-%m-%d")
 
 
 def count_posted_today(pillar: str) -> int:
@@ -91,7 +103,8 @@ def should_post_now(pillar: str, current_hour_utc: int, check_hours: list,
     # the day. (GitHub drops many scheduled runs, so waiting for a random or
     # "last" check-in was skipping whole days.)
     if os.environ.get("TIKTOK_POST_MODE", "draft").lower() != "direct":
-        return True
+        # don't send drafts in the middle of the night (New York time)
+        return 6 <= _local_now().hour < 23
 
     # The guaranteed-count promise takes priority over spacing — if this is
     # the LAST check of the day and we're still short, post anyway even if
